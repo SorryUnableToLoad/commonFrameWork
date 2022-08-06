@@ -28,6 +28,16 @@ public interface FrameworkConfig extends Config {
     @Key("cloud")
     CloudType cloudType();
 
+    @Key("browserstackusername")
+    String userName();
+
+    @Key("browserstackautomatekey")
+    String automateKay();
+
+    @DefaultValue("https://${browserstackusername}:${browserstackautomatekey}@hub-cloud.browserstack.com/wd/hub")
+    @ConverterClass(StringToURLConverter.class)
+    URL browserStackURL();
+
     @ConverterClass(StringToURLConverter.class)
     @Key("seleniumgridurl")
     URL seleniumGridUrl();
@@ -36,13 +46,4 @@ public interface FrameworkConfig extends Config {
     @Key("selenoidurl")
     URL selenoidUrl();
 
-    @Key("browserstackusername")
-    String userName();
-
-    @Key("browserstackautomatekey")
-    String automateKay();
-
-    @DefaultValue("https://${userName}:${automateKay}@hub-cloud.browserstack.com/wd/hub")
-    @ConverterClass(StringToURLConverter.class)
-    URL browserStackURL();
 }

@@ -7,11 +7,18 @@
     <groupId>org.example</groupId>
     <artifactId>commonFrameWork</artifactId>
     <version>1.0-SNAPSHOT</version>
-
-    <properties>
-        <maven.compiler.source>8</maven.compiler.source>
-        <maven.compiler.target>8</maven.compiler.target>
-    </properties>
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <configuration>
+                    <source>9</source>
+                    <target>9</target>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
 
     <dependencies>
 
@@ -33,7 +40,7 @@
         <dependency>
             <groupId>org.testng</groupId>
             <artifactId>testng</artifactId>
-            <version>6.14.3</version>
+            <version>7.4.0</version>
         </dependency>
 
         <!-- https://mvnrepository.com/artifact/io.appium/java-client -->
@@ -115,12 +122,17 @@
         </dependency>
 
         <!-- https://mvnrepository.com/artifact/io.github.sskorol/test-data-supplier -->
-        <dependency>
-            <groupId>io.github.sskorol</groupId>
-            <artifactId>test-data-supplier</artifactId>
-            <version>1.9.7</version>
-        </dependency>
+        <!--    <dependency>
+                <groupId>io.github.sskorol</groupId>
+                <artifactId>test-data-supplier</artifactId>
+                <version>2.1.0</version>
+            </dependency>  -->
+
 
     </dependencies>
+    <properties>
+        <maven.compiler.source>1.8</maven.compiler.source>
+        <maven.compiler.target>1.8</maven.compiler.target>
+    </properties>
 
 </project>
