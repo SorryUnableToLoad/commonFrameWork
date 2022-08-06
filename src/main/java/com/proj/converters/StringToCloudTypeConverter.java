@@ -9,6 +9,7 @@ public class StringToCloudTypeConverter implements Converter<CloudType> {
 
     @Override
     public CloudType convert(Method method, String cloudName) {
+
         return CloudType.valueOf(cloudName.toUpperCase());
     }
 }

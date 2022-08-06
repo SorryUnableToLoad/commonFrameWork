@@ -1,0 +1,20 @@
+package com.proj.drivermanager.web.remote.selenoid;
+
+import com.proj.config.ConfigFactory;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.remote.DesiredCapabilities;
+import org.openqa.selenium.remote.RemoteWebDriver;
+
+public final class SelenoidChromeManager {
+    private SelenoidChromeManager() {
+    }
+
+    public static WebDriver getDriver() {
+        DesiredCapabilities desiredCapabilities = new DesiredCapabilities();
+        desiredCapabilities.setCapability("browserName", "chrome");
+        desiredCapabilities.setCapability("rowserVersion", "101.0");
+        desiredCapabilities.setCapability("enableVNC", true);
+        desiredCapabilities.setCapability("enableVideo", false);
+        return new RemoteWebDriver(ConfigFactory.getConfig().selenoidUrl(), desiredCapabilities);
+    }
+}
