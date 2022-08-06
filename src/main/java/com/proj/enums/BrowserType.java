@@ -1,4 +1,4 @@
-package com.proj.config.enums;
+package com.proj.enums;
 
 public enum BrowserType {
     CHROME,FIREFOX

@@ -1,10 +1,9 @@
-package com.proj.config.converters;
+package com.proj.converters;
 
-import com.proj.config.enums.BrowserType;
+import com.proj.enums.BrowserType;
 import org.aeonbits.owner.Converter;
 
 import java.lang.reflect.Method;
-import java.util.Map;
 
 public class StringToBrowserTypeConverter implements Converter<BrowserType> {
 
