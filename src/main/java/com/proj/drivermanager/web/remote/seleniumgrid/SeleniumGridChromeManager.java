@@ -1,7 +1,7 @@
 package com.proj.drivermanager.web.remote.seleniumgrid;
 
 import com.proj.config.ConfigFactory;
-import com.proj.enums.BrowserType;
+import com.proj.enums.WebBrowserType;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.remote.RemoteWebDriver;
@@ -15,7 +15,7 @@ public final class SeleniumGridChromeManager {
 
     public static WebDriver getDriver() {
         DesiredCapabilities desiredCapabilities = new DesiredCapabilities();
-        desiredCapabilities.setBrowserName(String.valueOf(BrowserType.CHROME));
+        desiredCapabilities.setBrowserName(String.valueOf(WebBrowserType.CHROME));
         return new RemoteWebDriver(ConfigFactory.getConfig().seleniumGridUrl(), desiredCapabilities);
 
     }

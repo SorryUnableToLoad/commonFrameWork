@@ -1,11 +1,10 @@
 package com.proj.drivermanager.web.local;
 
-import com.proj.enums.BrowserType;
+import com.proj.enums.WebBrowserType;
 import org.openqa.selenium.WebDriver;
 
 import java.util.EnumMap;
 import java.util.Map;
-import java.util.PrimitiveIterator;
 import java.util.function.Supplier;
 
 public final class LocalDriverFactory {
@@ -22,7 +21,7 @@ public final class LocalDriverFactory {
             return browserType == BrowserType.CHROME;
         }
     */
-    private static final Map<BrowserType, Supplier<WebDriver>> MAP=new EnumMap<>(BrowserType.class);
+    private static final Map<WebBrowserType, Supplier<WebDriver>> MAP=new EnumMap<>(WebBrowserType.class);
     /*private static final Supplier<WebDriver> CHROME=ChromeManager::getDriver;
     private static final Supplier<WebDriver> FIREFOX=FirefoxManager::getDriver;
     static {
@@ -30,10 +29,10 @@ public final class LocalDriverFactory {
         MAP.put(BrowserType.FIREFOX,FIREFOX);
     }*/
     static {
-        MAP.put(BrowserType.CHROME,ChromeManager::getDriver);
-        MAP.put(BrowserType.FIREFOX,FirefoxManager::getDriver);
+        MAP.put(WebBrowserType.CHROME,ChromeManager::getDriver);
+        MAP.put(WebBrowserType.FIREFOX,FirefoxManager::getDriver);
     }
-        public static WebDriver getDriver(BrowserType browserType){
-        return MAP.get(browserType).get();
+        public static WebDriver getDriver(WebBrowserType webbrowserType){
+        return MAP.get(webbrowserType).get();
         }
 }
