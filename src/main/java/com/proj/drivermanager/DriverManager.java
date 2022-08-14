@@ -8,9 +8,9 @@ import org.openqa.selenium.WebDriver;
 import java.util.EnumMap;
 import java.util.Map;
 
-import static com.proj.enums.PlatFormType.MOBILE;
-import static com.proj.enums.PlatFormType.WEB;
-import static java.lang.ThreadLocal.withInitial;
+import static com.proj.enums.PlatFormType.*;
+import static java.lang.ThreadLocal.*;
+
 
 public class DriverManager {
     private DriverManager(){}

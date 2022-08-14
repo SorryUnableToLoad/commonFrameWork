@@ -7,7 +7,7 @@ import org.openqa.selenium.WebDriver;
 public class RemoteWebDriverImpl implements IWebDriver {
     @Override
     public WebDriver getDriver(WebDriverData driverData) {
-        return RemoteWebDriverFactory.getDriver(driverData.getBrowserRemoteModeType()
+        return RemoteWebDriverFactory.getDriver(driverData.getCloudType()
                 ,driverData.getBrowserType());
     }
 }

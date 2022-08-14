@@ -12,7 +12,8 @@ import java.util.EnumMap;
 import java.util.Map;
 import java.util.function.Supplier;
 
-public class DriverFactory {private DriverFactory(){}
+public class DriverFactory {
+    private DriverFactory(){}
 
     private static final Map<RunModeType, Supplier<IWebDriver>> WEB = new EnumMap<>(RunModeType.class);
     private static final Map<RunModeType, Supplier<IMobileDriver>> MOBILE = new EnumMap<>(RunModeType.class);
