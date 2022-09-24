@@ -11,7 +11,7 @@ public class AndroidTest extends MobileBaseClass {
     public void testLoginAndroid() {
 
         System.out.println("running");
-        DriverManager.getCurrentDriver();
+       
         /*LoginPageDemo lp=new LoginPageDemo();
         lp.loginToApplication();*/
 
