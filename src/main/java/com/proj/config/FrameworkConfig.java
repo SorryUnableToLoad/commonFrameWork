@@ -1,11 +1,9 @@
 package com.proj.config;
 
-import com.proj.converters.*;
-import com.proj.enums.MobileCloudType;
-import com.proj.enums.RunModeType;
-import com.proj.enums.WebBrowserType;
-import com.proj.enums.WebCloudType;
+import com.proj.config.converters.*;
+import com.proj.driver.enums.*;
 import org.aeonbits.owner.Config;
+import org.openqa.selenium.remote.CommandExecutor;
 
 import java.net.URL;
 
@@ -16,7 +14,7 @@ import java.net.URL;
         // look for jenkins environment property
         "system:env",
         //look for local directory properties file
-        "file:${user.dir}/src/test/resources/config.properties"
+        "file:${user.dir}/src/main/resources/config.properties"
 })
 
 public interface FrameworkConfig extends Config {
@@ -27,6 +25,7 @@ public interface FrameworkConfig extends Config {
     @Key("${environment}.webUrl")
     String webUrl();
 
+//---------------------------------------------------------------------//
 
     @DefaultValue("CHROME")
     @Key("webBrowser")
@@ -41,8 +40,20 @@ public interface FrameworkConfig extends Config {
     @ConverterClass(StringToWebCloudTypeConverter.class)
     WebCloudType webCloudMode();
 
+    @ConverterClass(StringToURLConverter.class)
+    @Key("seleniumgridurl")
+    URL seleniumGridUrl();
 
+    @ConverterClass(StringToURLConverter.class)
+    @Key("selenoidurl")
+    URL selenoidUrl();
 
+//---------------------------------------------------------------------//
+
+    @DefaultValue("ANDROID")
+    @Key("mobileOs")
+    @ConverterClass(StringToMobileOsTypeConverter.class)
+    MobilePlatformType mobileOs();
 
     @Key("mobileRunMode")
     @ConverterClass(StringToRunModeTypeConverter.class)
@@ -58,24 +69,27 @@ public interface FrameworkConfig extends Config {
 
 
     @Key("browserstackusername")
-    String userName();
+    String browserStackUserName();
 
     @Key("browserstackautomatekey")
-    String automateKay();
+    String browserstackautomatekey();
 
     @DefaultValue("https://${browserstackusername}:${browserstackautomatekey}@hub-cloud.browserstack.com/wd/hub")
     @ConverterClass(StringToURLConverter.class)
     URL browserStackURL();
 
 
+    @Key("saucelabskey")
+    String key();
+
+    @Key("saucelabsusername")
+    String saucelabsusername();
 
     @ConverterClass(StringToURLConverter.class)
-    @Key("seleniumgridurl")
-    URL seleniumGridUrl();
+    @Key("saucelabsurl")
+    URL saucelabsurl();
 
-    @ConverterClass(StringToURLConverter.class)
-    @Key("selenoidurl")
-    URL selenoidUrl();
-
+    //---------------------------------------------------------------------//
+    int waitTime=20;
 
 }
