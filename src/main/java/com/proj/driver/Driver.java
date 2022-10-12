@@ -2,9 +2,7 @@ package com.proj.driver;
 
 import com.proj.driver.entity.MobileDriverData;
 import com.proj.driver.entity.WebDriverData;
-import com.proj.driver.enums.MobilePlatformType;
 import com.proj.driver.factory.DriverFactory;
-import io.appium.java_client.android.AndroidDriver;
 import org.openqa.selenium.WebDriver;
 
 import java.util.Objects;
@@ -26,10 +24,10 @@ public final class Driver {
      * webRunMode -> local, cloud
      */
     public static void initDriverForWeb() {
-        if (Objects.isNull(DriverManager.getCurrentDriver())) {
+        if (Objects.isNull(DriverManager.getDriver())) {
             WebDriverData driverData = new WebDriverData(getConfig().webBrowser(), getConfig().webCloudMode());
             WebDriver driver = DriverFactory.getDriverForWeb(getConfig().webRunMode()).getDriver(driverData);
-            DriverManager.setDriver(driver);
+            DriverManager.getInstance().setDriver(driver);
             loadURL();
         }
     }
@@ -39,8 +37,8 @@ public final class Driver {
      * Description : url can be dev environment,beta environment, staging environment
      */
     public static void loadURL() {
-        DriverManager.getCurrentDriver().manage().window().maximize();
-        DriverManager.getCurrentDriver().get(getConfig().webUrl());
+        DriverManager.getDriver().manage().window().maximize();
+        DriverManager.getDriver().get(getConfig().webUrl());
         // DriverManager.getDriver().get("https://www.amazon.in/");
     }
 
@@ -52,17 +50,18 @@ public final class Driver {
      * mobileRunMode -> local, cloud
      */
     public static void initDriverForMobile() {
-        MobileDriverData driverData = new MobileDriverData(MobilePlatformType.ANDROID, getConfig().mobileCloudMode());
+        //MobileDriverData driverData = new MobileDriverData(MobilePlatformType.ANDROID, getConfig().mobileCloudMode());
+        MobileDriverData driverData=new MobileDriverData(getConfig().mobileOs(),getConfig().mobileCloudMode());
         WebDriver driver = DriverFactory.getDriverForMobile(getConfig().mobileRunMode()).getDriver(driverData);
-        DriverManager.setDriver(driver);
+        DriverManager.getInstance().setDriver(driver);
     }
 
     /**
      * This method is terminated the instance of running test script after completion.
      */
     public static void quitDriver() {
-        if (Objects.nonNull(DriverManager.getCurrentDriver())) {
-            DriverManager.getCurrentDriver().quit();
+        if (Objects.nonNull(DriverManager.getDriver())) {
+            DriverManager.getDriver().quit();
             DriverManager.unload();
         }
     }

@@ -1,8 +1,8 @@
 package com.proj.driver.factory.web.local;
 
+import com.proj.config.enums.WebBrowserType;
 import com.proj.driver.manager.web.local.ChromeManager;
 import com.proj.driver.manager.web.local.FirefoxManager;
-import com.proj.driver.enums.WebBrowserType;
 import org.openqa.selenium.WebDriver;
 
 import java.util.EnumMap;

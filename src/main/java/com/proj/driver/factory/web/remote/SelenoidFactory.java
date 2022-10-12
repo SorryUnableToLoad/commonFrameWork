@@ -1,8 +1,8 @@
 package com.proj.driver.factory.web.remote;
 
+import com.proj.config.enums.WebBrowserType;
 import com.proj.driver.manager.web.remote.selenoid.SelenoidChromeManager;
 import com.proj.driver.manager.web.remote.selenoid.SelenoidFirefoxManager;
-import com.proj.driver.enums.WebBrowserType;
 import org.openqa.selenium.WebDriver;
 
 public final class SelenoidFactory {

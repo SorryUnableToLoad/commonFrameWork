@@ -1,9 +1,8 @@
 package com.proj.config;
 
 import com.proj.config.converters.*;
-import com.proj.driver.enums.*;
+import com.proj.config.enums.*;
 import org.aeonbits.owner.Config;
-import org.openqa.selenium.remote.CommandExecutor;
 
 import java.net.URL;
 
@@ -90,6 +89,11 @@ public interface FrameworkConfig extends Config {
     URL saucelabsurl();
 
     //---------------------------------------------------------------------//
-    int waitTime=20;
+
+    @Key("waitTime")
+    int waitTime();
+
+    @Key("apkPackageName")
+    String apkPackageName();
 
 }

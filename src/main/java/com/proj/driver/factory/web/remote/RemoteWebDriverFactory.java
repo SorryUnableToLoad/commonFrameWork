@@ -1,7 +1,7 @@
 package com.proj.driver.factory.web.remote;
 
-import com.proj.driver.enums.WebBrowserType;
-import com.proj.driver.enums.WebCloudType;
+import com.proj.config.enums.WebBrowserType;
+import com.proj.config.enums.WebCloudType;
 import org.openqa.selenium.WebDriver;
 
 import java.util.EnumMap;

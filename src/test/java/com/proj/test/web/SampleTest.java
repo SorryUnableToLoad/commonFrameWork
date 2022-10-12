@@ -8,7 +8,7 @@ public class SampleTest extends WebBaseClass {
     @Test
     public void test(){
         System.out.println("WEB LOCAL");
-        String title = DriverManager.getCurrentDriver().getTitle();
+        String title = DriverManager.getDriver().getTitle();
         System.out.println(title);
     }
 }

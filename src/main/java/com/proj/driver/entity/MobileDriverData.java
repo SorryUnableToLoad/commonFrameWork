@@ -1,7 +1,7 @@
 package com.proj.driver.entity;
 
-import com.proj.driver.enums.MobileCloudType;
-import com.proj.driver.enums.MobilePlatformType;
+import com.proj.config.enums.MobileCloudType;
+import com.proj.config.enums.MobilePlatformType;
 
 public class MobileDriverData {
     private MobilePlatformType mobilePlatformType;

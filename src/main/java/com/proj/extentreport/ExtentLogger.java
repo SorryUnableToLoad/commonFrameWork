@@ -3,10 +3,6 @@ package com.proj.extentreport;
 import com.aventstack.extentreports.markuputils.CodeLanguage;
 import com.aventstack.extentreports.markuputils.ExtentColor;
 import com.aventstack.extentreports.markuputils.MarkupHelper;
-import io.restassured.http.Header;
-import io.restassured.specification.QueryableRequestSpecification;
-import io.restassured.specification.RequestSpecification;
-import io.restassured.specification.SpecificationQuerier;
 
 
 public class ExtentLogger {
@@ -29,7 +25,7 @@ public class ExtentLogger {
         ExtentManager.getTest().info(message);
     }
 
-    public static void logRequest(RequestSpecification requestSpecification) {
+   /* public static void logRequest(RequestSpecification requestSpecification) {
         QueryableRequestSpecification query = SpecificationQuerier.query(requestSpecification);
         info("Request Body Details");
         ExtentManager.getTest().info(MarkupHelper.createCodeBlock(query.getBody(), CodeLanguage.JSON));
@@ -37,7 +33,7 @@ public class ExtentLogger {
             info(header.getName() + ":" + header.getValue());
         }
 
-    }
+    }*/
 
     public static void logResponse(String message) {
         info("Response Body Details");

@@ -1,10 +1,9 @@
 package com.proj.config.converters;
 
-import com.proj.driver.enums.WebBrowserType;
+import com.proj.config.enums.WebBrowserType;
 import org.aeonbits.owner.Converter;
 
 import java.lang.reflect.Method;
-import java.util.Map;
 
 public class StringToWebBrowserTypeConverter implements Converter<WebBrowserType> {
     @Override

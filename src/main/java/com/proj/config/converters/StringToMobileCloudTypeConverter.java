@@ -1,6 +1,6 @@
 package com.proj.config.converters;
 
-import com.proj.driver.enums.MobileCloudType;
+import com.proj.config.enums.MobileCloudType;
 import org.aeonbits.owner.Converter;
 
 import java.lang.reflect.Method;

@@ -13,8 +13,6 @@ import org.testng.ITestListener;
 import org.testng.ITestResult;
 
 public class TestListenerImpl implements ITestListener {
-
-    AndroidDriver driver;
     private ExtentTest test;
     @Override
     public void onStart(ITestContext context) {

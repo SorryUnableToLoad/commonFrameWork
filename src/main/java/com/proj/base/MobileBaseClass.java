@@ -1,45 +1,52 @@
 package com.proj.base;
 
 import com.proj.driver.Driver;
-import com.proj.pages.loginpage.LoginPage;
-import org.openqa.selenium.WebDriver;
+import com.proj.driver.DriverManager;
+import com.proj.pages.initializepages.InitializePages;
 import org.testng.Reporter;
 import org.testng.annotations.*;
 
 import java.util.concurrent.TimeUnit;
 
+import static com.proj.config.FrameworkConfigFactory.getConfig;
+
 /**
  * This class contains basic configuration methods to execute every TestScripts
+ *
  * @author surajkumarnaganuri
  */
 public class MobileBaseClass {
-WebDriver driver;
+
     /**
-     * This method consist of before Suite configuration functionalities
+     * This method consist of before method configuration functionalities
      */
-    @BeforeClass
-    public void setUp(){
-         Driver.initDriverForMobile();
+    @BeforeSuite
+    public void setUp() {
+        Driver.initDriverForMobile();
+        DriverManager.getDriver().manage().timeouts().implicitlyWait(getConfig().waitTime(), TimeUnit.SECONDS);
+        Reporter.log("Set Up Done", true);
     }
 
-
-    @BeforeMethod(enabled = false)
+    @BeforeClass(enabled = true)
     public void loginToApplication() {
-        LoginPage lp=new LoginPage();
-        lp.loginToApplication();
-        Reporter.log("Successfully login to the application",true);
+        InitializePages pages = new InitializePages();
+        pages.loginPage.loginToApplication("7019020148");
+        Reporter.log("Successfully login to the application", true);
     }
-    @AfterMethod(enabled = false)
-    public void logoutToApplication(){
 
-        Reporter.log("Successfully logout to the application",true);
+    @AfterClass(enabled = true)
+    public void logoutToApplication() {
+        InitializePages pages = new InitializePages();
+        pages.logoutPage.logoutToApplication();
+        Reporter.log("Successfully logout to the application", true);
     }
 
     /**
      * This method consist of after method configuration functionalities
      */
-    @AfterClass(enabled = false)
-    public void tearDown(){
+    @AfterSuite
+    public void tearDown() {
         Driver.quitDriver();
+        Reporter.log("Teat Down", true);
     }
 }

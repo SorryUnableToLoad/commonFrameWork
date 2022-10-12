@@ -1,5 +1,6 @@
 package com.proj.driver.manager.mobile.remote.saucelabs;
 
+import io.appium.java_client.AppiumDriver;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.remote.RemoteWebDriver;
@@ -11,7 +12,7 @@ public final class SauceLabsAndroidManager {
 
     private SauceLabsAndroidManager(){}
 
-    public static WebDriver getDriver(){
+    public static AppiumDriver getDriver(){
         //dummy code and not tested
         DesiredCapabilities capabilities = new DesiredCapabilities();
         capabilities.setCapability("platformName", "Android");
@@ -23,7 +24,7 @@ public final class SauceLabsAndroidManager {
         sauceOptions.setCapability("username", getConfig().saucelabsurl());
         sauceOptions.setCapability("accessKey", getConfig().key());
         capabilities.setCapability("sauce:options", sauceOptions);
-        return new RemoteWebDriver(getConfig()
+        return new AppiumDriver(getConfig()
                 .saucelabsurl(), capabilities);
     }
 }

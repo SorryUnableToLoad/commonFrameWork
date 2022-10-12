@@ -1,7 +1,7 @@
 package com.proj.driver.manager.web.remote.seleniumgrid;
 
 import com.proj.config.FrameworkConfigFactory;
-import com.proj.driver.enums.WebBrowserType;
+import com.proj.config.enums.WebBrowserType;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.remote.RemoteWebDriver;

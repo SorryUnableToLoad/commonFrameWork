@@ -1,6 +1,7 @@
 package com.proj.driver.manager.mobile.local;
 
 import com.proj.config.FrameworkConfigFactory;
+import io.appium.java_client.AppiumDriver;
 import io.appium.java_client.remote.MobileCapabilityType;
 import org.openqa.selenium.Platform;
 import org.openqa.selenium.WebDriver;
@@ -9,12 +10,12 @@ import org.openqa.selenium.remote.RemoteWebDriver;
 
 public final class IosManager {
     private IosManager(){}
-    public static WebDriver getDriver(){
+    public static AppiumDriver getDriver(){
         DesiredCapabilities desiredCapabilities=new DesiredCapabilities();
         desiredCapabilities.setCapability(MobileCapabilityType.PLATFORM_NAME, Platform.IOS);
         desiredCapabilities.setCapability(MobileCapabilityType.AUTOMATION_NAME,"XCUITest");
         desiredCapabilities.setCapability(MobileCapabilityType.DEVICE_NAME,"iPod touch (7th generation)");
         desiredCapabilities.setCapability(MobileCapabilityType.APP,System.getProperty("user.dir")+"ios-app.zip");
-        return new RemoteWebDriver(FrameworkConfigFactory.getConfig().localAppiumServerURL(),desiredCapabilities)
+        return new AppiumDriver(FrameworkConfigFactory.getConfig().localAppiumServerURL(),desiredCapabilities)
 ;    }
 }

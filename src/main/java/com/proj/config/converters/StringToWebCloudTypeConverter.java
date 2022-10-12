@@ -1,6 +1,6 @@
 package com.proj.config.converters;
 
-import com.proj.driver.enums.WebCloudType;
+import com.proj.config.enums.WebCloudType;
 import org.aeonbits.owner.Converter;
 
 import java.lang.reflect.Method;

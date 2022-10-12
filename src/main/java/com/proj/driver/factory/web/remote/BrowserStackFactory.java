@@ -1,8 +1,8 @@
 package com.proj.driver.factory.web.remote;
 
+import com.proj.config.enums.WebBrowserType;
 import com.proj.driver.manager.web.remote.browserstack.BrowserStackChromeManager;
 import com.proj.driver.manager.web.remote.browserstack.BrowserStackFirefoxManager;
-import com.proj.driver.enums.WebBrowserType;
 import org.openqa.selenium.WebDriver;
 
 public final class BrowserStackFactory {

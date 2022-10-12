@@ -1,10 +1,9 @@
 package com.proj.config.converters;
 
-import com.proj.driver.enums.MobilePlatformType;
+import com.proj.config.enums.MobilePlatformType;
 import org.aeonbits.owner.Converter;
 
 import java.lang.reflect.Method;
-import java.util.Map;
 
 public class StringToMobileOsTypeConverter implements Converter<MobilePlatformType> {
     @Override

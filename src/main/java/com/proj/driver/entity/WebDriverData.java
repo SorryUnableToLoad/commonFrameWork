@@ -1,7 +1,7 @@
 package com.proj.driver.entity;
 
-import com.proj.driver.enums.WebBrowserType;
-import com.proj.driver.enums.WebCloudType;
+import com.proj.config.enums.WebBrowserType;
+import com.proj.config.enums.WebCloudType;
 
 public class WebDriverData {
     private WebBrowserType browserType;
