@@ -8,7 +8,7 @@ import static com.proj.utils.AppiumDriverUtils.*;
 public class LogoutPage {
 
     /**
-     * Identifing the mobile elements by using By class
+     * Identifying the mobile elements by using By class
      */
     private static final By account_page_button = By.xpath("//android.view.View[@content-desc='Account']");
     private static final By logout_option = By.xpath("//android.view.View[@content-desc='Logout']");
@@ -17,7 +17,7 @@ public class LogoutPage {
     private static final By cancel_button = By.xpath("//android.widget.Button[@content-desc='Logout']");
 
     /**
-     * This method is used to logout to the application
+     * This method is used to log out to the application
      */
     public void logoutToApplication() {
         clickOnElement(account_page_button);

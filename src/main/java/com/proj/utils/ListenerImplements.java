@@ -7,16 +7,16 @@ import com.aventstack.extentreports.Status;
 import com.aventstack.extentreports.reporter.ExtentSparkReporter;
 import com.aventstack.extentreports.reporter.configuration.Theme;
 import lombok.SneakyThrows;
-import org.apache.commons.io.FileUtils;
 import org.testng.ITestContext;
 import org.testng.ITestListener;
 import org.testng.ITestResult;
 
 import java.io.File;
+import java.io.IOException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
-import static org.apache.commons.codec.binary.Base64.encodeBase64String;
+import static com.proj.utils.AppiumDriverUtils.takeScreenShot;
 
 public class ListenerImplements implements ITestListener {
     public ListenerImplements() {
@@ -62,6 +62,14 @@ public class ListenerImplements implements ITestListener {
         test.log(Status.FAIL, result.getMethod().getMethodName() + "is failed");
         test.log(Status.FAIL, result.getThrowable());
 
+        String testCaseName = result.getMethod().getMethodName();
+        try {
+            String path = takeScreenShot();
+            test.fail(testCaseName,MediaEntityBuilder.createScreenCaptureFromBase64String(path).build());
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
         //  String screenShotAs = ((TakesScreenshot) DriverManager.getDriver()).getScreenshotAs(OutputType.BASE64);
         // test.fail(result.getMethod().getMethodName(), MediaEntityBuilder.createScreenCaptureFromBase64String(screenShotAs).build());
 
@@ -90,8 +98,7 @@ public class ListenerImplements implements ITestListener {
             throw new RuntimeException(e);
         }
         test.addScreenCaptureFromPath(dest, result.getMethod().getMethodName());*/
-
-        String screenshotPath = ScreenShotUtils.getScreenShot(result.getMethod().getMethodName()+ ".png");
+       // String path = takeScreenShot();
         //test.addScreenCaptureFromPath(screenshotPath).fail(MediaEntityBuilder.createScreenCaptureFromPath(screenshotPath).build());
 
        /* File f = new File(screenshotPath);
@@ -100,9 +107,9 @@ public class ListenerImplements implements ITestListener {
         fis.read(bytes);
         String base64Img = new String(encodeBase64(bytes), StandardCharsets.UTF_8);*/
 
-        byte[] file = FileUtils.readFileToByteArray(new File(screenshotPath));
+       /* byte[] file = FileUtils.readFileToByteArray(new File(path));
         String base64Img = encodeBase64String(file);
-        test.addScreenCaptureFromPath(screenshotPath).fail(MediaEntityBuilder.createScreenCaptureFromBase64String(base64Img).build());
+        test.addScreenCaptureFromPath(path).fail(MediaEntityBuilder.createScreenCaptureFromBase64String(base64Img).build());*/
     }
 
     @Override

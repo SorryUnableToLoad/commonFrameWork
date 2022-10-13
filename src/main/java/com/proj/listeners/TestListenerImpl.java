@@ -2,22 +2,26 @@ package com.proj.listeners;
 
 import com.aventstack.extentreports.ExtentTest;
 import com.aventstack.extentreports.MediaEntityBuilder;
+import com.aventstack.extentreports.Status;
 import com.proj.annotations.FrameworkAnnotations;
-import com.proj.extentreport.ExtentLogger;
+import com.proj.extentreport.ExtentManager;
 import com.proj.extentreport.ExtentReport;
-import io.appium.java_client.android.AndroidDriver;
-import org.openqa.selenium.OutputType;
-import org.openqa.selenium.TakesScreenshot;
 import org.testng.ITestContext;
 import org.testng.ITestListener;
 import org.testng.ITestResult;
 
+import java.io.IOException;
+
+import static com.proj.utils.AppiumDriverUtils.takeScreenShot;
+
 public class TestListenerImpl implements ITestListener {
     private ExtentTest test;
+
     @Override
     public void onStart(ITestContext context) {
         ExtentReport.initReport();
     }
+
     @Override
     public void onFinish(ITestContext context) {
         ExtentReport.tearDownReport();
@@ -34,28 +38,32 @@ public class TestListenerImpl implements ITestListener {
         String[] category = result.getMethod().getConstructorOrMethod().getMethod().getAnnotation(FrameworkAnnotations.class).category();
         ExtentReport.addCategory(category);
 
-        ExtentLogger.info(result.getMethod().getMethodName()+" IS EXECUTED");
+        ExtentManager.getTest().log(Status.INFO,result.getMethod().getMethodName()+" is executed");
     }
 
     @Override
     public void onTestSuccess(ITestResult result) {
-        ExtentLogger.pass(result.getMethod().getMethodName()+" IS PASS");
+        ExtentManager.getTest().log(Status.PASS,result.getMethod().getMethodName()+" is pass");
     }
 
     @Override
     public void onTestFailure(ITestResult result) {
-        ExtentLogger.fail(result.getMethod().getMethodName()+" IS FAIL");
-        ExtentLogger.fail(String.valueOf(result.getThrowable()));
+        ExtentManager.getTest().log(Status.FAIL,result.getMethod().getMethodName()+"is failed");
+        ExtentManager.getTest().log(Status.FAIL,result.getThrowable());
+        String testCaseName = result.getMethod().getMethodName();
+        try {
+            String path = takeScreenShot();
+            ExtentManager.getTest().fail(testCaseName,MediaEntityBuilder.createScreenCaptureFromBase64String(path).build());
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
 
-        ExtentReport.takeScreenShot(result);
-        //String screenShotAs = ((TakesScreenshot) driver).getScreenshotAs(OutputType.BASE64);
-        //test.fail(result.getMethod().getMethodName(), MediaEntityBuilder.createScreenCaptureFromBase64String(screenShotAs).build());
     }
 
     @Override
     public void onTestSkipped(ITestResult result) {
-        ExtentLogger.skipped(result.getMethod().getMethodName()+" IS SKIPPED");
-        ExtentLogger.skipped(String.valueOf(result.getThrowable()));
+        ExtentManager.getTest().log(Status.SKIP,result.getMethod().getMethodName()+"is skipped");
+        ExtentManager.getTest().log(Status.SKIP,result.getThrowable());
     }
 
     @Override

@@ -10,13 +10,12 @@ import io.appium.java_client.touch.TapOptions;
 import io.appium.java_client.touch.WaitOptions;
 import io.appium.java_client.touch.offset.ElementOption;
 import io.appium.java_client.touch.offset.PointOption;
-import org.openqa.selenium.By;
-import org.openqa.selenium.Dimension;
-import org.openqa.selenium.WebElement;
+import org.openqa.selenium.*;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
+import java.io.IOException;
 import java.time.Duration;
 import java.util.function.Consumer;
 
@@ -253,5 +252,8 @@ public class AppiumDriverUtils {
     //====================================================================================================//
     public static WebElement chooseAProduct(String productName) {
         return driver.findElement(By.xpath("//android.widget.ImageView[@content-desc='" + productName + "']"));
+    }
+    public static String takeScreenShot() throws IOException {
+        return ((TakesScreenshot)driver).getScreenshotAs(OutputType.BASE64);
     }
 }

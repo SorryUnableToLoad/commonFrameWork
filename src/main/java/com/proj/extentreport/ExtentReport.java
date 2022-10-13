@@ -44,11 +44,6 @@ public class ExtentReport {
         ExtentManager.setExtent(test);
     }
 
-    public static void takeScreenShot(ITestResult result){
-        String screenShotAs = ((TakesScreenshot) driver).getScreenshotAs(OutputType.BASE64);
-        test.fail(result.getMethod().getMethodName(), MediaEntityBuilder.createScreenCaptureFromBase64String(screenShotAs).build());
-    }
-
     public static void addAuthor(String[] authors ) {
         for (String author : authors) {
             ExtentManager.getTest().assignAuthor(author);
