@@ -27,7 +27,7 @@ public class ExtentReport {
         ExtentSparkReporter extentSparkReporter = new ExtentSparkReporter(file);
         extentSparkReporter.config().setTheme(Theme.STANDARD);
         extentSparkReporter.config().setDocumentTitle("Customer App Project");
-        extentSparkReporter.config().setReportName("API's Test");
+        extentSparkReporter.config().setReportName("Regression Testing");
         report = new ExtentReports();
         report.attachReporter(extentSparkReporter);
         report.setSystemInfo("PlatForm", "Android");

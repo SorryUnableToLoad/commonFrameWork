@@ -3,12 +3,13 @@ package com.proj.test.mobile.demotest;
 import com.proj.annotations.FrameworkAnnotations;
 import com.proj.base.MobileBaseClass;
 import org.testng.SkipException;
+import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 import org.testng.asserts.SoftAssert;
 
 import static com.proj.utils.AppiumDriverUtils.*;
-
-public class ScrollTest extends MobileBaseClass {
+@Listeners(com.proj.listeners.TestListenerImpl.class)
+public class ReportTest extends MobileBaseClass {
     @FrameworkAnnotations(author = "Suraj")
     @Test
     public void test() throws InterruptedException {
@@ -40,7 +41,7 @@ public class ScrollTest extends MobileBaseClass {
         System.out.println("test 2nd executed but failed");
         SoftAssert sa = new SoftAssert();
         sa.fail("fail");
-        //sa.assertAll();
+        sa.assertAll();
     }
     @FrameworkAnnotations(author = "Suraj")
     @Test

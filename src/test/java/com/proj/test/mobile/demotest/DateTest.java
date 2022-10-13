@@ -6,9 +6,7 @@ import org.testng.annotations.Test;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
-public class dateTest {
-    public dateTest(String deliveryDate) {
-    }
+public class DateTest {
 
     @Test
     public void customdateformate() {

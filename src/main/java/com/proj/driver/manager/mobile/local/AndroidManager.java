@@ -25,8 +25,8 @@ public final class AndroidManager {
         desiredCapabilities.setCapability(MobileCapabilityType.PLATFORM_VERSION, "12");
         desiredCapabilities.setCapability(MobileCapabilityType.AUTOMATION_NAME, "uiautomator2");
         //desiredCapabilities.setCapability(AndroidMobileCapabilityType.APP_ACTIVITY, APP_ACTIVITY_NAME);
-        desiredCapabilities.setCapability(AndroidMobileCapabilityType.APP_PACKAGE, getConfig().apkPackageName());
-        desiredCapabilities.setCapability(MobileCapabilityType.APP, System.getProperty("user.dir") + "/src/test/resources/apkbuilds/app_prod_6_oct_2022.apk");
+        //desiredCapabilities.setCapability(AndroidMobileCapabilityType.APP_PACKAGE, getConfig().apkPackageName());
+        //desiredCapabilities.setCapability(MobileCapabilityType.APP, System.getProperty("user.dir") + "/src/test/resources/apkbuilds/app_prod_6_oct_2022.apk");
         //desiredCapabilities.setCapability(MobileCapabilityType.APP,System.getProperty("user.dir")+"/src/test/resources/apkbuilds/android-app.apk");
         return new AppiumDriver(getConfig().localAppiumServerURL(), desiredCapabilities);
     }

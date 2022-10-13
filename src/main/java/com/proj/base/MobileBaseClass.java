@@ -27,14 +27,14 @@ public class MobileBaseClass {
         Reporter.log("Set Up Done", true);
     }
 
-    @BeforeClass(enabled = true)
+    @BeforeClass(enabled = false)
     public void loginToApplication() {
         InitializePages pages = new InitializePages();
         pages.loginPage.loginToApplication("7019020148");
         Reporter.log("Successfully login to the application", true);
     }
 
-    @AfterClass(enabled = true)
+    @AfterClass(enabled = false)
     public void logoutToApplication() {
         InitializePages pages = new InitializePages();
         pages.logoutPage.logoutToApplication();
