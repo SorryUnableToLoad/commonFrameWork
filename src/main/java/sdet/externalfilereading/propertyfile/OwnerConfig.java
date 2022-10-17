@@ -1,4 +1,4 @@
-package externalfilereading;
+package sdet.externalfilereading.propertyfile;
 
 import org.aeonbits.owner.Config;
 

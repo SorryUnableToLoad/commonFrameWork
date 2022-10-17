@@ -1,6 +1,7 @@
-package externalfilereading;
+package sdet.externalfilereading.propertyfile;
 
-import javax.jws.soap.SOAPBinding;
+import sdet.externalfilereading.propertyfile.ConfigProperties;
+import sdet.externalfilereading.propertyfile.TryWithResources;
 
 public class TryWithResourcesRunner {
     public static void main(String[] args) {

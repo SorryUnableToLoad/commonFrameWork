@@ -1,9 +1,6 @@
-package externalfilereading;
-
-import com.sun.xml.internal.ws.policy.privateutil.PolicyUtils;
+package sdet.externalfilereading.propertyfile;
 
 import java.io.FileInputStream;
-import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.util.HashMap;
 import java.util.Map;

@@ -1,4 +1,6 @@
-package externalfilereading;
+package sdet.externalfilereading.propertyfile;
+
+import sdet.externalfilereading.propertyfile.PropertyFileUtils;
 
 public class PropertyFileUtilsRunner {
     public static void main(String[] args) {

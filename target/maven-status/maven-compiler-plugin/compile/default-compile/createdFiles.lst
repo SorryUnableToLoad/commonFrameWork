@@ -15,7 +15,6 @@ com/proj/config/enums/PlatFormType.class
 com/proj/driver/manager/web/local/ChromeManager.class
 com/proj/pages/home/HomePageRepo.class
 com/proj/driver/manager/mobile/remote/browserstack/BrowserStackAndroidManager.class
-com/proj/utils/ScreenShotUtils.class
 com/proj/driver/IMobileDriver.class
 com/proj/driver/impl/mobile/LocalMobileDriverImpl.class
 com/proj/pages/account/AccountPageRepo.class
@@ -51,10 +50,8 @@ com/proj/config/converters/StringToWebCloudTypeConverter.class
 com/proj/config/converters/StringToWebBrowserTypeConverter.class
 com/proj/driver/impl/web/LocalWebDriverImpl.class
 com/proj/driver/manager/web/remote/browserstack/BrowserStackChromeManager.class
-com/proj/utils/FileUtility.class
 com/proj/driver/manager/mobile/remote/browserstack/BrowserStackIosManager.class
 com/proj/pages/categories/CategoriesPageRepo.class
-com/proj/extentreport/ExtentLogger.class
 com/proj/driver/DriverManager.class
 com/proj/pages/mycart/MyCartPageRepo.class
 com/proj/driver/factory/mobile/local/LocalMobileDriverFactory.class
