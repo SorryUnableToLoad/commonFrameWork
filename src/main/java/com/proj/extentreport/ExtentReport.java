@@ -25,7 +25,7 @@ public class ExtentReport {
     public static void initReport() {
         File file = new File("./extentreports/HTML" + " " + timeStamp);
         ExtentSparkReporter extentSparkReporter = new ExtentSparkReporter(file);
-        extentSparkReporter.config().setTheme(Theme.STANDARD);
+        extentSparkReporter.config().setTheme(Theme.DARK);
         extentSparkReporter.config().setDocumentTitle("Customer App Project");
         extentSparkReporter.config().setReportName("Regression Testing");
         report = new ExtentReports();

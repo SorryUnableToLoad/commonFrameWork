@@ -1,4 +1,4 @@
-package com.proj.test.mobile.loginPageTest;
+package com.proj.test.mobile.demotest;
 
 import com.proj.annotations.FrameworkAnnotations;
 import com.proj.base.MobileBaseClass;

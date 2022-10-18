@@ -9,7 +9,8 @@ import org.testng.asserts.SoftAssert;
 
 import static com.proj.utils.AppiumDriverUtils.*;
 @Listeners(com.proj.listeners.TestListenerImpl.class)
-public class ReportTest extends MobileBaseClass {
+//@Listeners(com.proj.utils.ListenerImplements.class)
+public class FrameworkSanityCheck extends MobileBaseClass {
     @FrameworkAnnotations(author = "Suraj")
     @Test
     public void test() throws InterruptedException {
