@@ -253,7 +253,5 @@ public class AppiumDriverUtils {
     public static WebElement chooseAProduct(String productName) {
         return driver.findElement(By.xpath("//android.widget.ImageView[@content-desc='" + productName + "']"));
     }
-    public static String takeScreenShot() throws IOException {
-        return ((TakesScreenshot)driver).getScreenshotAs(OutputType.BASE64);
-    }
+
 }

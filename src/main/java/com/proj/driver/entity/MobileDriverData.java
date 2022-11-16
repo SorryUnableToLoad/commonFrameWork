@@ -5,11 +5,11 @@ import com.proj.config.enums.MobilePlatformType;
 
 public class MobileDriverData {
     private MobilePlatformType mobilePlatformType;
-    private MobileCloudType mobileRemoteModeType;
+    private MobileCloudType mobileCloudType;
 
     public MobileDriverData(MobilePlatformType mobilePlatformType, MobileCloudType mobileRemoteModeType) {
         this.mobilePlatformType = mobilePlatformType;
-        this.mobileRemoteModeType = mobileRemoteModeType;
+        this.mobileCloudType = mobileRemoteModeType;
     }
 
     public MobilePlatformType getMobilePlatformType() {
@@ -17,6 +17,6 @@ public class MobileDriverData {
     }
 
     public MobileCloudType getMobileRemoteModeType() {
-        return this.mobileRemoteModeType;
+        return this.mobileCloudType;
     }
 }

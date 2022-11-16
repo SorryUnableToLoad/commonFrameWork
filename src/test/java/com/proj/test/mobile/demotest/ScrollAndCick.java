@@ -1,7 +1,7 @@
 package com.proj.test.mobile.demotest;
 
-import com.proj.base.MobileBaseClass;
 import com.proj.driver.DriverManager;
+import com.proj.test.base.MobileSetUp;
 import io.appium.java_client.MobileElement;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
@@ -11,7 +11,7 @@ import java.util.List;
 
 import static com.proj.utils.AppiumDriverUtils.scrollToSpecificElementAndClick;
 
-public class ScrollAndCick extends MobileBaseClass {
+public class ScrollAndCick extends MobileSetUp {
 
     @Test
     public void scrollAndClick() throws InterruptedException {

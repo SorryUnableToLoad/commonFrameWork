@@ -1,15 +1,14 @@
 package com.proj.test.mobile.demotest;
 
-import com.proj.base.MobileBaseClass;
 import com.proj.driver.DriverManager;
-import io.appium.java_client.MobileElement;
+import com.proj.test.base.MobileSetUp;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.testng.annotations.Test;
 
 import java.util.List;
 
-public class ListOfStore extends MobileBaseClass {
+public class ListOfStore extends MobileSetUp {
     @Test
     public void listOfStore() throws InterruptedException {
         Thread.sleep(3000);

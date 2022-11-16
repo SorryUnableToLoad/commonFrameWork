@@ -9,6 +9,7 @@ import org.openqa.selenium.remote.RemoteWebDriver;
 public class BrowserStackIosManager {
     private BrowserStackIosManager(){}
     public static AppiumDriver getDriver() {
+        //dummy code and not tested
         DesiredCapabilities desiredCapabilities=new DesiredCapabilities();
         desiredCapabilities.setCapability("app","bs://c700ce60cf13ae8ed97705a55b8e022f113c5827c");
         desiredCapabilities.setCapability("device","GooglePixel 3");

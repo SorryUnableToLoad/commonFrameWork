@@ -1,10 +1,10 @@
 package com.proj.test.mobile.apptestcases;
 
-import com.proj.base.MobileBaseClass;
+import com.proj.test.base.MobileSetUp;
 import com.proj.pages.initializepages.InitializePages;
 import org.testng.annotations.Test;
 
-public class apptestCases extends MobileBaseClass {
+public class apptestCases extends MobileSetUp {
     @Test(priority = 0)
     public void createNewOrder() {
         InitializePages pages = new InitializePages();

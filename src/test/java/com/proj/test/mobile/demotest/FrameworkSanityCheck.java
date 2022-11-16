@@ -1,7 +1,7 @@
 package com.proj.test.mobile.demotest;
 
 import com.proj.annotations.FrameworkAnnotations;
-import com.proj.base.MobileBaseClass;
+import com.proj.test.base.MobileSetUp;
 import org.testng.SkipException;
 import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
@@ -10,7 +10,7 @@ import org.testng.asserts.SoftAssert;
 import static com.proj.utils.AppiumDriverUtils.*;
 @Listeners(com.proj.listeners.TestListenerImpl.class)
 //@Listeners(com.proj.utils.ListenerImplements.class)
-public class FrameworkSanityCheck extends MobileBaseClass {
+public class FrameworkSanityCheck extends MobileSetUp {
     @FrameworkAnnotations(author = "Suraj")
     @Test
     public void test() throws InterruptedException {

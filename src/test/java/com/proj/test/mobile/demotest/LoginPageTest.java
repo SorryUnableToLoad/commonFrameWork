@@ -1,10 +1,10 @@
 package com.proj.test.mobile.demotest;
 
 import com.proj.annotations.FrameworkAnnotations;
-import com.proj.base.MobileBaseClass;
+import com.proj.test.base.MobileSetUp;
 import org.testng.annotations.Test;
 
-public class LoginPageTest extends MobileBaseClass {
+public class LoginPageTest extends MobileSetUp {
     @FrameworkAnnotations(author = "Suraj")
     @Test
     public void homePageValidation() throws InterruptedException {

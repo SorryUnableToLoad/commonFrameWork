@@ -1,4 +1,4 @@
-package com.proj.extentreport;
+package com.proj.listeners.extentreport;
 
 import com.aventstack.extentreports.ExtentTest;
 

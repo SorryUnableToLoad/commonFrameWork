@@ -1,10 +1,13 @@
-package com.proj.base;
+package com.proj.test.base;
 
 import com.proj.driver.Driver;
 import com.proj.driver.DriverManager;
 import com.proj.pages.initializepages.InitializePages;
 import org.testng.Reporter;
-import org.testng.annotations.*;
+import org.testng.annotations.AfterClass;
+import org.testng.annotations.AfterSuite;
+import org.testng.annotations.BeforeClass;
+import org.testng.annotations.BeforeSuite;
 
 import java.util.concurrent.TimeUnit;
 
@@ -15,7 +18,7 @@ import static com.proj.config.FrameworkConfigFactory.getConfig;
  *
  * @author surajkumarnaganuri
  */
-public class MobileBaseClass {
+public class MobileSetUp {
 
     /**
      * This method consist of before method configuration functionalities

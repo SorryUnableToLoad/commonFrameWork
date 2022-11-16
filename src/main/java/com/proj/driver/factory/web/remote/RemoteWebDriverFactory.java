@@ -22,18 +22,20 @@ public class RemoteWebDriverFactory {
         return null;
     }*/
 
-    private static final Map<WebCloudType, Function<WebBrowserType,WebDriver>> MAP=new EnumMap<>(WebCloudType.class);
+    private static final Map<WebCloudType, Function<WebBrowserType, WebDriver>> MAP =
+            new EnumMap<>(WebCloudType.class);
     //private static final Function<BrowserType,WebDriver>SELENIUMGRID=browserType -> SelenoidFactory.getDriver();
-    private static final Function<WebBrowserType,WebDriver>SELENIUMGRID=SeleniumGridFactory::getDriver;
-    private static final Function<WebBrowserType,WebDriver>SELENOID=SelenoidFactory::getDriver;
-    private static final Function<WebBrowserType,WebDriver>BROWSERSTACK=BrowserStackFactory::getDriver;
+    private static final Function<WebBrowserType, WebDriver> SELENIUMGRID = SeleniumGridFactory::getDriver;
+    private static final Function<WebBrowserType, WebDriver> SELENOID = SelenoidFactory::getDriver;
+    private static final Function<WebBrowserType, WebDriver> BROWSERSTACK = BrowserStackFactory::getDriver;
 
     static {
         MAP.put(WebCloudType.SELENIUMGRID, SELENIUMGRID);
         MAP.put(WebCloudType.SELENOID, SELENOID);
         MAP.put(WebCloudType.BROWSERSTACK, BROWSERSTACK);
     }
-    public static WebDriver getDriver(WebCloudType cloudType, WebBrowserType webBrowserType){
+
+    public static WebDriver getDriver(WebCloudType cloudType, WebBrowserType webBrowserType) {
         return MAP.get(cloudType).apply(webBrowserType);
     }
 }

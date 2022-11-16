@@ -13,6 +13,8 @@ public final class BrowserStackFirefoxManager {
         DesiredCapabilities desiredCapabilities = new DesiredCapabilities();
         desiredCapabilities.setCapability("browserName", "chrome");
         desiredCapabilities.setCapability("rowserVersion", "101.0");
+        desiredCapabilities.setCapability("os", "Windows");
+        desiredCapabilities.setCapability("os_version", "10");
         desiredCapabilities.setCapability("enableVNC", true);
         desiredCapabilities.setCapability("enableVideo", false);
         return new RemoteWebDriver(FrameworkConfigFactory.getConfig().browserStackURL(), desiredCapabilities);

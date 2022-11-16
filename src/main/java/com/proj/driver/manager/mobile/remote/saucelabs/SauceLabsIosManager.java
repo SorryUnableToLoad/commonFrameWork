@@ -12,6 +12,7 @@ public final class SauceLabsIosManager {
     private SauceLabsIosManager(){}
 
     public static AppiumDriver getDriver(){
+        //dummy code and not tested
         DesiredCapabilities capabilities = new DesiredCapabilities();
         capabilities.setCapability("platformName", "iOS");
         capabilities.setCapability("appium:platformVersion", "15.0");

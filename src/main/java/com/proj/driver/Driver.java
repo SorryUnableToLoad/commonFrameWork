@@ -25,8 +25,11 @@ public final class Driver {
      */
     public static void initDriverForWeb() {
         if (Objects.isNull(DriverManager.getDriver())) {
-            WebDriverData driverData = new WebDriverData(getConfig().webBrowser(), getConfig().webCloudMode());
-            WebDriver driver = DriverFactory.getDriverForWeb(getConfig().webRunMode()).getDriver(driverData);
+            WebDriverData driverData = new WebDriverData(getConfig().webBrowser(),
+                    getConfig().webCloudMode());
+            WebDriver driver = DriverFactory
+                    .getDriverForWeb(getConfig().webRunMode())
+                    .getDriver(driverData);
             DriverManager.getInstance().setDriver(driver);
             loadURL();
         }
@@ -51,8 +54,11 @@ public final class Driver {
      */
     public static void initDriverForMobile() {
         //MobileDriverData driverData = new MobileDriverData(MobilePlatformType.ANDROID, getConfig().mobileCloudMode());
-        MobileDriverData driverData=new MobileDriverData(getConfig().mobileOs(),getConfig().mobileCloudMode());
-        WebDriver driver = DriverFactory.getDriverForMobile(getConfig().mobileRunMode()).getDriver(driverData);
+        MobileDriverData driverData=new MobileDriverData(getConfig().mobileOs()
+                ,getConfig().mobileCloudMode());
+        WebDriver driver = DriverFactory
+                .getDriverForMobile(getConfig().mobileRunMode())
+                .getDriver(driverData);
         DriverManager.getInstance().setDriver(driver);
     }
 

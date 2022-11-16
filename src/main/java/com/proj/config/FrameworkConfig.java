@@ -13,7 +13,7 @@ import java.net.URL;
         // look for jenkins environment property
         "system:env",
         //look for local directory properties file
-        "file:${user.dir}/src/main/resources/config.properties"
+        "file:${user.dir}/src/test/resources/config.properties"
 })
 
 public interface FrameworkConfig extends Config {
@@ -23,6 +23,9 @@ public interface FrameworkConfig extends Config {
 
     @Key("${environment}.webUrl")
     String webUrl();
+
+    @Key("apiBaseUrl")
+    String baseUri();
 
 //---------------------------------------------------------------------//
 

@@ -1,22 +1,19 @@
 package com.proj.listeners;
 
-import com.aventstack.extentreports.ExtentTest;
 import com.aventstack.extentreports.MediaEntityBuilder;
 import com.aventstack.extentreports.Status;
 import com.proj.annotations.FrameworkAnnotations;
-import com.proj.extentreport.ExtentManager;
-import com.proj.extentreport.ExtentReport;
+import com.proj.listeners.extentreport.ExtentManager;
+import com.proj.listeners.extentreport.ExtentReport;
 import org.testng.ITestContext;
 import org.testng.ITestListener;
 import org.testng.ITestResult;
 
 import java.io.IOException;
 
-import static com.proj.utils.AppiumDriverUtils.takeScreenShot;
+import static com.proj.utils.ScreenshotUtils.takeScreenShot;
 
 public class TestListenerImpl implements ITestListener {
-    private ExtentTest test;
-
     @Override
     public void onStart(ITestContext context) {
         ExtentReport.initReport();
@@ -48,8 +45,8 @@ public class TestListenerImpl implements ITestListener {
 
     @Override
     public void onTestFailure(ITestResult result) {
-        ExtentManager.getTest().log(Status.FAIL,result.getMethod().getMethodName()+"is failed");
         ExtentManager.getTest().log(Status.FAIL,result.getThrowable());
+        ExtentManager.getTest().log(Status.FAIL,result.getMethod().getMethodName()+"is failed");
         String testCaseName = result.getMethod().getMethodName();
         try {
             String path = takeScreenShot();

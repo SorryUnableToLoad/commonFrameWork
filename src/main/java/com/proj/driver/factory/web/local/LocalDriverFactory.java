@@ -13,7 +13,7 @@ public final class LocalDriverFactory {
     private LocalDriverFactory() {
     }
     /*
-        public static WebDriver getDriver(BrowserType browserType) {
+        public static WebDriver getDriver(WebBrowserType browserType) {
             return (isBrowser(browserType))
                     ? ChromeManager.getDriver()
                     : FirefoxManager.getDriver();
@@ -27,8 +27,8 @@ public final class LocalDriverFactory {
     /*private static final Supplier<WebDriver> CHROME=ChromeManager::getDriver;
     private static final Supplier<WebDriver> FIREFOX=FirefoxManager::getDriver;
     static {
-        MAP.put(BrowserType.CHROME,CHROME);
-        MAP.put(BrowserType.FIREFOX,FIREFOX);
+        MAP.put(WebBrowserType.CHROME,CHROME);
+        MAP.put(WebBrowserType.FIREFOX,FIREFOX);
     }*/
     static {
         MAP.put(WebBrowserType.CHROME, ChromeManager::getDriver);

@@ -33,21 +33,13 @@ public class DriverManager {
         return getInstance().getdriver();
     }
 
-    private static boolean isMobileDriver(WebDriver driver) {
-        return driver instanceof AndroidDriver || driver instanceof IOSDriver;
-    }
-
-    public static void unload() {
-        WEB_DRIVER_THREAD_LOCAL.remove();
-        MOBILE_DRIVER_THREAD_LOCAL.remove();
-        CONTEXT.remove();
-    }
-
     private WebDriver getdriver() {
-        return CONTEXT.get() == PlatFormType.WEB ? WEB_DRIVER_THREAD_LOCAL.get() : MOBILE_DRIVER_THREAD_LOCAL.get();
+        return CONTEXT.get() == PlatFormType.WEB
+                ? WEB_DRIVER_THREAD_LOCAL.get()
+                : MOBILE_DRIVER_THREAD_LOCAL.get();
     }
 
-     public void setDriver(WebDriver driver) {
+    public void setDriver(WebDriver driver) {
         if (isMobileDriver(driver)) {
             MOBILE_DRIVER_THREAD_LOCAL.set(driver);
             DRIVER_MAP.put(PlatFormType.MOBILE, MOBILE_DRIVER_THREAD_LOCAL);
@@ -57,5 +49,15 @@ public class DriverManager {
             DRIVER_MAP.put(PlatFormType.WEB, WEB_DRIVER_THREAD_LOCAL);
             CONTEXT.set(PlatFormType.WEB);
         }
+    }
+
+    private static boolean isMobileDriver(WebDriver driver) {
+        return driver instanceof AndroidDriver || driver instanceof IOSDriver;
+    }
+
+    public static void unload() {
+        WEB_DRIVER_THREAD_LOCAL.remove();
+        MOBILE_DRIVER_THREAD_LOCAL.remove();
+        CONTEXT.remove();
     }
 }
