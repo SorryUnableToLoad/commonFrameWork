@@ -1,0 +1,32 @@
+[
+  {
+    "fname": "suraj1",
+    "lname": "naganuri1",
+    "mobileno": 9876543210,
+    "isboolean": true
+  },
+  {
+    "fname": "suraj2",
+    "lname": "naganuri2",
+    "mobileno": 9876543210,
+    "isboolean": true
+  },
+  {
+    "fname": "suraj3",
+    "lname": "naganuri3",
+    "mobileno": 9876543210,
+    "isboolean": true
+  },
+  {
+    "fname": "suraj4",
+    "lname": "naganuri4",
+    "mobileno": 9876543210,
+    "isboolean": false
+  },
+  {
+    "fname": "suraj5",
+    "lname": "naganuri5",
+    "mobileno": 9876543210,
+    "isboolean": false
+  }
+]
