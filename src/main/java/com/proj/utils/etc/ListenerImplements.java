@@ -1,4 +1,4 @@
-package com.proj.utils;
+package com.proj.utils.etc;
 
 import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.ExtentTest;

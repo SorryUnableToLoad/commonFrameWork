@@ -1,4 +1,4 @@
-package com.proj.utils;
+package com.proj.utils.etc;
 
 import com.proj.driver.DriverManager;
 import io.appium.java_client.MobileBy;

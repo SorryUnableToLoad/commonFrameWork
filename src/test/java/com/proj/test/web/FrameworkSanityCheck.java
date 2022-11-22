@@ -11,7 +11,7 @@ import org.testng.asserts.SoftAssert;
 //integrating with extent report
 
 @Listeners(com.proj.listeners.TestListenerImpl.class)
-//@Listeners(com.proj.utils.ListenerImplements.class)
+//@Listeners(com.proj.utils.etc.ListenerImplements.class)
 
 
 public class FrameworkSanityCheck extends WebSetUp {

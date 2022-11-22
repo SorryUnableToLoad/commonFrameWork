@@ -1,6 +1,6 @@
 package com.proj.test.mobile.demotest;
 
-import com.proj.utils.JavaUtility;
+import com.proj.utils.etc.JavaUtility;
 import org.testng.annotations.Test;
 
 import java.text.SimpleDateFormat;

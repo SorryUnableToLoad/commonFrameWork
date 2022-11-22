@@ -1,4 +1,4 @@
-package com.proj.utils;
+package com.proj.utils.etc;
 
 import org.testng.annotations.Test;
 

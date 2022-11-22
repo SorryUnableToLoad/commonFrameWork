@@ -9,7 +9,7 @@ import org.testng.asserts.SoftAssert;
 
 import static com.proj.utils.AppiumDriverUtils.*;
 @Listeners(com.proj.listeners.TestListenerImpl.class)
-//@Listeners(com.proj.utils.ListenerImplements.class)
+//@Listeners(com.proj.utils.etc.ListenerImplements.class)
 public class FrameworkSanityCheck extends MobileSetUp {
     @FrameworkAnnotations(author = "Suraj")
     @Test
