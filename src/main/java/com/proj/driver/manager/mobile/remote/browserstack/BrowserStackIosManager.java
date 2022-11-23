@@ -1,10 +1,8 @@
 package com.proj.driver.manager.mobile.remote.browserstack;
 
-import com.proj.config.FrameworkConfigFactory;
+import com.proj.config.factory.FrameworkConfigFactory;
 import io.appium.java_client.AppiumDriver;
-import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.remote.DesiredCapabilities;
-import org.openqa.selenium.remote.RemoteWebDriver;
 
 public class BrowserStackIosManager {
     private BrowserStackIosManager(){}

@@ -1,7 +1,7 @@
 package com.proj.test.api;
 
 import com.proj.apis.GetUsers;
-import com.proj.constants.IConstants;
+import com.proj.config.factory.ApiConfigFactory;
 import com.proj.test.base.APISetUp;
 import io.restassured.http.ContentType;
 import io.restassured.response.Response;
@@ -13,10 +13,11 @@ public class GetUsersTest extends APISetUp {
     void getUserByPageNumber() {
 
         Response response = GetUsers.getUser(2);
+
         response.then()
                 .assertThat()
                 .statusCode(200)
-                .time(Matchers.lessThan(IConstants.responseTime))
+                .time(Matchers.lessThan(ApiConfigFactory.getConfig().responseTime()))
                 .contentType(ContentType.JSON);
         response.prettyPrint();
 

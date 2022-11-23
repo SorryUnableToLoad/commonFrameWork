@@ -1,16 +1,11 @@
 package com.proj.driver.manager.mobile.local;
 
-import com.proj.config.FrameworkConfig;
 import io.appium.java_client.AppiumDriver;
-import io.appium.java_client.remote.AndroidMobileCapabilityType;
 import io.appium.java_client.remote.MobileCapabilityType;
 import org.openqa.selenium.Platform;
-import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.remote.DesiredCapabilities;
-import org.openqa.selenium.remote.RemoteWebDriver;
-import org.testng.annotations.Test;
 
-import static com.proj.config.FrameworkConfigFactory.getConfig;
+import static com.proj.config.factory.FrameworkConfigFactory.getConfig;
 
 public final class AndroidManager {
     private AndroidManager() {

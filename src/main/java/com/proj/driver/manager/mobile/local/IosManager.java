@@ -1,12 +1,10 @@
 package com.proj.driver.manager.mobile.local;
 
-import com.proj.config.FrameworkConfigFactory;
+import com.proj.config.factory.FrameworkConfigFactory;
 import io.appium.java_client.AppiumDriver;
 import io.appium.java_client.remote.MobileCapabilityType;
 import org.openqa.selenium.Platform;
-import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.remote.DesiredCapabilities;
-import org.openqa.selenium.remote.RemoteWebDriver;
 
 public final class IosManager {
     private IosManager(){}

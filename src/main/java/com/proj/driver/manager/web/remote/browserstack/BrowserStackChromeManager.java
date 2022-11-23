@@ -1,6 +1,6 @@
 package com.proj.driver.manager.web.remote.browserstack;
 
-import com.proj.config.FrameworkConfigFactory;
+import com.proj.config.factory.FrameworkConfigFactory;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.remote.RemoteWebDriver;

@@ -7,7 +7,7 @@ import org.openqa.selenium.WebDriver;
 
 import java.util.Objects;
 
-import static com.proj.config.FrameworkConfigFactory.getConfig;
+import static com.proj.config.factory.FrameworkConfigFactory.getConfig;
 
 /**
  * This class is created for initialize the webDriver and quit the driver.

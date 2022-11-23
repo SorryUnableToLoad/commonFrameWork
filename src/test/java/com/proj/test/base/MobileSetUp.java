@@ -11,7 +11,7 @@ import org.testng.annotations.BeforeSuite;
 
 import java.util.concurrent.TimeUnit;
 
-import static com.proj.config.FrameworkConfigFactory.getConfig;
+import static com.proj.config.factory.FrameworkConfigFactory.getConfig;
 
 /**
  * This class contains basic configuration methods to execute every TestScripts

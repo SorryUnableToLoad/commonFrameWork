@@ -24,9 +24,6 @@ public interface FrameworkConfig extends Config {
     @Key("${environment}.webUrl")
     String webUrl();
 
-    @Key("apiBaseUrl")
-    String baseUri();
-
 //---------------------------------------------------------------------//
 
     @DefaultValue("CHROME")

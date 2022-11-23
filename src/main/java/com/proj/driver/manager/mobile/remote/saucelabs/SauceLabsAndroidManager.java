@@ -1,11 +1,9 @@
 package com.proj.driver.manager.mobile.remote.saucelabs;
 
 import io.appium.java_client.AppiumDriver;
-import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.remote.DesiredCapabilities;
-import org.openqa.selenium.remote.RemoteWebDriver;
 
-import static com.proj.config.FrameworkConfigFactory.getConfig;
+import static com.proj.config.factory.FrameworkConfigFactory.getConfig;
 
 
 public final class SauceLabsAndroidManager {
