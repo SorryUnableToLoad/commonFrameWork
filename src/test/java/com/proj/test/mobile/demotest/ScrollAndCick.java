@@ -2,7 +2,6 @@ package com.proj.test.mobile.demotest;
 
 import com.proj.driver.DriverManager;
 import com.proj.test.base.MobileSetUp;
-import io.appium.java_client.MobileElement;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.testng.annotations.Test;

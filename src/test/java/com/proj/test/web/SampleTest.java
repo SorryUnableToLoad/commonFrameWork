@@ -14,5 +14,6 @@ public class SampleTest extends WebSetUp {
         System.out.println("WEB LOCAL");
         String title = DriverManager.getDriver().getTitle();
         System.out.println(title);
+
     }
 }
