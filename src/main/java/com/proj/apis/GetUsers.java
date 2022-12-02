@@ -1,17 +1,22 @@
 package com.proj.apis;
 
 import com.proj.config.factory.ApiConfigFactory;
+import com.proj.listeners.extentreport.ExtentReport;
 import com.proj.utils.RequestBuilder;
 import io.restassured.response.Response;
+import io.restassured.specification.RequestSpecification;
 
 public final class GetUsers {
     private GetUsers() {
     }
 
     public static Response getUser(int pageNumber) {
-        return RequestBuilder.requestForGetCall()
-                .queryParam("page", pageNumber)
+        RequestSpecification requestSpecification = RequestBuilder.requestForGetCall()
+                .queryParam("page", pageNumber);
+        ExtentReport.logRequest(requestSpecification);
+        Response response = requestSpecification
                 .get(ApiConfigFactory.getConfig().listUserEndPoint());
+        return response;
 
     }
 

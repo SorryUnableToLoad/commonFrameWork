@@ -48,12 +48,12 @@ public class TestListenerImpl implements ITestListener {
         ExtentManager.getTest().log(Status.FAIL,result.getThrowable());
         ExtentManager.getTest().log(Status.FAIL,result.getMethod().getMethodName()+"is failed");
         String testCaseName = result.getMethod().getMethodName();
-        try {
+        /*try {
             String path = takeScreenShot();
             ExtentManager.getTest().fail(testCaseName,MediaEntityBuilder.createScreenCaptureFromBase64String(path).build());
         } catch (IOException e) {
             e.printStackTrace();
-        }
+        }*/
 
     }
 
