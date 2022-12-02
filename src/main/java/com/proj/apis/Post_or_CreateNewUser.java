@@ -14,7 +14,7 @@ public class Post_or_CreateNewUser {
     public static Response post_or_CreateNewUser(UserDetails userDetails) {
         RequestSpecification requestSpecification = RequestBuilder.requestForPostCall()
                 .body(userDetails);
-        ExtentReport.logRequest(requestSpecification);
+        //ExtentReport.logRequest(requestSpecification);
 
         Response response = requestSpecification
                 .post(ApiConfigFactory.getConfig().postUserEndPoint());

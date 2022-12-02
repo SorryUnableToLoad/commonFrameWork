@@ -13,7 +13,7 @@ public final class GetUsers {
     public static Response getUser(int pageNumber) {
         RequestSpecification requestSpecification = RequestBuilder.requestForGetCall()
                 .queryParam("page", pageNumber);
-        ExtentReport.logRequest(requestSpecification);
+        //ExtentReport.logRequest(requestSpecification);
         Response response = requestSpecification
                 .get(ApiConfigFactory.getConfig().listUserEndPoint());
         return response;

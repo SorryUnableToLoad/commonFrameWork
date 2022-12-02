@@ -221,19 +221,19 @@ public class AppiumDriverUtils {
 
     //++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++//
     public static void clickOnElement(MobileElement element) {
-        waitForElementToBeClickableAndCLick(element);
+        waitForElementToBeClickableAndClick(element);
     }
 
-    public static void waitForElementToBeClickableAndCLick(MobileElement element) {
+    public static void waitForElementToBeClickableAndClick(MobileElement element) {
         WebDriverWait wait = new WebDriverWait(driver, getConfig().waitTime());
         wait.until(ExpectedConditions.elementToBeClickable(element)).click();
     }
 
     public static void clickOnElement(By byLocator) {
-        waitForElementToBeClickableAndCLick(byLocator);
+        waitForElementToBeClickableAndClick(byLocator);
     }
 
-    public static void waitForElementToBeClickableAndCLick(By byLocator) {
+    public static void waitForElementToBeClickableAndClick(By byLocator) {
         WebDriverWait wait = new WebDriverWait(driver, getConfig().waitTime());
         wait.until(ExpectedConditions.elementToBeClickable(byLocator)).click();
     }

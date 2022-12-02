@@ -11,6 +11,7 @@ import io.restassured.http.Header;
 import io.restassured.specification.QueryableRequestSpecification;
 import io.restassured.specification.RequestSpecification;
 import io.restassured.specification.SpecificationQuerier;
+import org.testng.ITestResult;
 
 import java.io.File;
 import java.text.SimpleDateFormat;
@@ -41,8 +42,8 @@ public class ExtentReport {
         report.flush();
     }
 
-    public static void createTest(String testcasename) {
-        test = report.createTest(testcasename);
+    public static void createTest(String testCaseName) {
+        test = report.createTest(testCaseName);
         ExtentManager.setExtent(test);
     }
 
@@ -61,15 +62,23 @@ public class ExtentReport {
 
     public static void logRequest(RequestSpecification requestSpecification) {
         QueryableRequestSpecification query = SpecificationQuerier.query(requestSpecification);
-        test.log(Status.INFO, "Request Body Details");
-        ExtentManager.getTest().info(MarkupHelper.createCodeBlock(query.getBody(), CodeLanguage.JSON));
-        for (Header header : query.getHeaders()) {
-            test.log(Status.INFO, header.getName() + ":" + header.getValue());
+        //test.log(Status.INFO, "Request Body Details");
+        ExtentManager.getTest().log(Status.INFO, "Request Body Details");
+        if (query == null) {
+            ExtentManager.getTest().pass(" Doesn't Have Request Body");
+
+        } else {
+            ExtentManager.getTest().pass(MarkupHelper.createCodeBlock(query.getBody(), CodeLanguage.JSON));
+            for (Header header : query.getHeaders()) {
+                //test.log(Status.INFO, header.getName() + ":" + header.getValue());
+                ExtentManager.getTest().log(Status.INFO, header.getName() + ":" + header.getValue());
+            }
         }
     }
 
     public static void logResponse(String response) {
-        test.log(Status.INFO, "Response Body Details");
+        //test.log(Status.INFO, "Response Body Details");
+        ExtentManager.getTest().log(Status.INFO, "Response Body Details");
         ExtentManager.getTest().pass(MarkupHelper.createCodeBlock(response, CodeLanguage.JSON));
     }
 }
