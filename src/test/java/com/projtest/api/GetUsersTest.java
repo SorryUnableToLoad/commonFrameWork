@@ -39,13 +39,13 @@ public class GetUsersTest {
                 .assertAll();*/
 
 
-        /*ResponseAssert.asserThat(response)
+        ResponseAssert.asserThat(response)
                 .statusCodeIs(201)
                 .responseTimeIsLessThan(1800l)
                 .hasHeaderKeyAndValue("Content-Type","application/json")
                 .hasContentType("application/json")
                 .hasKeyWithValue("page","3")
-                .assertAll();*/
+                .assertAll();
 
     }
 }

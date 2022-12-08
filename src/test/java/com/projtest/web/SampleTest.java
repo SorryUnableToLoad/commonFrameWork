@@ -14,6 +14,11 @@ public class SampleTest extends WebSetUp {
         System.out.println("WEB LOCAL");
         String title = DriverManager.getDriver().getTitle();
         System.out.println(title);
+        logger.info("Test completed");
+        logger.debug("Test completed");
+        logger.trace("Test completed");
+        logger.warn("Test completed");
+        logger.error("Test completed");
 
     }
 }

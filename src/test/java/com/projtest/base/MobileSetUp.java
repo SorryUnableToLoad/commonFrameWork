@@ -3,6 +3,8 @@ package com.projtest.base;
 import com.proj.driver.Driver;
 import com.proj.driver.DriverManager;
 import com.proj.pages.initializepages.InitializePages;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.testng.Reporter;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.AfterSuite;
@@ -19,6 +21,8 @@ import static com.proj.config.factory.FrameworkConfigFactory.getConfig;
  * @author surajkumarnaganuri
  */
 public class MobileSetUp {
+    public static final Logger logger = LoggerFactory.getLogger(WebSetUp.class);
+
 
     /**
      * This method consist of before method configuration functionalities
@@ -28,6 +32,7 @@ public class MobileSetUp {
         Driver.initDriverForMobile();
         DriverManager.getDriver().manage().timeouts().implicitlyWait(getConfig().waitTime(), TimeUnit.SECONDS);
         Reporter.log("Set Up Done", true);
+        logger.info("Set Up Done");
     }
 
     @BeforeClass(enabled = false)
@@ -51,5 +56,6 @@ public class MobileSetUp {
     public void tearDown() {
         Driver.quitDriver();
         Reporter.log("Teat Down", true);
+        logger.info("Teat Down Completed");
     }
 }
