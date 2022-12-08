@@ -21,7 +21,7 @@ import static com.proj.config.factory.FrameworkConfigFactory.getConfig;
  * @author surajkumarnaganuri
  */
 public class MobileSetUp {
-    public static final Logger logger = LoggerFactory.getLogger(WebSetUp.class);
+    public static final Logger logger = LoggerFactory.getLogger(MobileSetUp.class);
 
 
     /**
@@ -32,7 +32,7 @@ public class MobileSetUp {
         Driver.initDriverForMobile();
         DriverManager.getDriver().manage().timeouts().implicitlyWait(getConfig().waitTime(), TimeUnit.SECONDS);
         Reporter.log("Set Up Done", true);
-        logger.info("Set Up Done");
+        logger.info("Initiated for mobile set up");
     }
 
     @BeforeClass(enabled = false)
@@ -56,6 +56,6 @@ public class MobileSetUp {
     public void tearDown() {
         Driver.quitDriver();
         Reporter.log("Teat Down", true);
-        logger.info("Teat Down Completed");
+        logger.info("Mobile tear Down Completed");
     }
 }

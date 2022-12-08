@@ -21,6 +21,6 @@ public class WebSetUp {
     @AfterClass
     public void tearDown(){
         Driver.quitDriver();
-        logger.info("web tear down completed");
+        logger.info("Web tear down completed");
     }
 }

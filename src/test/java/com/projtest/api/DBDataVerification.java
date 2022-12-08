@@ -7,7 +7,7 @@ import java.sql.SQLException;
 
 public class DBDataVerification {
     @Test
-    void test2() throws SQLException {
+    void test() throws SQLException {
         DatabaseUtils.connectToDB();
         String query = "select * from businesses";
         String data = DatabaseUtils.getTheDataFromDatabaseAndVerify(query, "TEstCode", 2);

@@ -10,7 +10,7 @@ import org.testng.annotations.Listeners;
 
 @Listeners(com.proj.listeners.TestListenerImpl.class)
 public class APISetUp {
-    public static final Logger logger = LoggerFactory.getLogger(WebSetUp.class);
+    public static final Logger logger = LoggerFactory.getLogger(APISetUp.class);
 
     @BeforeSuite(enabled = false)
     public void connectDB(){
