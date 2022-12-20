@@ -5,7 +5,7 @@ import com.aventstack.extentreports.markuputils.CodeLanguage;
 import com.aventstack.extentreports.markuputils.MarkupHelper;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.proj.annotations.FrameworkAnnotations;
-import com.proj.apis.pojos.UserDetails;
+import com.proj.api.pojos.UserDetails;
 import com.proj.listeners.extentreport.ExtentManager;
 import io.restassured.http.ContentType;
 import io.restassured.http.Header;

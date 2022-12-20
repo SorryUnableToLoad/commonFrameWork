@@ -22,7 +22,7 @@ public class ExcelRunner {
 
     @DataProvider
     public Object[][] getData() throws IOException {
-        FileInputStream fis = new FileInputStream(System.getProperty("user.dir") + "/src/test/resources/testdata.xlsx");
+        FileInputStream fis = new FileInputStream(System.getProperty("user.dir") + "/src/test/resources/externalfile/testdata.xlsx");
 
         XSSFWorkbook wb = new XSSFWorkbook(fis);
         XSSFSheet sheet = wb.getSheetAt(0);
@@ -52,7 +52,7 @@ public class ExcelRunner {
 
     @DataProvider
     public Object[] getDataWithMap() throws IOException {
-        FileInputStream fis = new FileInputStream(System.getProperty("user.dir") + "/src/test/resources/testdata.xlsx");
+        FileInputStream fis = new FileInputStream(System.getProperty("user.dir") + "/src/test/resources/externalfile/testdata.xlsx");
 
         XSSFWorkbook wb = new XSSFWorkbook(fis);
         XSSFSheet sheet = wb.getSheetAt(0);

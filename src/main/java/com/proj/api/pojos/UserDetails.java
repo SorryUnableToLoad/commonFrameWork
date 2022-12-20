@@ -1,4 +1,4 @@
-package com.proj.apis.pojos;
+package com.proj.api.pojos;
 
 import lombok.Data;
 

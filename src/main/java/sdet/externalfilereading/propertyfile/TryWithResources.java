@@ -15,7 +15,7 @@ public final class TryWithResources {
     private static final Map<String, String> CONFIGMAP = new HashMap<>();
 
     static {
-        try (FileInputStream fis = new FileInputStream(System.getProperty("user.dir") + "/src/test/resources/prop.properties")) {
+        try (FileInputStream fis = new FileInputStream(System.getProperty("user.dir") + "/src/test/resources/externalfile/prop.properties")) {
             pro.load(fis);
             for (Map.Entry<Object, Object> entry : pro.entrySet()) {
                 CONFIGMAP.put(String.valueOf(entry.getKey()), String.valueOf(entry.getValue()).trim());

@@ -1,8 +1,7 @@
-package com.proj.apis;
+package com.proj.api;
 
-import com.proj.apis.pojos.UserDetails;
+import com.proj.api.pojos.UserDetails;
 import com.proj.config.factory.ApiConfigFactory;
-import com.proj.listeners.extentreport.ExtentReport;
 import com.proj.utils.RequestBuilder;
 import io.restassured.response.Response;
 import io.restassured.specification.RequestSpecification;

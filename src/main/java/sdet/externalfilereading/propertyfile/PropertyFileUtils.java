@@ -13,7 +13,7 @@ public final class PropertyFileUtils {
         FileInputStream fis = null;
         Properties pro;
         try {
-            fis = new FileInputStream(System.getProperty("user.dir")+"/src/test/resources/prop.properties");
+            fis = new FileInputStream(System.getProperty("user.dir")+"/src/test/resources/externalfile/prop.properties");
             pro = new Properties();
             pro.load(fis);
             return pro.getProperty(key);

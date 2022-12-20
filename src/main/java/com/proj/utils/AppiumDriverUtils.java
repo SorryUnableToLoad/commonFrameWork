@@ -5,18 +5,27 @@ import io.appium.java_client.AppiumDriver;
 import io.appium.java_client.MobileElement;
 import io.appium.java_client.PerformsTouchActions;
 import io.appium.java_client.TouchAction;
+import io.appium.java_client.android.AndroidDriver;
+import io.appium.java_client.android.AndroidTouchAction;
+import io.appium.java_client.ios.IOSTouchAction;
 import io.appium.java_client.touch.LongPressOptions;
 import io.appium.java_client.touch.TapOptions;
 import io.appium.java_client.touch.WaitOptions;
 import io.appium.java_client.touch.offset.ElementOption;
 import io.appium.java_client.touch.offset.PointOption;
-import org.openqa.selenium.*;
+import org.openqa.selenium.By;
+import org.openqa.selenium.Dimension;
+import org.openqa.selenium.NoSuchElementException;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.time.Duration;
+import java.util.List;
 import java.util.function.Consumer;
+import java.util.function.Function;
+import java.util.function.Predicate;
 
 import static com.proj.config.factory.FrameworkConfigFactory.getConfig;
 
@@ -45,10 +54,7 @@ public class AppiumDriverUtils {
      * This method is perform left to right swipe action
      */
     public static void swipeFromLeftToRight() {
-        touchAction.press(PointOption.point(horizontalEndPoint, centerPoint))
-                .waitAction(WaitOptions.waitOptions(Duration.ofMillis(500)))
-                .moveTo(PointOption.point(horizontalStartPoint, centerPoint))
-                .release().perform();
+        touchAction.press(PointOption.point(horizontalEndPoint, centerPoint)).waitAction(WaitOptions.waitOptions(Duration.ofMillis(500))).moveTo(PointOption.point(horizontalStartPoint, centerPoint)).release().perform();
     }
 
     /**
@@ -56,10 +62,7 @@ public class AppiumDriverUtils {
      */
     public static void swipeFromLeftToRight(int Times) {
         for (int initTime = 0; initTime < Times; initTime++) {
-            touchAction.press(PointOption.point(horizontalEndPoint, centerPoint))
-                    .waitAction(WaitOptions.waitOptions(Duration.ofMillis(500)))
-                    .moveTo(PointOption.point(horizontalStartPoint, centerPoint))
-                    .release().perform();
+            touchAction.press(PointOption.point(horizontalEndPoint, centerPoint)).waitAction(WaitOptions.waitOptions(Duration.ofMillis(500))).moveTo(PointOption.point(horizontalStartPoint, centerPoint)).release().perform();
         }
     }
 
@@ -67,10 +70,7 @@ public class AppiumDriverUtils {
      * This method is perform right to left swipe action
      */
     public static void swipeFromRightToLeft() {
-        touchAction.press(PointOption.point(horizontalStartPoint, centerPoint))
-                .waitAction(WaitOptions.waitOptions(Duration.ofMillis(500)))
-                .moveTo(PointOption.point(horizontalEndPoint, centerPoint))
-                .release().perform();
+        touchAction.press(PointOption.point(horizontalStartPoint, centerPoint)).waitAction(WaitOptions.waitOptions(Duration.ofMillis(500))).moveTo(PointOption.point(horizontalEndPoint, centerPoint)).release().perform();
     }
 
     /**
@@ -78,10 +78,7 @@ public class AppiumDriverUtils {
      */
     public static void swipeFromRightToLeft(int Times) {
         for (int initTime = 0; initTime < Times; initTime++) {
-            touchAction.press(PointOption.point(horizontalStartPoint, centerPoint))
-                    .waitAction(WaitOptions.waitOptions(Duration.ofMillis(500)))
-                    .moveTo(PointOption.point(horizontalEndPoint, centerPoint))
-                    .release().perform();
+            touchAction.press(PointOption.point(horizontalStartPoint, centerPoint)).waitAction(WaitOptions.waitOptions(Duration.ofMillis(500))).moveTo(PointOption.point(horizontalEndPoint, centerPoint)).release().perform();
         }
     }
 
@@ -89,10 +86,7 @@ public class AppiumDriverUtils {
      * This method is perform top to bottom swipe action
      */
     public static void swipeFromTopToBottom() {
-        touchAction.press(PointOption.point(centerPoint, verticalEndPoint))
-                .waitAction(WaitOptions.waitOptions(Duration.ofMillis(500)))
-                .moveTo(PointOption.point(centerPoint, verticalStartPoint))
-                .release().perform();
+        touchAction.press(PointOption.point(centerPoint, verticalEndPoint)).waitAction(WaitOptions.waitOptions(Duration.ofMillis(500))).moveTo(PointOption.point(centerPoint, verticalStartPoint)).release().perform();
     }
 
     /**
@@ -100,19 +94,15 @@ public class AppiumDriverUtils {
      */
     public static void swipeFromTopToBottom(int Times) {
         for (int initTime = 0; initTime < Times; initTime++) {
-            touchAction.press(PointOption.point(centerPoint, verticalEndPoint))
-                    .waitAction(WaitOptions.waitOptions(Duration.ofMillis(500)))
-                    .moveTo(PointOption.point(centerPoint, verticalStartPoint))
-                    .release().perform();
+            touchAction.press(PointOption.point(centerPoint, verticalEndPoint)).waitAction(WaitOptions.waitOptions(Duration.ofMillis(500))).moveTo(PointOption.point(centerPoint, verticalStartPoint)).release().perform();
         }
-    }/**
+    }
+
+    /**
      * This method is perform bottom to top swipe action
      */
     public static void swipeFromBottomToTop() {
-        touchAction.press(PointOption.point(centerPoint, verticalStartPoint))
-                .waitAction(WaitOptions.waitOptions(Duration.ofMillis(500)))
-                .moveTo(PointOption.point(centerPoint, verticalEndPoint))
-                .release().perform();
+        touchAction.press(PointOption.point(centerPoint, verticalStartPoint)).waitAction(WaitOptions.waitOptions(Duration.ofMillis(500))).moveTo(PointOption.point(centerPoint, verticalEndPoint)).release().perform();
     }
 
     /**
@@ -120,10 +110,7 @@ public class AppiumDriverUtils {
      */
     public static void swipeFromBottomToTop(int Times) {
         for (int initTime = 0; initTime < Times; initTime++) {
-            touchAction.press(PointOption.point(centerPoint, verticalStartPoint))
-                    .waitAction(WaitOptions.waitOptions(Duration.ofMillis(500)))
-                    .moveTo(PointOption.point(centerPoint, verticalEndPoint))
-                    .release().perform();
+            touchAction.press(PointOption.point(centerPoint, verticalStartPoint)).waitAction(WaitOptions.waitOptions(Duration.ofMillis(500))).moveTo(PointOption.point(centerPoint, verticalEndPoint)).release().perform();
         }
     }
 
@@ -149,9 +136,7 @@ public class AppiumDriverUtils {
      * @param mobileElement
      */
     public static void tapOnElement(MobileElement mobileElement) {
-        touchAction.tap(TapOptions.tapOptions()
-                        .withElement(ElementOption.element(mobileElement)))
-                .perform();
+        touchAction.tap(TapOptions.tapOptions().withElement(ElementOption.element(mobileElement))).perform();
     }
 
     public static void tapOnElementByCoordinates(int x, int y) {
@@ -159,16 +144,11 @@ public class AppiumDriverUtils {
     }
 
     public void longPress(MobileElement mobileElement, int seconds) {
-        touchAction.longPress(LongPressOptions.longPressOptions().withElement(ElementOption.element(mobileElement)))
-                .waitAction(WaitOptions.waitOptions(Duration.ofSeconds(seconds)))
-                .perform();
+        touchAction.longPress(LongPressOptions.longPressOptions().withElement(ElementOption.element(mobileElement))).waitAction(WaitOptions.waitOptions(Duration.ofSeconds(seconds))).perform();
     }
 
     public static void dragAndDrop(MobileElement sourceElement, MobileElement targetElement) {
-        touchAction.tap(TapOptions.tapOptions().withElement(ElementOption.element(sourceElement)))
-                .waitAction(WaitOptions.waitOptions(Duration.ofSeconds(1)))
-                .moveTo(ElementOption.element(targetElement))
-                .release().perform();
+        touchAction.tap(TapOptions.tapOptions().withElement(ElementOption.element(sourceElement))).waitAction(WaitOptions.waitOptions(Duration.ofSeconds(1))).moveTo(ElementOption.element(targetElement)).release().perform();
     }
 
     //++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++//
@@ -239,9 +219,9 @@ public class AppiumDriverUtils {
     }
 
     //++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++//
-    public static void select(By byLocator, Consumer<Select> consumer) {
+    /*public static void select(By byLocator, Consumer<Select> consumer) {
         consumer.accept(new Select(driver.findElement(byLocator)));
-    }
+    }*/
 
     //====================================================================================================//
     public static int getSize(By byLocator) {
@@ -252,5 +232,107 @@ public class AppiumDriverUtils {
     public static WebElement chooseAProduct(String productName) {
         return driver.findElement(By.xpath("//android.widget.ImageView[@content-desc='" + productName + "']"));
     }
+    public static void waitAndClick(By by) {
+        //wait strategy
+        DriverManager.getDriver().findElement(by).click();
+    }
 
+    public static void waitAndClick(By androidBy, By iosBy) {
+        //wait strategy
+        By byBasedOnMobilePlatform = getByBasedOnMobilePlatform(androidBy, iosBy);
+        DriverManager.getDriver().findElement(byBasedOnMobilePlatform).click();
+    }
+
+    public static void waitAndSendKeys(By by, String value) {
+        //wait strategy
+        DriverManager.getDriver().findElement(by).sendKeys(value);
+    }
+
+    public static void select(By byLocator, Consumer<Select> consumer) {
+        consumer.accept(new Select(DriverManager.getDriver().findElement(byLocator)));
+    }
+
+    public static String getAttribute(By by, Function<WebElement, String> attributeFunction) {
+        return attributeFunction.apply(DriverManager.getDriver().findElement(by));
+    }
+
+    public static boolean isPresent(By by, Predicate<WebElement> elementPredicate) {
+        return elementPredicate.test(DriverManager.getDriver().findElement(by));
+    }
+
+    private static By getByBasedOnMobilePlatform(By androidBy, By iosBy) {
+        return isAndroid() ? androidBy : iosBy;
+    }
+
+    private static boolean isAndroid() {
+        return DriverManager.getDriver() instanceof AndroidDriver;
+    }
+
+    public static void scrollForMobile(By by) {
+        String previousPageSource = "";
+        while (isElementNotEnabled(by) && isNotEndOfPage(previousPageSource)) {
+            previousPageSource = DriverManager.getDriver().getPageSource();
+            performScroll();
+        }
+    }
+
+    public static void scrollForMobile(WebElement element) {
+        String previousPageSource = "";
+        while (isElementNotEnabled(element) && isNotEndOfPage(previousPageSource)) {
+            previousPageSource = DriverManager.getDriver().getPageSource();
+            performScroll();
+        }
+    }
+
+    private static boolean isNotEndOfPage(String previousPageSource) {
+        return !previousPageSource.equals(DriverManager.getDriver().getPageSource());
+    }
+
+    private static boolean isElementNotEnabled(WebElement element) {
+        try {
+            return !element.isDisplayed();
+        } catch (NoSuchElementException e) {
+            return true;
+        }
+    }
+
+    private static boolean isElementNotEnabled(By by) {
+        List<WebElement> elements = DriverManager.getDriver().findElements(by);
+        if (isAndroid()) {
+            return elements.isEmpty();
+        }
+        if (!elements.isEmpty()) {
+            return elements.get(0).getAttribute("visible").equalsIgnoreCase("false");
+        }
+        return true;
+    }
+
+    private static void performScroll() {
+        Dimension size = DriverManager.getDriver().manage().window().getSize();
+        int startX = size.getWidth() / 2;
+        int endX = size.getWidth() / 2;
+        int startY = size.getHeight() / 2;
+        int endY = (int) (size.getHeight() * 0.25);
+
+        if (isAndroid()) performScrollForAndroid(startX, startY, endX, endY);
+        else performScrollForIOS(startX, startY, endX, endY);
+    }
+
+    private static void performScrollForAndroid(int startX, int startY, int endX, int endY) {
+        new AndroidTouchAction((PerformsTouchActions) DriverManager.getDriver())
+                .press(PointOption.point(startX, startY))
+                .waitAction(WaitOptions.waitOptions(Duration.ofMillis(200)))
+                .moveTo(PointOption.point(endX, endY))
+                .release()
+                .perform();
+    }
+
+    private static void performScrollForIOS(int startX, int startY, int endX, int endY) {
+        new IOSTouchAction((PerformsTouchActions) DriverManager.getDriver())
+                .press(PointOption.point(startX, startY))
+                .waitAction(WaitOptions.waitOptions(Duration.ofMillis(200)))
+                .moveTo(PointOption.point(endX, endY))
+                .release()
+                .perform();
+    }
 }

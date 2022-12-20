@@ -24,4 +24,6 @@ public interface ApiConfig extends Config {
     @Key("create.users")
     String postUserEndPoint();
 
+    @Key("add_new_pet_store")
+    String addNewPetStore();
 }

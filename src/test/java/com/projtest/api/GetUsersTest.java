@@ -1,13 +1,10 @@
 package com.projtest.api;
 
 import com.proj.annotations.FrameworkAnnotations;
-import com.proj.apis.GetUsers;
+import com.proj.api.GetUsers;
 import com.proj.utils.ResponseAssert;
 import io.restassured.response.Response;
-import org.hamcrest.Matchers;
 import org.testng.annotations.Test;
-
-import java.util.concurrent.TimeUnit;
 
 public class GetUsersTest {
     @Test

@@ -35,7 +35,7 @@ public class UseCase2Test {
     public StreamEx<TestData> getDataFromJson() {
         return use(JsonReader.class)
                 .withTarget(TestData.class)
-                .withSource("testdata.json")
+                .withSource("externalfile/testdata.json")
                 .read();
     }
 
@@ -48,7 +48,7 @@ public class UseCase2Test {
     public StreamEx<TestData1> getDataFromCsv() {
         return use(CsvReader.class)
                 .withTarget(TestData1.class)
-                .withSource("testdata.csv")
+                .withSource("externalfile/testdata.csv")
                 .read();
     }
 
@@ -61,7 +61,7 @@ public class UseCase2Test {
     public StreamEx<TestData> getDataFromExcel() {
         return use(XlsxReader.class)
                 .withTarget(TestData.class)
-                .withSource("testdata.xlsx")
+                .withSource("externalfile/testdata.csv")
                 .read();
     }
 
@@ -73,7 +73,7 @@ public class UseCase2Test {
     public StreamEx<TestData> getDataFromExcel1(Method mtd) {
         return use(XlsxReader.class)
                 .withTarget(TestData.class)
-                .withSource("testdata.xlsx")
+                .withSource("externalfile/testdata.csv")
                 .read().filter(e->e.getFname().equalsIgnoreCase(mtd.getName()));
     }
 
