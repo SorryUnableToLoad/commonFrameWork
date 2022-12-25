@@ -34,7 +34,7 @@ public class SelectStore {
 
     public void changeStore() {
         clickOnElement(change_store);
-        swipeFromBottomToTop();
+        performScrollBottomToTop();
         scrollToSpecificElementAndClick(test_customer_1);
     }
 }

@@ -18,16 +18,16 @@ public class FrameworkSanityCheck extends MobileSetUp {
         System.out.println("test started");
 
         Thread.sleep(3000);
-        swipeFromLeftToRight();
+        performScrollLeftToRight();
         System.out.println("swiped From Left To Right");
         Thread.sleep(3000);
-        swipeFromRightToLeft();
+        performScrollRightToLeft();
         System.out.println("swiped From Right To Left");
         Thread.sleep(3000);
-        swipeFromBottomToTop();
+        performScrollBottomToTop();
         System.out.println("swiped From Bottom To Top");
         Thread.sleep(3000);
-        swipeFromTopToBottom();
+        performScrollTopToBottom();
         System.out.println("swiped From Top To Bottom");
 
     }

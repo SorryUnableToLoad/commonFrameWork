@@ -21,7 +21,7 @@ public class LogoutPage {
      */
     public void logoutToApplication() {
         clickOnElement(account_page_button);
-        swipeFromBottomToTop();
+        performScrollBottomToTop();
         scrollToSpecificElementAndClick(logout_option);
         String logOutPopUp = getAttribute(logout_popup);
         Assert.assertEquals(logOutPopUp, "Are you sure you want to logout?");
