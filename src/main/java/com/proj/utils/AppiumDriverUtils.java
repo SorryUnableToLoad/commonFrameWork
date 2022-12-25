@@ -43,14 +43,211 @@ public class AppiumDriverUtils {
     static int endX = size.getWidth() * 90 / 100;
 
     private AppiumDriverUtils() {
+
+    }
+    //+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++//
+
+    /**
+     * This method is used to wait and click on the element
+     *
+     * @param element
+     */
+    public static void clickOnElement(MobileElement element) {
+        waitForElementToBeClickableAndClick(element);
     }
 
+    /**
+     * This method is used to wait and click on the element
+     *
+     * @param by
+     */
+    public static void clickOnElement(By by) {
+        waitForElementToBeClickableAndClick(by);
+    }
+
+    private static void waitForElementToBeClickableAndClick(MobileElement element) {
+        WebDriverWait wait = new WebDriverWait(DriverManager.getDriver(), getConfig().waitTime());
+        wait.until(ExpectedConditions.elementToBeClickable(element)).click();
+    }
+
+    private static void waitForElementToBeClickableAndClick(By by) {
+        WebDriverWait wait = new WebDriverWait(DriverManager.getDriver(), getConfig().waitTime());
+        wait.until(ExpectedConditions.elementToBeClickable(by)).click();
+    }
+
+    //===================================================================================================================================================================//
+    //+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++//
+
+    /**
+     * This method is used for send the text input from user
+     *
+     * @param element
+     * @param text
+     */
+    public static void waitAndSendKeys(MobileElement element, String text) {
+        waitForPresenceOfElement(element);
+        element.sendKeys(text);
+    }
+
+    /**
+     * This method is used for send the text input from user
+     *
+     * @param by
+     * @param text
+     */
+    public static void waitAndSendKeys(By by, String text) {
+        waitForPresenceOfElement(by);
+        DriverManager.getDriver().findElement(by).sendKeys(text);
+    }
+
+    /**
+     * This method is used for get the text from element
+     *
+     * @param element
+     */
+    public static String gatText(MobileElement element) {
+        waitForPresenceOfElement(element);
+        return element.getText();
+    }
+
+    /**
+     * This method is used for get the text from element
+     *
+     * @param by
+     */
+    public static String getText(By by) {
+        waitForPresenceOfElement(by);
+        return DriverManager.getDriver().findElement(by).getText();
+    }
+
+    /**
+     * This method is used for get the attribute value from element
+     *
+     * @param element
+     */
+    public static String getAttribute(MobileElement element, String attributeName) {
+        waitForPresenceOfElement(element);
+        String attributeValue = element.getAttribute(attributeName);
+        return attributeValue;
+    }
+
+    /**
+     * This method is used for get the attribute value from element
+     *
+     * @param by
+     */
+    public static String getAttribute(By by) {
+        waitForPresenceOfElement(by);
+        return DriverManager.getDriver().findElement(by).getTagName();
+    }
+
+    /**
+     * This method is used for get the attribute value from element
+     *
+     * @param by
+     * @param attributeFunction
+     * @return
+     */
+    public static String getAttribute(By by, Function<WebElement, String> attributeFunction) {
+        waitForPresenceOfElement(by);
+        return attributeFunction.apply(DriverManager.getDriver().findElement(by));
+    }
+
+    /**
+     * This method is used for get the count of element
+     *
+     * @param by
+     * @return
+     */
+    public static int getSize(By by) {
+        waitForPresenceOfElement(by);
+        return DriverManager.getDriver().findElements(by).size();
+    }
+
+    /**
+     * This method is used to verify the element is displayed or not
+     *
+     * @param mobileElement
+     * @return
+     */
+    public static boolean verifyIsElementDisplayed(MobileElement mobileElement) {
+        waitForPresenceOfElement(mobileElement);
+        return mobileElement.isDisplayed();
+    }
+
+    /**
+     * This method is used to verify the element is displayed or not
+     *
+     * @param by
+     * @return
+     */
+    public static boolean verifyIsElementDisplayed(By by) {
+        waitForPresenceOfElement(by);
+        return DriverManager.getDriver().findElement(by).isDisplayed();
+    }
+
+    /**
+     * This method is used to verify the element is displayed or not
+     *
+     * @param by
+     * @param elementPredicate
+     * @return
+     */
+    public static boolean verifyIsElementPresent(By by, Predicate<WebElement> elementPredicate) {
+        waitForPresenceOfElement(by);
+        return elementPredicate.test(DriverManager.getDriver().findElement(by));
+    }
+
+    /**
+     * This method is used to select the element
+     *
+     * @param by
+     * @param consumer
+     */
+    public static void select(By by, Consumer<Select> consumer) {
+        waitForPresenceOfElement(by);
+        consumer.accept(new Select(DriverManager.getDriver().findElement(by)));
+    }
+
+    /**
+     * This method is used to wait for the visibility of element
+     *
+     * @param mobileElement
+     */
+    public static void waitForPresenceOfElement(MobileElement mobileElement) {
+        WebDriverWait wait = new WebDriverWait(DriverManager.getDriver(), getConfig().waitTime());
+        wait.until(ExpectedConditions.visibilityOf(mobileElement));
+    }
+
+    /**
+     * This method is used to wait for the presence of element
+     *
+     * @param by
+     */
+    public static void waitForPresenceOfElement(By by) {
+        WebDriverWait wait = new WebDriverWait(DriverManager.getDriver(), getConfig().waitTime());
+        wait.until(ExpectedConditions.presenceOfElementLocated(by));
+    }
+    //===================================================================================================================================================================//
+    //+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++//
+
+    /**
+     * This method is used for click on android and ios elements
+     *
+     * @param androidBy
+     * @param iosBy
+     */
     public static void clickOnElement(By androidBy, By iosBy) {
         //wait strategy
         By byBasedOnMobilePlatform = getByBasedOnMobilePlatform(androidBy, iosBy);
         DriverManager.getDriver().findElement(byBasedOnMobilePlatform).click();
     }
 
+    /**
+     * This method is used for scroll the page.
+     *
+     * @param by
+     */
     public static void performScroll(By by) {
         String previousPageSource = "";
         while (isElementNotEnabled(by) && isNotEndOfPage(previousPageSource)) {
@@ -59,11 +256,58 @@ public class AppiumDriverUtils {
         }
     }
 
+    /**
+     * This method is used for scroll the page.
+     *
+     * @param element
+     */
     public static void performScroll(WebElement element) {
         String previousPageSource = "";
         while (isElementNotEnabled(element) && isNotEndOfPage(previousPageSource)) {
             previousPageSource = DriverManager.getDriver().getPageSource();
             scrollForMobile();
+        }
+    }
+
+    /**
+     * This method is used for scroll to the specific element and click on it.
+     *
+     * @param by
+     */
+    public static void performScrollAndClick(By by) {
+        String previousPageSource = "";
+        while (isElementNotEnabled(by) && isNotEndOfPage(previousPageSource)) {
+            previousPageSource = DriverManager.getDriver().getPageSource();
+            scrollForMobile();
+            DriverManager.getDriver().findElement(by).click();
+        }
+    }
+
+    /**
+     * This method is used for scrolling to the element and click on it.
+     *
+     * @param element
+     */
+    public static void performScrollAndClick(WebElement element) {
+        String previousPageSource = "";
+        while (isElementNotEnabled(element) && isNotEndOfPage(previousPageSource)) {
+            previousPageSource = DriverManager.getDriver().getPageSource();
+            scrollForMobile();
+            element.click();
+        }
+    }
+
+    /**
+     * This method is used for scroll to the specific mobile element and click on it.
+     *
+     * @param by
+     */
+    public static void scrollToSpecificElementAndClick(By by) {
+        while (DriverManager.getDriver().findElements(by).isEmpty()) {
+            performScrollBottomToTop();
+        }
+        if (!DriverManager.getDriver().findElements(by).isEmpty()) {
+            DriverManager.getDriver().findElement(by).click();
         }
     }
 
@@ -117,7 +361,8 @@ public class AppiumDriverUtils {
                 .waitAction(WaitOptions.waitOptions(Duration.ofMillis(200)))
                 .moveTo(PointOption.point(center, endY)).release().perform();
     }
-    //=================================================================================================================================================================//
+    //===================================================================================================================================================================//
+    //+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++//
 
     /**
      * This method is performed bottom to top swipe action
@@ -215,20 +460,8 @@ public class AppiumDriverUtils {
     }
 
     /**
-     * This method is used for scroll to the specific mobile element
-     * @param by
-     */
-    public static void scrollToSpecificElementAndClick(By by) {
-        while (DriverManager.getDriver().findElements(by).isEmpty()) {
-            performScrollBottomToTop();
-        }
-        if (!DriverManager.getDriver().findElements(by).isEmpty()) {
-            DriverManager.getDriver().findElement(by).click();
-        }
-    }
-
-    /**
      * This method is used for tap on element
+     *
      * @param mobileElement
      */
     public static void tapOnElement(MobileElement mobileElement) {
@@ -241,6 +474,7 @@ public class AppiumDriverUtils {
     /**
      * This method is used for tap on element
      * by passing argument as x and y coordinates
+     *
      * @param x
      * @param y
      */
@@ -252,6 +486,7 @@ public class AppiumDriverUtils {
 
     /**
      * This method is used for long-press on element
+     *
      * @param mobileElement
      * @param milliSeconds
      */
@@ -266,6 +501,7 @@ public class AppiumDriverUtils {
     /**
      * This method is used to drag and drop the element
      * by passing the source element and the target element
+     *
      * @param sourceElement
      * @param targetElement
      */
@@ -277,104 +513,6 @@ public class AppiumDriverUtils {
                 .release().perform();
     }
     //=================================================================================================================================================================//
-
-    //++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++//
-    public static void waitAndSendKeys(MobileElement mobileElement, String text) {
-        waitForPresenceOfElement(mobileElement);
-        mobileElement.sendKeys(text);
-    }
-
-    public static void waitAndSendKeys(By by, String value) {
-        waitForPresenceOfElement(by);
-        DriverManager.getDriver().findElement(by).sendKeys(value);
-    }
-
-    public static String gatText(MobileElement mobileElement) {
-        waitForPresenceOfElement(mobileElement);
-        return mobileElement.getText();
-    }
-
-    public static String getText(By by) {
-        waitForPresenceOfElement(by);
-        return DriverManager.getDriver().findElement(by).getText();
-    }
-
-    public static String getAttribute(MobileElement mobileElement, String attributeName) {
-        waitForPresenceOfElement(mobileElement);
-        String attributeValue = mobileElement.getAttribute(attributeName);
-        return attributeValue;
-    }
-
-    public static String getAttribute(By by) {
-        waitForPresenceOfElement(by);
-        return DriverManager.getDriver().findElement(by).getTagName();
-    }
-
-    public static String getAttribute(By by, Function<WebElement, String> attributeFunction) {
-        waitForPresenceOfElement(by);
-        return attributeFunction.apply(DriverManager.getDriver().findElement(by));
-    }
-
-    public static int getSize(By by) {
-        waitForPresenceOfElement(by);
-        return DriverManager.getDriver().findElements(by).size();
-    }
-
-    public static boolean verifyIsElementDisplayed(MobileElement mobileElement) {
-        waitForPresenceOfElement(mobileElement);
-        return mobileElement.isDisplayed();
-    }
-
-    public static boolean verifyIsElementDisplayed(By by) {
-        waitForPresenceOfElement(by);
-        return DriverManager.getDriver().findElement(by).isDisplayed();
-    }
-
-    public static boolean verifyIsElementPresent(By by, Predicate<WebElement> elementPredicate) {
-        waitForPresenceOfElement(by);
-        return elementPredicate.test(DriverManager.getDriver().findElement(by));
-    }
-
-    public static void select(By by, Consumer<Select> consumer) {
-        waitForPresenceOfElement(by);
-        consumer.accept(new Select(DriverManager.getDriver().findElement(by)));
-    }
-
-    public static void waitForPresenceOfElement(MobileElement mobileElement) {
-        WebDriverWait wait = new WebDriverWait(DriverManager.getDriver(), getConfig().waitTime());
-        wait.until(ExpectedConditions.visibilityOf(mobileElement));
-    }
-
-    public static void waitForPresenceOfElement(By by) {
-        WebDriverWait wait = new WebDriverWait(DriverManager.getDriver(), getConfig().waitTime());
-        wait.until(ExpectedConditions.presenceOfElementLocated(by));
-    }
-
-    //++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++//
-    public static void clickOnElement(MobileElement element) {
-        waitForElementToBeClickableAndClick(element);
-    }
-
-    public static void clickOnElement(By by) {
-        waitForElementToBeClickableAndClick(by);
-    }
-
-    private static void waitForElementToBeClickableAndClick(MobileElement element) {
-        WebDriverWait wait = new WebDriverWait(DriverManager.getDriver(), getConfig().waitTime());
-        wait.until(ExpectedConditions.elementToBeClickable(element)).click();
-    }
-
-    private static void waitForElementToBeClickableAndClick(By by) {
-        WebDriverWait wait = new WebDriverWait(DriverManager.getDriver(), getConfig().waitTime());
-        wait.until(ExpectedConditions.elementToBeClickable(by)).click();
-    }
-
-    //++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++//
-
-
-
-    //++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++//
-
 
 
     //====================================================================================================//
