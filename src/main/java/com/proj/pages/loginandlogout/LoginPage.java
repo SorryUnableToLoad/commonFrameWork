@@ -52,7 +52,7 @@ public class LoginPage {
         Assert.assertEquals(enter_your_mobile_number, "Please enter your mobile number");
         System.out.println(enter_your_mobile_number);
         clickOnElement(mobileNumberInputBox);
-        enterText(mobileNumberInputBox, mobileNumber);
+        waitAndSendKeys(mobileNumberInputBox, mobileNumber);
         waitForPresenceOfElement(otpPage);
         String otppage = getAttribute(otpPage, "content-desc");
         Assert.assertEquals(otppage, "Enter OTP");

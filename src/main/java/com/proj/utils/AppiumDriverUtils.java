@@ -117,7 +117,6 @@ public class AppiumDriverUtils {
 
     /**
      * This method is uesd for scroll to the specific mobile element
-     *
      * @param by
      */
     public static void scrollToSpecificElementAndClick(By by) {
@@ -132,7 +131,6 @@ public class AppiumDriverUtils {
     /**
      * This method is used for tap on element
      * by passing argument as Mobileelement
-     *
      * @param mobileElement
      */
     public static void tapOnElement(MobileElement mobileElement) {
@@ -152,14 +150,24 @@ public class AppiumDriverUtils {
     }
 
     //++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++//
-    public static void enterText(MobileElement mobileElement, String text) {
+    public static void waitAndSendKeys(MobileElement mobileElement, String text) {
         waitForPresenceOfElement(mobileElement);
         mobileElement.sendKeys(text);
+    }
+
+    public static void waitAndSendKeys(By by, String value) {
+        waitForPresenceOfElement(by);
+        DriverManager.getDriver().findElement(by).sendKeys(value);
     }
 
     public static String gatText(MobileElement mobileElement) {
         waitForPresenceOfElement(mobileElement);
         return mobileElement.getText();
+    }
+
+    public static String getText(By by) {
+        waitForPresenceOfElement(by);
+        return DriverManager.getDriver().findElement(by).getText();
     }
 
     public static String getAttribute(MobileElement mobileElement, String attributeName) {
@@ -168,34 +176,48 @@ public class AppiumDriverUtils {
         return attributeValue;
     }
 
+    public static String getAttribute(By by) {
+        waitForPresenceOfElement(by);
+        return DriverManager.getDriver().findElement(by).getTagName();
+    }
+
+    public static String getAttribute(By by, Function<WebElement, String> attributeFunction) {
+        waitForPresenceOfElement(by);
+        return attributeFunction.apply(DriverManager.getDriver().findElement(by));
+    }
+
+    public static int getSize(By by) {
+        waitForPresenceOfElement(by);
+        return DriverManager.getDriver().findElements(by).size();
+    }
+
     public static boolean verifyIsElementDisplayed(MobileElement mobileElement) {
         waitForPresenceOfElement(mobileElement);
         return mobileElement.isDisplayed();
     }
 
+    public static boolean verifyIsElementDisplayed(By by) {
+        waitForPresenceOfElement(by);
+        return DriverManager.getDriver().findElement(by).isDisplayed();
+    }
+
+    public static boolean verifyIsElementPresent(By by, Predicate<WebElement> elementPredicate) {
+        waitForPresenceOfElement(by);
+        return elementPredicate.test(DriverManager.getDriver().findElement(by));
+    }
+
+    public static void select(By by, Consumer<Select> consumer) {
+        waitForPresenceOfElement(by);
+        consumer.accept(new Select(DriverManager.getDriver().findElement(by)));
+    }
+
     public static void waitForPresenceOfElement(MobileElement mobileElement) {
-        WebDriverWait wait = new WebDriverWait(driver, getConfig().waitTime());
+        WebDriverWait wait = new WebDriverWait(DriverManager.getDriver(), getConfig().waitTime());
         wait.until(ExpectedConditions.visibilityOf(mobileElement));
     }
 
-    public static void enterText(By byLocator, String value) {
-        driver.findElement(byLocator).sendKeys(value);
-    }
-
-    public static String getText(By byLocator) {
-        return driver.findElement(byLocator).getText();
-    }
-
-    public static String getAttribute(By byLocator) {
-        return driver.findElement(byLocator).getTagName();
-    }
-
-    public static boolean verifyIsElementDisplayed(By bylocator) {
-        return driver.findElement(bylocator).isDisplayed();
-    }
-
     public static void waitForPresenceOfElement(By by) {
-        WebDriverWait wait = new WebDriverWait(driver, getConfig().waitTime());
+        WebDriverWait wait = new WebDriverWait(DriverManager.getDriver(), getConfig().waitTime());
         wait.until(ExpectedConditions.presenceOfElementLocated(by));
     }
 
@@ -204,86 +226,49 @@ public class AppiumDriverUtils {
         waitForElementToBeClickableAndClick(element);
     }
 
-    public static void waitForElementToBeClickableAndClick(MobileElement element) {
-        WebDriverWait wait = new WebDriverWait(driver, getConfig().waitTime());
+    public static void clickOnElement(By by) {
+        waitForElementToBeClickableAndClick(by);
+    }
+
+    private static void waitForElementToBeClickableAndClick(MobileElement element) {
+        WebDriverWait wait = new WebDriverWait(DriverManager.getDriver(), getConfig().waitTime());
         wait.until(ExpectedConditions.elementToBeClickable(element)).click();
     }
 
-    public static void clickOnElement(By byLocator) {
-        waitForElementToBeClickableAndClick(byLocator);
-    }
-
-    public static void waitForElementToBeClickableAndClick(By byLocator) {
-        WebDriverWait wait = new WebDriverWait(driver, getConfig().waitTime());
-        wait.until(ExpectedConditions.elementToBeClickable(byLocator)).click();
+    private static void waitForElementToBeClickableAndClick(By by) {
+        WebDriverWait wait = new WebDriverWait(DriverManager.getDriver(), getConfig().waitTime());
+        wait.until(ExpectedConditions.elementToBeClickable(by)).click();
     }
 
     //++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++//
-    /*public static void select(By byLocator, Consumer<Select> consumer) {
-        consumer.accept(new Select(driver.findElement(byLocator)));
-    }*/
 
-    //====================================================================================================//
-    public static int getSize(By byLocator) {
-        return driver.findElements(byLocator).size();
-    }
-
-    //====================================================================================================//
-    public static WebElement chooseAProduct(String productName) {
-        return driver.findElement(By.xpath("//android.widget.ImageView[@content-desc='" + productName + "']"));
-    }
-    public static void waitAndClick(By by) {
-        //wait strategy
-        DriverManager.getDriver().findElement(by).click();
-    }
-
-    public static void waitAndClick(By androidBy, By iosBy) {
+    public static void clickOnElement(By androidBy, By iosBy) {
         //wait strategy
         By byBasedOnMobilePlatform = getByBasedOnMobilePlatform(androidBy, iosBy);
         DriverManager.getDriver().findElement(byBasedOnMobilePlatform).click();
     }
-
-    public static void waitAndSendKeys(By by, String value) {
-        //wait strategy
-        DriverManager.getDriver().findElement(by).sendKeys(value);
+    public static void performScroll(By by) {
+        String previousPageSource = "";
+        while (isElementNotEnabled(by) && isNotEndOfPage(previousPageSource)) {
+            previousPageSource = DriverManager.getDriver().getPageSource();
+            scrollForMobile();
+        }
     }
 
-    public static void select(By byLocator, Consumer<Select> consumer) {
-        consumer.accept(new Select(DriverManager.getDriver().findElement(byLocator)));
+    public static void performScroll(WebElement element) {
+        String previousPageSource = "";
+        while (isElementNotEnabled(element) && isNotEndOfPage(previousPageSource)) {
+            previousPageSource = DriverManager.getDriver().getPageSource();
+            scrollForMobile();
+        }
     }
-
-    public static String getAttribute(By by, Function<WebElement, String> attributeFunction) {
-        return attributeFunction.apply(DriverManager.getDriver().findElement(by));
-    }
-
-    public static boolean isPresent(By by, Predicate<WebElement> elementPredicate) {
-        return elementPredicate.test(DriverManager.getDriver().findElement(by));
+    private static boolean isAndroid() {
+        return DriverManager.getDriver() instanceof AndroidDriver;
     }
 
     private static By getByBasedOnMobilePlatform(By androidBy, By iosBy) {
         return isAndroid() ? androidBy : iosBy;
     }
-
-    private static boolean isAndroid() {
-        return DriverManager.getDriver() instanceof AndroidDriver;
-    }
-
-    public static void scrollForMobile(By by) {
-        String previousPageSource = "";
-        while (isElementNotEnabled(by) && isNotEndOfPage(previousPageSource)) {
-            previousPageSource = DriverManager.getDriver().getPageSource();
-            performScroll();
-        }
-    }
-
-    public static void scrollForMobile(WebElement element) {
-        String previousPageSource = "";
-        while (isElementNotEnabled(element) && isNotEndOfPage(previousPageSource)) {
-            previousPageSource = DriverManager.getDriver().getPageSource();
-            performScroll();
-        }
-    }
-
     private static boolean isNotEndOfPage(String previousPageSource) {
         return !previousPageSource.equals(DriverManager.getDriver().getPageSource());
     }
@@ -307,7 +292,7 @@ public class AppiumDriverUtils {
         return true;
     }
 
-    private static void performScroll() {
+    private static void scrollForMobile() {
         Dimension size = DriverManager.getDriver().manage().window().getSize();
         int startX = size.getWidth() / 2;
         int endX = size.getWidth() / 2;
@@ -334,5 +319,15 @@ public class AppiumDriverUtils {
                 .moveTo(PointOption.point(endX, endY))
                 .release()
                 .perform();
+    }
+
+    //++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++//
+
+    //====================================================================================================//
+
+
+    //====================================================================================================//
+    public static WebElement chooseAProduct(String productName) {
+        return DriverManager.getDriver().findElement(By.xpath("//android.widget.ImageView[@content-desc='" + productName + "']"));
     }
 }
