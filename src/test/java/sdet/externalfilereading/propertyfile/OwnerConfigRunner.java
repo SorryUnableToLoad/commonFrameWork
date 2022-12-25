@@ -9,6 +9,5 @@ public class OwnerConfigRunner {
         System.out.println(config.favtools());
         System.out.println(config.browser());
         System.out.println(config.loves());
-
     }
 }

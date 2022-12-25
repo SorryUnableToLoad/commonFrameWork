@@ -9,7 +9,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.PageFactory;
 
-import static com.proj.utils.AppiumDriverUtils.clickOnElement;
+import static com.proj.utils.ActionHelper.clickOnElement;
 
 public class CategoriesPageRepo {
     AppiumDriver driver;

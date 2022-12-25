@@ -1,7 +1,7 @@
 package com.projtest.mobile.demotest;
 
 import com.proj.annotations.FrameworkAnnotations;
-import com.projtest.base.MobileSetUp;
+import com.proj.base.MobileSetUp;
 import org.testng.annotations.Test;
 
 public class LoginPageTest extends MobileSetUp {

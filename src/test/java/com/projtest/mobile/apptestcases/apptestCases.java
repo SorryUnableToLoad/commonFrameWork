@@ -1,6 +1,6 @@
 package com.projtest.mobile.apptestcases;
 
-import com.projtest.base.MobileSetUp;
+import com.proj.base.MobileSetUp;
 import com.proj.pages.initializepages.InitializePages;
 import org.testng.annotations.Test;
 

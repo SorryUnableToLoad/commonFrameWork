@@ -17,7 +17,7 @@ public final class Driver {
     }
 
     /**
-     * This method is intialize the driver based on user data for web application testing.
+     * This method is initialized the driver based on user data for web application testing.
      * Description : set the browser type,cloud mode and run mode in config file
      * webBrowser -> chrome, firefox
      * webCloudMode -> selenium-grid, selenoid, browserstack
@@ -36,7 +36,7 @@ public final class Driver {
     }
 
     /**
-     * Thsi is method is load the url of application
+     * This is method is load the url of application
      * Description : url can be dev environment,beta environment, staging environment
      */
     public static void loadURL() {
@@ -46,7 +46,7 @@ public final class Driver {
     }
 
     /**
-     * This method is intialize the driver based on user data for mobile application testing.
+     * This method is initialized the driver based on user data for mobile application testing.
      * Description : set the browser type,cloud mode and run mode in config file
      * mobile-platform -> android, ios
      * mobileCloudMode -> browserstack

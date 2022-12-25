@@ -1,5 +1,6 @@
 package com.proj.listeners;
 
+import com.aventstack.extentreports.MediaEntityBuilder;
 import com.aventstack.extentreports.Status;
 import com.proj.annotations.FrameworkAnnotations;
 import com.proj.listeners.extentreport.ExtentManager;
@@ -7,6 +8,10 @@ import com.proj.listeners.extentreport.ExtentReport;
 import org.testng.ITestContext;
 import org.testng.ITestListener;
 import org.testng.ITestResult;
+
+import java.io.IOException;
+
+import static com.proj.utils.ScreenshotUtils.takeScreenShot;
 
 public class TestListenerImpl implements ITestListener {
     @Override
@@ -45,7 +50,7 @@ public class TestListenerImpl implements ITestListener {
         String testCaseName = result.getMethod().getMethodName();
         /*try {
             String path = takeScreenShot();
-            ExtentManager.getTest().fail(testCaseName,MediaEntityBuilder.createScreenCaptureFromBase64String(path).build());
+            ExtentManager.getTest().fail(testCaseName, MediaEntityBuilder.createScreenCaptureFromBase64String(path).build());
         } catch (IOException e) {
             e.printStackTrace();
         }*/

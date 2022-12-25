@@ -2,7 +2,7 @@ package com.proj.pages.home;
 
 import org.openqa.selenium.By;
 
-import static com.proj.utils.AppiumDriverUtils.*;
+import static com.proj.utils.ActionHelper.*;
 
 public class SelectStore {
     public SelectStore() {

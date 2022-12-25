@@ -2,7 +2,7 @@ package com.projtest.web;
 
 import com.proj.annotations.FrameworkAnnotations;
 import com.proj.driver.DriverManager;
-import com.projtest.base.WebSetUp;
+import com.proj.base.WebSetUp;
 import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 

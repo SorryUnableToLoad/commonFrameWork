@@ -1,6 +1,6 @@
 package com.projtest.api;
 
-import com.proj.utils.DatabaseUtils;
+import com.proj.utils.apiutils.DatabaseUtils;
 import org.testng.annotations.Test;
 
 import java.sql.SQLException;

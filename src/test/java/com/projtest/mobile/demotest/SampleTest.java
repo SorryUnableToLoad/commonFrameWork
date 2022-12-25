@@ -1,6 +1,6 @@
 package com.projtest.mobile.demotest;
 
-import com.projtest.base.WebSetUp;
+import com.proj.base.WebSetUp;
 import org.testng.annotations.Test;
 
 public class SampleTest extends WebSetUp {

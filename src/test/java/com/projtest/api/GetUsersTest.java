@@ -2,7 +2,7 @@ package com.projtest.api;
 
 import com.proj.annotations.FrameworkAnnotations;
 import com.proj.api.GetUsers;
-import com.proj.utils.ResponseAssert;
+import com.proj.utils.apiutils.ResponseAssert;
 import io.restassured.response.Response;
 import org.testng.annotations.Test;
 

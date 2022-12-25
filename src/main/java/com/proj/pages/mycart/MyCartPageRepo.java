@@ -9,8 +9,8 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.support.PageFactory;
 import org.testng.Assert;
 
-import static com.proj.utils.AppiumDriverUtils.clickOnElement;
-import static com.proj.utils.AppiumDriverUtils.getAttribute;
+import static com.proj.utils.ActionHelper.clickOnElement;
+import static com.proj.utils.ActionHelper.getAttribute;
 
 public class MyCartPageRepo {
     AppiumDriver driver;

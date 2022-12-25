@@ -3,7 +3,7 @@ package com.proj.pages.loginandlogout;
 import org.openqa.selenium.By;
 import org.testng.Assert;
 
-import static com.proj.utils.AppiumDriverUtils.*;
+import static com.proj.utils.ActionHelper.*;
 
 public class LogoutPage {
 

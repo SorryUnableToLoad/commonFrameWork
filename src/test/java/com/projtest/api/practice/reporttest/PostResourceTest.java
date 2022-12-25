@@ -2,7 +2,7 @@ package com.projtest.api.practice.reporttest;
 
 
 import com.proj.annotations.FrameworkAnnotations;
-import com.proj.utils.ApiUtils;
+import com.proj.utils.apiutils.ApiUtils;
 import io.restassured.http.ContentType;
 import io.restassured.response.Response;
 import io.restassured.specification.RequestSpecification;

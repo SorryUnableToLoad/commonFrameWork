@@ -1,14 +1,14 @@
 package com.projtest.mobile.demotest;
 
 import com.proj.driver.DriverManager;
-import com.projtest.base.MobileSetUp;
+import com.proj.base.MobileSetUp;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.testng.annotations.Test;
 
 import java.util.List;
 
-import static com.proj.utils.AppiumDriverUtils.scrollToSpecificElementAndClick;
+import static com.proj.utils.ActionHelper.scrollToSpecificElementAndClick;
 
 public class ScrollAndCick extends MobileSetUp {
 

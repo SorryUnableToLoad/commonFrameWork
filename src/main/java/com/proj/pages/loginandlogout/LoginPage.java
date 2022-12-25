@@ -8,7 +8,7 @@ import io.appium.java_client.pagefactory.AppiumFieldDecorator;
 import org.openqa.selenium.support.PageFactory;
 import org.testng.Assert;
 
-import static com.proj.utils.AppiumDriverUtils.*;
+import static com.proj.utils.ActionHelper.*;
 
 public class LoginPage {
     AppiumDriver driver;
