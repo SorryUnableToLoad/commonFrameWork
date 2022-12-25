@@ -40,14 +40,11 @@ public class ActionHelper extends MobileSetUp {
 
     static AppiumDriver driver = (AppiumDriver) DriverManager.getDriver();
     static Dimension size = DriverManager.getDriver().manage().window().getSize();
-    static int height = size.getHeight();
-    static int width = size.getWidth();
-
-    static int center = width * 50 / 100;
-    static int startX = width * 90 / 100;
-    static int endX = width * 10 / 100;
-    static int startY = height * 60 / 100;
-    static int endY = height * 10 / 100;
+    static int center = size.getWidth() * 50 / 100;
+    static int startX = size.getWidth() * 90 / 100;
+    static int endX = size.getWidth() * 10 / 100;
+    static int startY = size.getHeight() * 60 / 100;
+    static int endY = size.getHeight() * 10 / 100;
 
 
    /* static int center = size.getHeight() / 2;
@@ -368,18 +365,11 @@ public class ActionHelper extends MobileSetUp {
     }
 
     private static void performScrollForAndroid() {
-        new AndroidTouchAction((PerformsTouchActions) DriverManager.getDriver())
-                .press(PointOption.point(center, startY))
-                .waitAction(WaitOptions.waitOptions(Duration.ofMillis(500)))
-                .moveTo(PointOption.point(center, endY))
-                .release().perform();
+        new AndroidTouchAction((PerformsTouchActions) DriverManager.getDriver()).press(PointOption.point(center, startY)).waitAction(WaitOptions.waitOptions(Duration.ofMillis(500))).moveTo(PointOption.point(center, endY)).release().perform();
     }
 
     private static void performScrollForIOS() {
-        new IOSTouchAction((PerformsTouchActions) DriverManager.getDriver())
-                .press(PointOption.point(center, startY))
-                .waitAction(WaitOptions.waitOptions(Duration.ofMillis(500)))
-                .moveTo(PointOption.point(center, endY)).release().perform();
+        new IOSTouchAction((PerformsTouchActions) DriverManager.getDriver()).press(PointOption.point(center, startY)).waitAction(WaitOptions.waitOptions(Duration.ofMillis(500))).moveTo(PointOption.point(center, endY)).release().perform();
     }
     //===================================================================================================================================================================//
     //+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++//
@@ -388,11 +378,7 @@ public class ActionHelper extends MobileSetUp {
      * This method is performed bottom to top swipe action
      */
     public static void performScrollBottomToTop() {
-        new TouchAction((PerformsTouchActions) DriverManager.getDriver())
-                .press(PointOption.point(center, startY))
-                .waitAction(WaitOptions.waitOptions(Duration.ofMillis(500)))
-                .moveTo(PointOption.point(center, endY))
-                .release().perform();
+        new TouchAction((PerformsTouchActions) DriverManager.getDriver()).press(PointOption.point(center, startY)).waitAction(WaitOptions.waitOptions(Duration.ofMillis(500))).moveTo(PointOption.point(center, endY)).release().perform();
     }
 
     /**
@@ -401,10 +387,7 @@ public class ActionHelper extends MobileSetUp {
      */
     public static void performScrollBottomToTop(int Times) {
         for (int initTime = 0; initTime < Times; initTime++) {
-            new TouchAction((PerformsTouchActions) DriverManager.getDriver())
-                    .press(PointOption.point(center, startY))
-                    .waitAction(WaitOptions.waitOptions(Duration.ofMillis(500)))
-                    .moveTo(PointOption.point(center, endY)).release().perform();
+            new TouchAction((PerformsTouchActions) DriverManager.getDriver()).press(PointOption.point(center, startY)).waitAction(WaitOptions.waitOptions(Duration.ofMillis(500))).moveTo(PointOption.point(center, endY)).release().perform();
         }
     }
 
@@ -412,10 +395,7 @@ public class ActionHelper extends MobileSetUp {
      * This method is performed top to bottom swipe action
      */
     public static void performScrollTopToBottom() {
-        new TouchAction((PerformsTouchActions) DriverManager.getDriver())
-                .press(PointOption.point(center, endY))
-                .waitAction(WaitOptions.waitOptions(Duration.ofMillis(500)))
-                .moveTo(PointOption.point(center, startY)).release().perform();
+        new TouchAction((PerformsTouchActions) DriverManager.getDriver()).press(PointOption.point(center, endY)).waitAction(WaitOptions.waitOptions(Duration.ofMillis(500))).moveTo(PointOption.point(center, startY)).release().perform();
     }
 
     /**
@@ -424,10 +404,7 @@ public class ActionHelper extends MobileSetUp {
      */
     public static void performScrollTopToBottom(int Times) {
         for (int initTime = 0; initTime < Times; initTime++) {
-            new TouchAction((PerformsTouchActions) DriverManager.getDriver())
-                    .press(PointOption.point(center, endY))
-                    .waitAction(WaitOptions.waitOptions(Duration.ofMillis(500)))
-                    .moveTo(PointOption.point(center, startY)).release().perform();
+            new TouchAction((PerformsTouchActions) DriverManager.getDriver()).press(PointOption.point(center, endY)).waitAction(WaitOptions.waitOptions(Duration.ofMillis(500))).moveTo(PointOption.point(center, startY)).release().perform();
         }
     }
 
@@ -435,11 +412,7 @@ public class ActionHelper extends MobileSetUp {
      * This method is performed left to right swipe action
      */
     public static void performScrollLeftToRight() {
-        new TouchAction((PerformsTouchActions) DriverManager.getDriver())
-                .press(PointOption.point(endX, center))
-                .waitAction(WaitOptions.waitOptions(Duration.ofMillis(500)))
-                .moveTo(PointOption.point(startX, center))
-                .release().perform();
+        new TouchAction((PerformsTouchActions) DriverManager.getDriver()).press(PointOption.point(endX, center)).waitAction(WaitOptions.waitOptions(Duration.ofMillis(500))).moveTo(PointOption.point(startX, center)).release().perform();
     }
 
     /**
@@ -448,11 +421,7 @@ public class ActionHelper extends MobileSetUp {
      */
     public static void performScrollLeftToRight(int Times) {
         for (int initTime = 0; initTime < Times; initTime++) {
-            new TouchAction((PerformsTouchActions) DriverManager.getDriver())
-                    .press(PointOption.point(endX, center))
-                    .waitAction(WaitOptions.waitOptions(Duration.ofMillis(500)))
-                    .moveTo(PointOption.point(startX, center))
-                    .release().perform();
+            new TouchAction((PerformsTouchActions) DriverManager.getDriver()).press(PointOption.point(endX, center)).waitAction(WaitOptions.waitOptions(Duration.ofMillis(500))).moveTo(PointOption.point(startX, center)).release().perform();
         }
     }
 
@@ -460,11 +429,7 @@ public class ActionHelper extends MobileSetUp {
      * This method is performed right to left swipe action
      */
     public static void performScrollRightToLeft() {
-        new TouchAction((PerformsTouchActions) DriverManager.getDriver())
-                .press(PointOption.point(startX, center))
-                .waitAction(WaitOptions.waitOptions(Duration.ofMillis(500)))
-                .moveTo(PointOption.point(endX, center))
-                .release().perform();
+        new TouchAction((PerformsTouchActions) DriverManager.getDriver()).press(PointOption.point(startX, center)).waitAction(WaitOptions.waitOptions(Duration.ofMillis(500))).moveTo(PointOption.point(endX, center)).release().perform();
     }
 
     /**
@@ -472,11 +437,7 @@ public class ActionHelper extends MobileSetUp {
      * based on int argument i.e number of times
      */
     public static void performScrollRightToLeft(int Times) {
-        new TouchAction((PerformsTouchActions) DriverManager.getDriver())
-                .press(PointOption.point(startX, center))
-                .waitAction(WaitOptions.waitOptions(Duration.ofMillis(500)))
-                .moveTo(PointOption.point(endX, center))
-                .release().perform();
+        new TouchAction((PerformsTouchActions) DriverManager.getDriver()).press(PointOption.point(startX, center)).waitAction(WaitOptions.waitOptions(Duration.ofMillis(500))).moveTo(PointOption.point(endX, center)).release().perform();
     }
 
     /**
@@ -485,10 +446,7 @@ public class ActionHelper extends MobileSetUp {
      * @param mobileElement
      */
     public static void tapOnElement(MobileElement mobileElement) {
-        new TouchAction((PerformsTouchActions) DriverManager.getDriver())
-                .tap(TapOptions.tapOptions()
-                        .withElement(ElementOption.element(mobileElement)))
-                .perform();
+        new TouchAction((PerformsTouchActions) DriverManager.getDriver()).tap(TapOptions.tapOptions().withElement(ElementOption.element(mobileElement))).perform();
     }
 
     /**
@@ -499,9 +457,7 @@ public class ActionHelper extends MobileSetUp {
      * @param y
      */
     public static void tapOnElementByCoordinates(int x, int y) {
-        new TouchAction((PerformsTouchActions) DriverManager.getDriver())
-                .tap(PointOption.point(x, y))
-                .perform();
+        new TouchAction((PerformsTouchActions) DriverManager.getDriver()).tap(PointOption.point(x, y)).perform();
     }
 
     /**
@@ -511,11 +467,7 @@ public class ActionHelper extends MobileSetUp {
      * @param milliSeconds
      */
     public void longPress(MobileElement mobileElement, int milliSeconds) {
-        new TouchAction((PerformsTouchActions) DriverManager.getDriver())
-                .longPress(LongPressOptions.longPressOptions()
-                        .withElement(ElementOption.element(mobileElement)))
-                .waitAction(WaitOptions.waitOptions(Duration.ofMillis(milliSeconds)))
-                .perform();
+        new TouchAction((PerformsTouchActions) DriverManager.getDriver()).longPress(LongPressOptions.longPressOptions().withElement(ElementOption.element(mobileElement))).waitAction(WaitOptions.waitOptions(Duration.ofMillis(milliSeconds))).perform();
     }
 
     /**
@@ -526,11 +478,7 @@ public class ActionHelper extends MobileSetUp {
      * @param targetElement
      */
     public static void dragAndDrop(MobileElement sourceElement, MobileElement targetElement) {
-        new TouchAction((PerformsTouchActions) DriverManager.getDriver())
-                .tap(TapOptions.tapOptions().withElement(ElementOption.element(sourceElement)))
-                .waitAction(WaitOptions.waitOptions(Duration.ofMillis(500)))
-                .moveTo(ElementOption.element(targetElement))
-                .release().perform();
+        new TouchAction((PerformsTouchActions) DriverManager.getDriver()).tap(TapOptions.tapOptions().withElement(ElementOption.element(sourceElement))).waitAction(WaitOptions.waitOptions(Duration.ofMillis(500))).moveTo(ElementOption.element(targetElement)).release().perform();
     }
     //=================================================================================================================================================================//
 
