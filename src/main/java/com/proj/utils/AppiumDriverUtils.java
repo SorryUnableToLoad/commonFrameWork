@@ -49,11 +49,7 @@ public class AppiumDriverUtils {
      * This method is performed bottom to top swipe action
      */
     public static void performScrollBottomToTop() {
-        new AndroidTouchAction((PerformsTouchActions) DriverManager.getDriver())
-                .press(PointOption.point(center, center))
-                .waitAction(WaitOptions.waitOptions(Duration.ofMillis(200)))
-                .moveTo(PointOption.point(center, endY))
-                .release().perform();
+        new AndroidTouchAction((PerformsTouchActions) DriverManager.getDriver()).press(PointOption.point(center, center)).waitAction(WaitOptions.waitOptions(Duration.ofMillis(200))).moveTo(PointOption.point(center, endY)).release().perform();
     }
 
     /**
@@ -61,11 +57,7 @@ public class AppiumDriverUtils {
      */
     public static void swipeFromBottomToTop(int Times) {
         for (int initTime = 0; initTime < Times; initTime++) {
-            new AndroidTouchAction((PerformsTouchActions) DriverManager.getDriver())
-                    .press(PointOption.point(center, center))
-                    .waitAction(WaitOptions.waitOptions(Duration.ofMillis(200)))
-                    .moveTo(PointOption.point(center, endY))
-                    .release().perform();
+            new AndroidTouchAction((PerformsTouchActions) DriverManager.getDriver()).press(PointOption.point(center, center)).waitAction(WaitOptions.waitOptions(Duration.ofMillis(200))).moveTo(PointOption.point(center, endY)).release().perform();
         }
     }
 
@@ -73,11 +65,7 @@ public class AppiumDriverUtils {
      * This method is performed top to bottom swipe action
      */
     public static void performScrollTopToBottom() {
-        new AndroidTouchAction((PerformsTouchActions) DriverManager.getDriver())
-                .press(PointOption.point(center, endY))
-                .waitAction(WaitOptions.waitOptions(Duration.ofMillis(200)))
-                .moveTo(PointOption.point(center, center))
-                .release().perform();
+        new AndroidTouchAction((PerformsTouchActions) DriverManager.getDriver()).press(PointOption.point(center, endY)).waitAction(WaitOptions.waitOptions(Duration.ofMillis(200))).moveTo(PointOption.point(center, center)).release().perform();
     }
 
     /**
@@ -85,24 +73,15 @@ public class AppiumDriverUtils {
      */
     public static void performScrollTopToBottom(int Times) {
         for (int initTime = 0; initTime < Times; initTime++) {
-            new AndroidTouchAction((PerformsTouchActions) DriverManager.getDriver())
-                    .press(PointOption.point(center, endY))
-                    .waitAction(WaitOptions.waitOptions(Duration.ofMillis(200)))
-                    .moveTo(PointOption.point(center, center))
-                    .release().perform();
+            new AndroidTouchAction((PerformsTouchActions) DriverManager.getDriver()).press(PointOption.point(center, endY)).waitAction(WaitOptions.waitOptions(Duration.ofMillis(200))).moveTo(PointOption.point(center, center)).release().perform();
         }
     }
-
 
     /**
      * This method is performed left to right swipe action
      */
     public static void performScrollLeftToRight() {
-        new AndroidTouchAction((PerformsTouchActions) DriverManager.getDriver())
-                .press(PointOption.point(center, startX))
-                .waitAction(WaitOptions.waitOptions(Duration.ofMillis(200)))
-                .moveTo(PointOption.point(center, center))
-                .release().perform();
+        new AndroidTouchAction((PerformsTouchActions) DriverManager.getDriver()).press(PointOption.point(center, startX)).waitAction(WaitOptions.waitOptions(Duration.ofMillis(200))).moveTo(PointOption.point(center, center)).release().perform();
     }
 
     /**
@@ -110,11 +89,7 @@ public class AppiumDriverUtils {
      */
     public static void performScrollLeftToRight(int Times) {
         for (int initTime = 0; initTime < Times; initTime++) {
-            new AndroidTouchAction((PerformsTouchActions) DriverManager.getDriver())
-                    .press(PointOption.point(center, startX))
-                    .waitAction(WaitOptions.waitOptions(Duration.ofMillis(200)))
-                    .moveTo(PointOption.point(center, center))
-                    .release().perform();
+            new AndroidTouchAction((PerformsTouchActions) DriverManager.getDriver()).press(PointOption.point(center, startX)).waitAction(WaitOptions.waitOptions(Duration.ofMillis(200))).moveTo(PointOption.point(center, center)).release().perform();
         }
     }
 
@@ -122,22 +97,14 @@ public class AppiumDriverUtils {
      * This method is performed right to left swipe action
      */
     public static void performScrollRightToLeft() {
-        new AndroidTouchAction((PerformsTouchActions) DriverManager.getDriver())
-                .press(PointOption.point(center, endX))
-                .waitAction(WaitOptions.waitOptions(Duration.ofMillis(200)))
-                .moveTo(PointOption.point(center, center))
-                .release().perform();
+        new AndroidTouchAction((PerformsTouchActions) DriverManager.getDriver()).press(PointOption.point(center, endX)).waitAction(WaitOptions.waitOptions(Duration.ofMillis(200))).moveTo(PointOption.point(center, center)).release().perform();
     }
 
     /**
      * This method is performed right to left swipe action based on int argument i.e number of times
      */
     public static void swipeFromRightToLeft(int Times) {
-        new AndroidTouchAction((PerformsTouchActions) DriverManager.getDriver())
-                .press(PointOption.point(center, endX))
-                .waitAction(WaitOptions.waitOptions(Duration.ofMillis(200)))
-                .moveTo(PointOption.point(center, center))
-                .release().perform();
+        new AndroidTouchAction((PerformsTouchActions) DriverManager.getDriver()).press(PointOption.point(center, endX)).waitAction(WaitOptions.waitOptions(Duration.ofMillis(200))).moveTo(PointOption.point(center, center)).release().perform();
     }
 
     /**
@@ -161,32 +128,19 @@ public class AppiumDriverUtils {
      * @param mobileElement
      */
     public static void tapOnElement(MobileElement mobileElement) {
-        new TouchAction((PerformsTouchActions) DriverManager.getDriver())
-                .tap(TapOptions.tapOptions()
-                        .withElement(ElementOption.element(mobileElement)))
-                .perform();
+        new TouchAction((PerformsTouchActions) DriverManager.getDriver()).tap(TapOptions.tapOptions().withElement(ElementOption.element(mobileElement))).perform();
     }
 
     public static void tapOnElementByCoordinates(int x, int y) {
-        new TouchAction((PerformsTouchActions) DriverManager.getDriver())
-                .tap(PointOption.point(x, y))
-                .perform();
+        new TouchAction((PerformsTouchActions) DriverManager.getDriver()).tap(PointOption.point(x, y)).perform();
     }
 
     public void longPress(MobileElement mobileElement, int milliSeconds) {
-        new TouchAction((PerformsTouchActions) DriverManager.getDriver())
-                .longPress(LongPressOptions.longPressOptions()
-                        .withElement(ElementOption.element(mobileElement)))
-                .waitAction(WaitOptions.waitOptions(Duration.ofMillis(milliSeconds)))
-                .perform();
+        new TouchAction((PerformsTouchActions) DriverManager.getDriver()).longPress(LongPressOptions.longPressOptions().withElement(ElementOption.element(mobileElement))).waitAction(WaitOptions.waitOptions(Duration.ofMillis(milliSeconds))).perform();
     }
 
     public static void dragAndDrop(MobileElement sourceElement, MobileElement targetElement) {
-        new TouchAction((PerformsTouchActions) DriverManager.getDriver())
-                .tap(TapOptions.tapOptions().withElement(ElementOption.element(sourceElement)))
-                .waitAction(WaitOptions.waitOptions(Duration.ofMillis(500)))
-                .moveTo(ElementOption.element(targetElement))
-                .release().perform();
+        new TouchAction((PerformsTouchActions) DriverManager.getDriver()).tap(TapOptions.tapOptions().withElement(ElementOption.element(sourceElement))).waitAction(WaitOptions.waitOptions(Duration.ofMillis(500))).moveTo(ElementOption.element(targetElement)).release().perform();
     }
 
     //++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++//
@@ -347,19 +301,11 @@ public class AppiumDriverUtils {
     }
 
     private static void performScrollForAndroid(int startX, int startY, int endX, int endY) {
-        new AndroidTouchAction((PerformsTouchActions) DriverManager.getDriver())
-                .press(PointOption.point(startX, startY))
-                .waitAction(WaitOptions.waitOptions(Duration.ofMillis(200)))
-                .moveTo(PointOption.point(endX, endY))
-                .release().perform();
+        new AndroidTouchAction((PerformsTouchActions) DriverManager.getDriver()).press(PointOption.point(startX, startY)).waitAction(WaitOptions.waitOptions(Duration.ofMillis(200))).moveTo(PointOption.point(endX, endY)).release().perform();
     }
 
     private static void performScrollForIOS(int startX, int startY, int endX, int endY) {
-        new IOSTouchAction((PerformsTouchActions) DriverManager.getDriver())
-                .press(PointOption.point(startX, startY))
-                .waitAction(WaitOptions.waitOptions(Duration.ofMillis(200)))
-                .moveTo(PointOption.point(endX, endY))
-                .release().perform();
+        new IOSTouchAction((PerformsTouchActions) DriverManager.getDriver()).press(PointOption.point(startX, startY)).waitAction(WaitOptions.waitOptions(Duration.ofMillis(200))).moveTo(PointOption.point(endX, endY)).release().perform();
     }
 
     //++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++//
