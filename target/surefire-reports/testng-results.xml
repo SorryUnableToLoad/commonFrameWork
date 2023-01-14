@@ -28,7 +28,7 @@
         <test-method signature="testLinks()[pri:0, instance:javaPrectice.TestAssignment@49872d67]" started-at="2022-12-25T14:13:17 IST" name="testLinks" finished-at="2022-12-25T14:13:17 IST" duration-ms="0" status="FAIL">
           <exception class="java.lang.NullPointerException">
             <full-stacktrace>
-              <![CDATA[java.lang.NullPointerException
+                <![CDATA[java.lang.NullPointerException
 at com.proj.listeners.TestListenerImpl.onTestStart(TestListenerImpl.java:32)
 at org.testng.internal.TestListenerHelper.runTestListeners(TestListenerHelper.java:103)
 at org.testng.internal.TestInvoker.runTestResultListener(TestInvoker.java:219)
@@ -74,7 +74,7 @@ at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:75)
         <test-method signature="testLinks1()[pri:0, instance:javaPrectice.TestAssignment@49872d67]" started-at="2022-12-25T14:13:17 IST" name="testLinks1" finished-at="2022-12-25T14:13:17 IST" duration-ms="1" status="FAIL">
           <exception class="java.lang.NullPointerException">
             <full-stacktrace>
-              <![CDATA[java.lang.NullPointerException
+                <![CDATA[java.lang.NullPointerException
 at com.proj.listeners.TestListenerImpl.onTestStart(TestListenerImpl.java:32)
 at org.testng.internal.TestListenerHelper.runTestListeners(TestListenerHelper.java:103)
 at org.testng.internal.TestInvoker.runTestResultListener(TestInvoker.java:219)
@@ -122,7 +122,7 @@ at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:75)
         <test-method signature="serialization()[pri:0, instance:com.projtest.api.practice.pojolibtest.serialization.PojoLibTest@44040454]" started-at="2022-12-25T14:13:42 IST" name="serialization" finished-at="2022-12-25T14:13:42 IST" duration-ms="0" status="FAIL">
           <exception class="java.lang.NullPointerException">
             <full-stacktrace>
-              <![CDATA[java.lang.NullPointerException
+                <![CDATA[java.lang.NullPointerException
 at com.proj.listeners.TestListenerImpl.onTestStart(TestListenerImpl.java:32)
 at org.testng.internal.TestListenerHelper.runTestListeners(TestListenerHelper.java:103)
 at org.testng.internal.TestInvoker.runTestResultListener(TestInvoker.java:219)
@@ -177,7 +177,7 @@ at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:75)
           </params>
           <exception class="java.lang.NullPointerException">
             <full-stacktrace>
-              <![CDATA[java.lang.NullPointerException
+                <![CDATA[java.lang.NullPointerException
 at com.proj.listeners.TestListenerImpl.onTestStart(TestListenerImpl.java:32)
 at org.testng.internal.TestListenerHelper.runTestListeners(TestListenerHelper.java:103)
 at org.testng.internal.TestInvoker.runTestResultListener(TestInvoker.java:219)
@@ -230,7 +230,7 @@ at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:75)
           </params>
           <exception class="java.lang.NullPointerException">
             <full-stacktrace>
-              <![CDATA[java.lang.NullPointerException
+                <![CDATA[java.lang.NullPointerException
 at com.proj.listeners.TestListenerImpl.onTestStart(TestListenerImpl.java:32)
 at org.testng.internal.TestListenerHelper.runTestListeners(TestListenerHelper.java:103)
 at org.testng.internal.TestInvoker.runTestResultListener(TestInvoker.java:219)
@@ -379,7 +379,7 @@ at io.github.sskorol.data.XlsxReader.read(XlsxReader.java:34)
           </params>
           <exception class="java.lang.NullPointerException">
             <full-stacktrace>
-              <![CDATA[java.lang.NullPointerException
+                <![CDATA[java.lang.NullPointerException
 at com.proj.listeners.TestListenerImpl.onTestStart(TestListenerImpl.java:32)
 at org.testng.internal.TestListenerHelper.runTestListeners(TestListenerHelper.java:103)
 at org.testng.internal.TestInvoker.runTestResultListener(TestInvoker.java:219)
@@ -432,7 +432,7 @@ at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:75)
           </params>
           <exception class="java.lang.NullPointerException">
             <full-stacktrace>
-              <![CDATA[java.lang.NullPointerException
+                <![CDATA[java.lang.NullPointerException
 at com.proj.listeners.TestListenerImpl.onTestStart(TestListenerImpl.java:32)
 at org.testng.internal.TestListenerHelper.runTestListeners(TestListenerHelper.java:103)
 at org.testng.internal.TestInvoker.runTestResultListener(TestInvoker.java:219)
@@ -485,7 +485,7 @@ at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:75)
           </params>
           <exception class="java.lang.NullPointerException">
             <full-stacktrace>
-              <![CDATA[java.lang.NullPointerException
+                <![CDATA[java.lang.NullPointerException
 at com.proj.listeners.TestListenerImpl.onTestStart(TestListenerImpl.java:32)
 at org.testng.internal.TestListenerHelper.runTestListeners(TestListenerHelper.java:103)
 at org.testng.internal.TestInvoker.runTestResultListener(TestInvoker.java:219)
@@ -538,7 +538,7 @@ at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:75)
           </params>
           <exception class="java.lang.NullPointerException">
             <full-stacktrace>
-              <![CDATA[java.lang.NullPointerException
+                <![CDATA[java.lang.NullPointerException
 at com.proj.listeners.TestListenerImpl.onTestStart(TestListenerImpl.java:32)
 at org.testng.internal.TestListenerHelper.runTestListeners(TestListenerHelper.java:103)
 at org.testng.internal.TestInvoker.runTestResultListener(TestInvoker.java:219)
@@ -591,7 +591,7 @@ at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:75)
           </params>
           <exception class="java.lang.NullPointerException">
             <full-stacktrace>
-              <![CDATA[java.lang.NullPointerException
+                <![CDATA[java.lang.NullPointerException
 at com.proj.listeners.TestListenerImpl.onTestStart(TestListenerImpl.java:32)
 at org.testng.internal.TestListenerHelper.runTestListeners(TestListenerHelper.java:103)
 at org.testng.internal.TestInvoker.runTestResultListener(TestInvoker.java:219)
@@ -826,7 +826,7 @@ at org.testng.internal.MethodInvocationHelper.invokeMethodNoCheckedException(Met
         <test-method signature="test()[pri:0, instance:com.projtest.mobile.demotest.SampleTest@78f5c518]" started-at="2022-12-25T14:13:39 IST" name="test" finished-at="2022-12-25T14:13:39 IST" duration-ms="2" status="FAIL">
           <exception class="java.lang.NullPointerException">
             <full-stacktrace>
-              <![CDATA[java.lang.NullPointerException
+                <![CDATA[java.lang.NullPointerException
 at com.proj.listeners.TestListenerImpl.onTestStart(TestListenerImpl.java:32)
 at org.testng.internal.TestListenerHelper.runTestListeners(TestListenerHelper.java:103)
 at org.testng.internal.TestInvoker.runTestResultListener(TestInvoker.java:219)
@@ -881,7 +881,7 @@ at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:75)
         <test-method signature="uploadPetImage()[pri:0, instance:com.projtest.api.practice.fileUpload.FileUploadTest@23bff419]" started-at="2022-12-25T14:13:42 IST" name="uploadPetImage" finished-at="2022-12-25T14:13:42 IST" duration-ms="3" status="FAIL">
           <exception class="java.lang.NullPointerException">
             <full-stacktrace>
-              <![CDATA[java.lang.NullPointerException
+                <![CDATA[java.lang.NullPointerException
 at com.proj.listeners.TestListenerImpl.onTestStart(TestListenerImpl.java:32)
 at org.testng.internal.TestListenerHelper.runTestListeners(TestListenerHelper.java:103)
 at org.testng.internal.TestInvoker.runTestResultListener(TestInvoker.java:219)
@@ -927,7 +927,7 @@ at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:75)
         <test-method signature="validatePojoToJson()[pri:0, instance:com.projtest.api.practice.fileUpload.FileUploadTest@23bff419]" started-at="2022-12-25T14:13:42 IST" name="validatePojoToJson" finished-at="2022-12-25T14:13:42 IST" duration-ms="1" status="FAIL">
           <exception class="java.lang.NullPointerException">
             <full-stacktrace>
-              <![CDATA[java.lang.NullPointerException
+                <![CDATA[java.lang.NullPointerException
 at com.proj.listeners.TestListenerImpl.onTestStart(TestListenerImpl.java:32)
 at org.testng.internal.TestListenerHelper.runTestListeners(TestListenerHelper.java:103)
 at org.testng.internal.TestInvoker.runTestResultListener(TestInvoker.java:219)
@@ -975,7 +975,7 @@ at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:75)
         <test-method signature="builderPattern()[pri:0, instance:com.projtest.api.practice.samplepetstore.BuilderDesignPatternTest@44e3a2b2]" started-at="2022-12-25T14:13:42 IST" name="builderPattern" finished-at="2022-12-25T14:13:42 IST" duration-ms="1" status="FAIL">
           <exception class="java.lang.NullPointerException">
             <full-stacktrace>
-              <![CDATA[java.lang.NullPointerException
+                <![CDATA[java.lang.NullPointerException
 at com.proj.listeners.TestListenerImpl.onTestStart(TestListenerImpl.java:32)
 at org.testng.internal.TestListenerHelper.runTestListeners(TestListenerHelper.java:103)
 at org.testng.internal.TestInvoker.runTestResultListener(TestInvoker.java:219)
@@ -1021,7 +1021,7 @@ at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:75)
         <test-method signature="builderPattern1()[pri:0, instance:com.projtest.api.practice.samplepetstore.BuilderDesignPatternTest@44e3a2b2]" started-at="2022-12-25T14:13:42 IST" name="builderPattern1" finished-at="2022-12-25T14:13:42 IST" duration-ms="0" status="FAIL">
           <exception class="java.lang.NullPointerException">
             <full-stacktrace>
-              <![CDATA[java.lang.NullPointerException
+                <![CDATA[java.lang.NullPointerException
 at com.proj.listeners.TestListenerImpl.onTestStart(TestListenerImpl.java:32)
 at org.testng.internal.TestListenerHelper.runTestListeners(TestListenerHelper.java:103)
 at org.testng.internal.TestInvoker.runTestResultListener(TestInvoker.java:219)
@@ -1067,7 +1067,7 @@ at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:75)
         <test-method signature="builderPattern11()[pri:0, instance:com.projtest.api.practice.samplepetstore.BuilderDesignPatternTest@44e3a2b2]" started-at="2022-12-25T14:13:42 IST" name="builderPattern11" finished-at="2022-12-25T14:13:42 IST" duration-ms="0" status="FAIL">
           <exception class="java.lang.NullPointerException">
             <full-stacktrace>
-              <![CDATA[java.lang.NullPointerException
+                <![CDATA[java.lang.NullPointerException
 at com.proj.listeners.TestListenerImpl.onTestStart(TestListenerImpl.java:32)
 at org.testng.internal.TestListenerHelper.runTestListeners(TestListenerHelper.java:103)
 at org.testng.internal.TestInvoker.runTestResultListener(TestInvoker.java:219)
@@ -1118,7 +1118,7 @@ at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:75)
               <![CDATA[Illegal character in path at index 30: https://petstore.swagger.io/v2"]]>
             </message>
             <full-stacktrace>
-              <![CDATA[java.net.URISyntaxException: Illegal character in path at index 30: https://petstore.swagger.io/v2"
+                <![CDATA[java.net.URISyntaxException: Illegal character in path at index 30: https://petstore.swagger.io/v2"
 at java.base/java.net.URI$Parser.fail(URI.java:2913)
 at java.base/java.net.URI$Parser.checkChars(URI.java:3084)
 at java.base/java.net.URI$Parser.parseHierarchical(URI.java:3166)
@@ -1342,7 +1342,7 @@ at org.apache.poi.openxml4j.opc.ZipPackage.openZipEntrySourceStream(ZipPackage.j
         <test-method signature="serialization()[pri:0, instance:com.projtest.api.practice.pojolibtest.serialization.PojoArrayObjectTest@1d2bd371]" started-at="2022-12-25T14:13:42 IST" name="serialization" finished-at="2022-12-25T14:13:42 IST" duration-ms="0" status="FAIL">
           <exception class="java.lang.NullPointerException">
             <full-stacktrace>
-              <![CDATA[java.lang.NullPointerException
+                <![CDATA[java.lang.NullPointerException
 at com.proj.listeners.TestListenerImpl.onTestStart(TestListenerImpl.java:32)
 at org.testng.internal.TestListenerHelper.runTestListeners(TestListenerHelper.java:103)
 at org.testng.internal.TestInvoker.runTestResultListener(TestInvoker.java:219)
@@ -1452,7 +1452,7 @@ at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:75)
         <test-method signature="testLinks()[pri:0, instance:java8.TestAssignment@5f6722d3]" started-at="2022-12-25T14:13:16 IST" name="testLinks" finished-at="2022-12-25T14:13:16 IST" duration-ms="6" status="FAIL">
           <exception class="java.lang.NullPointerException">
             <full-stacktrace>
-              <![CDATA[java.lang.NullPointerException
+                <![CDATA[java.lang.NullPointerException
 at com.proj.listeners.TestListenerImpl.onTestStart(TestListenerImpl.java:32)
 at org.testng.internal.TestListenerHelper.runTestListeners(TestListenerHelper.java:103)
 at org.testng.internal.TestInvoker.runTestResultListener(TestInvoker.java:219)
@@ -1498,7 +1498,7 @@ at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:75)
         <test-method signature="testLinks1()[pri:0, instance:java8.TestAssignment@5f6722d3]" started-at="2022-12-25T14:13:16 IST" name="testLinks1" finished-at="2022-12-25T14:13:16 IST" duration-ms="0" status="FAIL">
           <exception class="java.lang.NullPointerException">
             <full-stacktrace>
-              <![CDATA[java.lang.NullPointerException
+                <![CDATA[java.lang.NullPointerException
 at com.proj.listeners.TestListenerImpl.onTestStart(TestListenerImpl.java:32)
 at org.testng.internal.TestListenerHelper.runTestListeners(TestListenerHelper.java:103)
 at org.testng.internal.TestInvoker.runTestResultListener(TestInvoker.java:219)
@@ -1553,7 +1553,7 @@ at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:75)
           </params>
           <exception class="java.lang.NullPointerException">
             <full-stacktrace>
-              <![CDATA[java.lang.NullPointerException
+                <![CDATA[java.lang.NullPointerException
 at com.proj.listeners.TestListenerImpl.onTestStart(TestListenerImpl.java:32)
 at org.testng.internal.TestListenerHelper.runTestListeners(TestListenerHelper.java:103)
 at org.testng.internal.TestInvoker.runTestResultListener(TestInvoker.java:219)
@@ -1606,7 +1606,7 @@ at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:75)
           </params>
           <exception class="java.lang.NullPointerException">
             <full-stacktrace>
-              <![CDATA[java.lang.NullPointerException
+                <![CDATA[java.lang.NullPointerException
 at com.proj.listeners.TestListenerImpl.onTestStart(TestListenerImpl.java:32)
 at org.testng.internal.TestListenerHelper.runTestListeners(TestListenerHelper.java:103)
 at org.testng.internal.TestInvoker.runTestResultListener(TestInvoker.java:219)
@@ -1659,7 +1659,7 @@ at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:75)
           </params>
           <exception class="java.lang.NullPointerException">
             <full-stacktrace>
-              <![CDATA[java.lang.NullPointerException
+                <![CDATA[java.lang.NullPointerException
 at com.proj.listeners.TestListenerImpl.onTestStart(TestListenerImpl.java:32)
 at org.testng.internal.TestListenerHelper.runTestListeners(TestListenerHelper.java:103)
 at org.testng.internal.TestInvoker.runTestResultListener(TestInvoker.java:219)
@@ -1712,7 +1712,7 @@ at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:75)
           </params>
           <exception class="java.lang.NullPointerException">
             <full-stacktrace>
-              <![CDATA[java.lang.NullPointerException
+                <![CDATA[java.lang.NullPointerException
 at com.proj.listeners.TestListenerImpl.onTestStart(TestListenerImpl.java:32)
 at org.testng.internal.TestListenerHelper.runTestListeners(TestListenerHelper.java:103)
 at org.testng.internal.TestInvoker.runTestResultListener(TestInvoker.java:219)
@@ -1765,7 +1765,7 @@ at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:75)
           </params>
           <exception class="java.lang.NullPointerException">
             <full-stacktrace>
-              <![CDATA[java.lang.NullPointerException
+                <![CDATA[java.lang.NullPointerException
 at com.proj.listeners.TestListenerImpl.onTestStart(TestListenerImpl.java:32)
 at org.testng.internal.TestListenerHelper.runTestListeners(TestListenerHelper.java:103)
 at org.testng.internal.TestInvoker.runTestResultListener(TestInvoker.java:219)
@@ -1818,7 +1818,7 @@ at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:75)
           </params>
           <exception class="java.lang.NullPointerException">
             <full-stacktrace>
-              <![CDATA[java.lang.NullPointerException
+                <![CDATA[java.lang.NullPointerException
 at com.proj.listeners.TestListenerImpl.onTestStart(TestListenerImpl.java:32)
 at org.testng.internal.TestListenerHelper.runTestListeners(TestListenerHelper.java:103)
 at org.testng.internal.TestInvoker.runTestResultListener(TestInvoker.java:219)
@@ -1871,7 +1871,7 @@ at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:75)
           </params>
           <exception class="java.lang.NullPointerException">
             <full-stacktrace>
-              <![CDATA[java.lang.NullPointerException
+                <![CDATA[java.lang.NullPointerException
 at com.proj.listeners.TestListenerImpl.onTestStart(TestListenerImpl.java:32)
 at org.testng.internal.TestListenerHelper.runTestListeners(TestListenerHelper.java:103)
 at org.testng.internal.TestInvoker.runTestResultListener(TestInvoker.java:219)
@@ -1924,7 +1924,7 @@ at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:75)
           </params>
           <exception class="java.lang.NullPointerException">
             <full-stacktrace>
-              <![CDATA[java.lang.NullPointerException
+                <![CDATA[java.lang.NullPointerException
 at com.proj.listeners.TestListenerImpl.onTestStart(TestListenerImpl.java:32)
 at org.testng.internal.TestListenerHelper.runTestListeners(TestListenerHelper.java:103)
 at org.testng.internal.TestInvoker.runTestResultListener(TestInvoker.java:219)
@@ -1987,7 +1987,7 @@ at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:75)
           </params>
           <exception class="java.lang.NullPointerException">
             <full-stacktrace>
-              <![CDATA[java.lang.NullPointerException
+                <![CDATA[java.lang.NullPointerException
 at com.proj.listeners.TestListenerImpl.onTestStart(TestListenerImpl.java:32)
 at org.testng.internal.TestListenerHelper.runTestListeners(TestListenerHelper.java:103)
 at org.testng.internal.TestInvoker.runTestResultListener(TestInvoker.java:219)
@@ -2111,7 +2111,7 @@ at org.testng.internal.MethodInvocationHelper.invokeMethodNoCheckedException(Met
         <test-method signature="serialization()[pri:0, instance:com.projtest.api.practice.pojolibtest.serialization.PojoMultipleArrayObjectTest@4c550889]" started-at="2022-12-25T14:13:42 IST" name="serialization" finished-at="2022-12-25T14:13:42 IST" duration-ms="0" status="FAIL">
           <exception class="java.lang.NullPointerException">
             <full-stacktrace>
-              <![CDATA[java.lang.NullPointerException
+                <![CDATA[java.lang.NullPointerException
 at com.proj.listeners.TestListenerImpl.onTestStart(TestListenerImpl.java:32)
 at org.testng.internal.TestListenerHelper.runTestListeners(TestListenerHelper.java:103)
 at org.testng.internal.TestInvoker.runTestResultListener(TestInvoker.java:219)
@@ -2166,7 +2166,7 @@ at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:75)
           </params>
           <exception class="java.lang.NullPointerException">
             <full-stacktrace>
-              <![CDATA[java.lang.NullPointerException
+                <![CDATA[java.lang.NullPointerException
 at com.proj.listeners.TestListenerImpl.onTestStart(TestListenerImpl.java:32)
 at org.testng.internal.TestListenerHelper.runTestListeners(TestListenerHelper.java:103)
 at org.testng.internal.TestInvoker.runTestResultListener(TestInvoker.java:219)
@@ -2219,7 +2219,7 @@ at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:75)
           </params>
           <exception class="java.lang.NullPointerException">
             <full-stacktrace>
-              <![CDATA[java.lang.NullPointerException
+                <![CDATA[java.lang.NullPointerException
 at com.proj.listeners.TestListenerImpl.onTestStart(TestListenerImpl.java:32)
 at org.testng.internal.TestListenerHelper.runTestListeners(TestListenerHelper.java:103)
 at org.testng.internal.TestInvoker.runTestResultListener(TestInvoker.java:219)
@@ -2272,7 +2272,7 @@ at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:75)
           </params>
           <exception class="java.lang.NullPointerException">
             <full-stacktrace>
-              <![CDATA[java.lang.NullPointerException
+                <![CDATA[java.lang.NullPointerException
 at com.proj.listeners.TestListenerImpl.onTestStart(TestListenerImpl.java:32)
 at org.testng.internal.TestListenerHelper.runTestListeners(TestListenerHelper.java:103)
 at org.testng.internal.TestInvoker.runTestResultListener(TestInvoker.java:219)
@@ -2330,7 +2330,7 @@ at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:75)
           </params>
           <exception class="java.lang.NullPointerException">
             <full-stacktrace>
-              <![CDATA[java.lang.NullPointerException
+                <![CDATA[java.lang.NullPointerException
 at com.proj.listeners.TestListenerImpl.onTestStart(TestListenerImpl.java:32)
 at org.testng.internal.TestListenerHelper.runTestListeners(TestListenerHelper.java:103)
 at org.testng.internal.TestInvoker.runTestResultListener(TestInvoker.java:219)
@@ -2388,7 +2388,7 @@ at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:75)
           </params>
           <exception class="java.lang.NullPointerException">
             <full-stacktrace>
-              <![CDATA[java.lang.NullPointerException
+                <![CDATA[java.lang.NullPointerException
 at com.proj.listeners.TestListenerImpl.onTestStart(TestListenerImpl.java:32)
 at org.testng.internal.TestListenerHelper.runTestListeners(TestListenerHelper.java:103)
 at org.testng.internal.TestInvoker.runTestResultListener(TestInvoker.java:219)
@@ -2446,7 +2446,7 @@ at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:75)
           </params>
           <exception class="java.lang.NullPointerException">
             <full-stacktrace>
-              <![CDATA[java.lang.NullPointerException
+                <![CDATA[java.lang.NullPointerException
 at com.proj.listeners.TestListenerImpl.onTestStart(TestListenerImpl.java:32)
 at org.testng.internal.TestListenerHelper.runTestListeners(TestListenerHelper.java:103)
 at org.testng.internal.TestInvoker.runTestResultListener(TestInvoker.java:219)
@@ -2501,7 +2501,7 @@ at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:75)
           </params>
           <exception class="java.lang.NullPointerException">
             <full-stacktrace>
-              <![CDATA[java.lang.NullPointerException
+                <![CDATA[java.lang.NullPointerException
 at com.proj.listeners.TestListenerImpl.onTestStart(TestListenerImpl.java:32)
 at org.testng.internal.TestListenerHelper.runTestListeners(TestListenerHelper.java:103)
 at org.testng.internal.TestInvoker.runTestResultListener(TestInvoker.java:219)
@@ -2554,7 +2554,7 @@ at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:75)
           </params>
           <exception class="java.lang.NullPointerException">
             <full-stacktrace>
-              <![CDATA[java.lang.NullPointerException
+                <![CDATA[java.lang.NullPointerException
 at com.proj.listeners.TestListenerImpl.onTestStart(TestListenerImpl.java:32)
 at org.testng.internal.TestListenerHelper.runTestListeners(TestListenerHelper.java:103)
 at org.testng.internal.TestInvoker.runTestResultListener(TestInvoker.java:219)
@@ -2607,7 +2607,7 @@ at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:75)
           </params>
           <exception class="java.lang.NullPointerException">
             <full-stacktrace>
-              <![CDATA[java.lang.NullPointerException
+                <![CDATA[java.lang.NullPointerException
 at com.proj.listeners.TestListenerImpl.onTestStart(TestListenerImpl.java:32)
 at org.testng.internal.TestListenerHelper.runTestListeners(TestListenerHelper.java:103)
 at org.testng.internal.TestInvoker.runTestResultListener(TestInvoker.java:219)
@@ -2680,7 +2680,7 @@ at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:75)
           </params>
           <exception class="java.lang.NullPointerException">
             <full-stacktrace>
-              <![CDATA[java.lang.NullPointerException
+                <![CDATA[java.lang.NullPointerException
 at com.proj.listeners.TestListenerImpl.onTestStart(TestListenerImpl.java:32)
 at org.testng.internal.TestListenerHelper.runTestListeners(TestListenerHelper.java:103)
 at org.testng.internal.TestInvoker.runTestResultListener(TestInvoker.java:219)
@@ -2753,7 +2753,7 @@ at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:75)
           </params>
           <exception class="java.lang.NullPointerException">
             <full-stacktrace>
-              <![CDATA[java.lang.NullPointerException
+                <![CDATA[java.lang.NullPointerException
 at com.proj.listeners.TestListenerImpl.onTestStart(TestListenerImpl.java:32)
 at org.testng.internal.TestListenerHelper.runTestListeners(TestListenerHelper.java:103)
 at org.testng.internal.TestInvoker.runTestResultListener(TestInvoker.java:219)
@@ -2826,7 +2826,7 @@ at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:75)
           </params>
           <exception class="java.lang.NullPointerException">
             <full-stacktrace>
-              <![CDATA[java.lang.NullPointerException
+                <![CDATA[java.lang.NullPointerException
 at com.proj.listeners.TestListenerImpl.onTestStart(TestListenerImpl.java:32)
 at org.testng.internal.TestListenerHelper.runTestListeners(TestListenerHelper.java:103)
 at org.testng.internal.TestInvoker.runTestResultListener(TestInvoker.java:219)
@@ -2965,7 +2965,7 @@ at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:75)
         <test-method signature="customdateformate()[pri:0, instance:com.projtest.mobile.demotest.DateTest@8692d67]" started-at="2022-12-25T14:13:17 IST" name="customdateformate" finished-at="2022-12-25T14:13:17 IST" duration-ms="0" status="FAIL">
           <exception class="java.lang.NullPointerException">
             <full-stacktrace>
-              <![CDATA[java.lang.NullPointerException
+                <![CDATA[java.lang.NullPointerException
 at com.proj.listeners.TestListenerImpl.onTestStart(TestListenerImpl.java:32)
 at org.testng.internal.TestListenerHelper.runTestListeners(TestListenerHelper.java:103)
 at org.testng.internal.TestInvoker.runTestResultListener(TestInvoker.java:219)
@@ -3011,7 +3011,7 @@ at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:75)
         <test-method signature="run()[pri:0, instance:com.projtest.mobile.demotest.DateTest@8692d67]" started-at="2022-12-25T14:13:17 IST" name="run" finished-at="2022-12-25T14:13:17 IST" duration-ms="0" status="FAIL">
           <exception class="java.lang.NullPointerException">
             <full-stacktrace>
-              <![CDATA[java.lang.NullPointerException
+                <![CDATA[java.lang.NullPointerException
 at com.proj.listeners.TestListenerImpl.onTestStart(TestListenerImpl.java:32)
 at org.testng.internal.TestListenerHelper.runTestListeners(TestListenerHelper.java:103)
 at org.testng.internal.TestInvoker.runTestResultListener(TestInvoker.java:219)
@@ -3057,7 +3057,7 @@ at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:75)
         <test-method signature="sample()[pri:0, instance:com.projtest.mobile.demotest.DateTest@8692d67]" started-at="2022-12-25T14:13:17 IST" name="sample" finished-at="2022-12-25T14:13:17 IST" duration-ms="0" status="FAIL">
           <exception class="java.lang.NullPointerException">
             <full-stacktrace>
-              <![CDATA[java.lang.NullPointerException
+                <![CDATA[java.lang.NullPointerException
 at com.proj.listeners.TestListenerImpl.onTestStart(TestListenerImpl.java:32)
 at org.testng.internal.TestListenerHelper.runTestListeners(TestListenerHelper.java:103)
 at org.testng.internal.TestInvoker.runTestResultListener(TestInvoker.java:219)
@@ -3103,7 +3103,7 @@ at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:75)
         <test-method signature="splitdate()[pri:0, instance:com.projtest.mobile.demotest.DateTest@8692d67]" started-at="2022-12-25T14:13:17 IST" name="splitdate" finished-at="2022-12-25T14:13:17 IST" duration-ms="0" status="FAIL">
           <exception class="java.lang.NullPointerException">
             <full-stacktrace>
-              <![CDATA[java.lang.NullPointerException
+                <![CDATA[java.lang.NullPointerException
 at com.proj.listeners.TestListenerImpl.onTestStart(TestListenerImpl.java:32)
 at org.testng.internal.TestListenerHelper.runTestListeners(TestListenerHelper.java:103)
 at org.testng.internal.TestInvoker.runTestResultListener(TestInvoker.java:219)

@@ -4,7 +4,7 @@ Test set: TestSuite
 Tests run: 55, Failures: 49, Errors: 0, Skipped: 5, Time elapsed: 43.516 sec <<< FAILURE!
 testLinks(java8.TestAssignment)  Time elapsed: 10.907 sec  <<< FAILURE!
 java.lang.NullPointerException
-	at com.proj.listeners.TestListenerImpl.onTestStart(TestListenerImpl.java:32)
+	at com.listeners.TestListenerImpl.onTestStart(TestListenerImpl.java:32)
 	at org.testng.internal.TestListenerHelper.runTestListeners(TestListenerHelper.java:103)
 	at org.testng.internal.TestInvoker.runTestResultListener(TestInvoker.java:219)
 	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:569)
@@ -43,7 +43,7 @@ java.lang.NullPointerException
 
 testLinks1(java8.TestAssignment)  Time elapsed: 10.91 sec  <<< FAILURE!
 java.lang.NullPointerException
-	at com.proj.listeners.TestListenerImpl.onTestStart(TestListenerImpl.java:32)
+	at com.listeners.TestListenerImpl.onTestStart(TestListenerImpl.java:32)
 	at org.testng.internal.TestListenerHelper.runTestListeners(TestListenerHelper.java:103)
 	at org.testng.internal.TestInvoker.runTestResultListener(TestInvoker.java:219)
 	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:569)
@@ -82,7 +82,7 @@ java.lang.NullPointerException
 
 testDemo(sdet.testdatasupplier.UseCase1Test)  Time elapsed: 10.946 sec  <<< FAILURE!
 java.lang.NullPointerException
-	at com.proj.listeners.TestListenerImpl.onTestStart(TestListenerImpl.java:32)
+	at com.listeners.TestListenerImpl.onTestStart(TestListenerImpl.java:32)
 	at org.testng.internal.TestListenerHelper.runTestListeners(TestListenerHelper.java:103)
 	at org.testng.internal.TestInvoker.runTestResultListener(TestInvoker.java:219)
 	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:569)
@@ -121,7 +121,7 @@ java.lang.NullPointerException
 
 testDemo(sdet.testdatasupplier.UseCase1Test)  Time elapsed: 10.954 sec  <<< FAILURE!
 java.lang.NullPointerException
-	at com.proj.listeners.TestListenerImpl.onTestStart(TestListenerImpl.java:32)
+	at com.listeners.TestListenerImpl.onTestStart(TestListenerImpl.java:32)
 	at org.testng.internal.TestListenerHelper.runTestListeners(TestListenerHelper.java:103)
 	at org.testng.internal.TestInvoker.runTestResultListener(TestInvoker.java:219)
 	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:569)
@@ -160,7 +160,7 @@ java.lang.NullPointerException
 
 testDemo(sdet.testdatasupplier.UseCase1Test)  Time elapsed: 10.956 sec  <<< FAILURE!
 java.lang.NullPointerException
-	at com.proj.listeners.TestListenerImpl.onTestStart(TestListenerImpl.java:32)
+	at com.listeners.TestListenerImpl.onTestStart(TestListenerImpl.java:32)
 	at org.testng.internal.TestListenerHelper.runTestListeners(TestListenerHelper.java:103)
 	at org.testng.internal.TestInvoker.runTestResultListener(TestInvoker.java:219)
 	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:569)
@@ -199,7 +199,7 @@ java.lang.NullPointerException
 
 testDemo1(sdet.testdatasupplier.UseCase1Test)  Time elapsed: 11.026 sec  <<< FAILURE!
 java.lang.NullPointerException
-	at com.proj.listeners.TestListenerImpl.onTestStart(TestListenerImpl.java:32)
+	at com.listeners.TestListenerImpl.onTestStart(TestListenerImpl.java:32)
 	at org.testng.internal.TestListenerHelper.runTestListeners(TestListenerHelper.java:103)
 	at org.testng.internal.TestInvoker.runTestResultListener(TestInvoker.java:219)
 	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:569)
@@ -238,7 +238,7 @@ java.lang.NullPointerException
 
 testDemo1(sdet.testdatasupplier.UseCase1Test)  Time elapsed: 11.031 sec  <<< FAILURE!
 java.lang.NullPointerException
-	at com.proj.listeners.TestListenerImpl.onTestStart(TestListenerImpl.java:32)
+	at com.listeners.TestListenerImpl.onTestStart(TestListenerImpl.java:32)
 	at org.testng.internal.TestListenerHelper.runTestListeners(TestListenerHelper.java:103)
 	at org.testng.internal.TestInvoker.runTestResultListener(TestInvoker.java:219)
 	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:569)
@@ -277,7 +277,7 @@ java.lang.NullPointerException
 
 testDemo1(sdet.testdatasupplier.UseCase1Test)  Time elapsed: 11.031 sec  <<< FAILURE!
 java.lang.NullPointerException
-	at com.proj.listeners.TestListenerImpl.onTestStart(TestListenerImpl.java:32)
+	at com.listeners.TestListenerImpl.onTestStart(TestListenerImpl.java:32)
 	at org.testng.internal.TestListenerHelper.runTestListeners(TestListenerHelper.java:103)
 	at org.testng.internal.TestInvoker.runTestResultListener(TestInvoker.java:219)
 	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:569)
@@ -316,7 +316,7 @@ java.lang.NullPointerException
 
 testDemo2(sdet.testdatasupplier.UseCase1Test)  Time elapsed: 11.042 sec  <<< FAILURE!
 java.lang.NullPointerException
-	at com.proj.listeners.TestListenerImpl.onTestStart(TestListenerImpl.java:32)
+	at com.listeners.TestListenerImpl.onTestStart(TestListenerImpl.java:32)
 	at org.testng.internal.TestListenerHelper.runTestListeners(TestListenerHelper.java:103)
 	at org.testng.internal.TestInvoker.runTestResultListener(TestInvoker.java:219)
 	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:569)
@@ -355,7 +355,7 @@ java.lang.NullPointerException
 
 testDemo2(sdet.testdatasupplier.UseCase1Test)  Time elapsed: 11.043 sec  <<< FAILURE!
 java.lang.NullPointerException
-	at com.proj.listeners.TestListenerImpl.onTestStart(TestListenerImpl.java:32)
+	at com.listeners.TestListenerImpl.onTestStart(TestListenerImpl.java:32)
 	at org.testng.internal.TestListenerHelper.runTestListeners(TestListenerHelper.java:103)
 	at org.testng.internal.TestInvoker.runTestResultListener(TestInvoker.java:219)
 	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:569)
@@ -394,7 +394,7 @@ java.lang.NullPointerException
 
 testDemo3(sdet.testdatasupplier.UseCase1Test)  Time elapsed: 11.057 sec  <<< FAILURE!
 java.lang.NullPointerException
-	at com.proj.listeners.TestListenerImpl.onTestStart(TestListenerImpl.java:32)
+	at com.listeners.TestListenerImpl.onTestStart(TestListenerImpl.java:32)
 	at org.testng.internal.TestListenerHelper.runTestListeners(TestListenerHelper.java:103)
 	at org.testng.internal.TestInvoker.runTestResultListener(TestInvoker.java:219)
 	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:569)
@@ -433,7 +433,7 @@ java.lang.NullPointerException
 
 readCsv(sdet.testdatasupplier.UseCase2Test)  Time elapsed: 11.098 sec  <<< FAILURE!
 java.lang.NullPointerException
-	at com.proj.listeners.TestListenerImpl.onTestStart(TestListenerImpl.java:32)
+	at com.listeners.TestListenerImpl.onTestStart(TestListenerImpl.java:32)
 	at org.testng.internal.TestListenerHelper.runTestListeners(TestListenerHelper.java:103)
 	at org.testng.internal.TestInvoker.runTestResultListener(TestInvoker.java:219)
 	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:569)
@@ -472,7 +472,7 @@ java.lang.NullPointerException
 
 readCsv(sdet.testdatasupplier.UseCase2Test)  Time elapsed: 11.099 sec  <<< FAILURE!
 java.lang.NullPointerException
-	at com.proj.listeners.TestListenerImpl.onTestStart(TestListenerImpl.java:32)
+	at com.listeners.TestListenerImpl.onTestStart(TestListenerImpl.java:32)
 	at org.testng.internal.TestListenerHelper.runTestListeners(TestListenerHelper.java:103)
 	at org.testng.internal.TestInvoker.runTestResultListener(TestInvoker.java:219)
 	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:569)
@@ -511,7 +511,7 @@ java.lang.NullPointerException
 
 readjson(sdet.testdatasupplier.UseCase2Test)  Time elapsed: 11.259 sec  <<< FAILURE!
 java.lang.NullPointerException
-	at com.proj.listeners.TestListenerImpl.onTestStart(TestListenerImpl.java:32)
+	at com.listeners.TestListenerImpl.onTestStart(TestListenerImpl.java:32)
 	at org.testng.internal.TestListenerHelper.runTestListeners(TestListenerHelper.java:103)
 	at org.testng.internal.TestInvoker.runTestResultListener(TestInvoker.java:219)
 	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:569)
@@ -550,7 +550,7 @@ java.lang.NullPointerException
 
 readjson(sdet.testdatasupplier.UseCase2Test)  Time elapsed: 11.26 sec  <<< FAILURE!
 java.lang.NullPointerException
-	at com.proj.listeners.TestListenerImpl.onTestStart(TestListenerImpl.java:32)
+	at com.listeners.TestListenerImpl.onTestStart(TestListenerImpl.java:32)
 	at org.testng.internal.TestListenerHelper.runTestListeners(TestListenerHelper.java:103)
 	at org.testng.internal.TestInvoker.runTestResultListener(TestInvoker.java:219)
 	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:569)
@@ -589,7 +589,7 @@ java.lang.NullPointerException
 
 readjson(sdet.testdatasupplier.UseCase2Test)  Time elapsed: 11.262 sec  <<< FAILURE!
 java.lang.NullPointerException
-	at com.proj.listeners.TestListenerImpl.onTestStart(TestListenerImpl.java:32)
+	at com.listeners.TestListenerImpl.onTestStart(TestListenerImpl.java:32)
 	at org.testng.internal.TestListenerHelper.runTestListeners(TestListenerHelper.java:103)
 	at org.testng.internal.TestInvoker.runTestResultListener(TestInvoker.java:219)
 	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:569)
@@ -628,7 +628,7 @@ java.lang.NullPointerException
 
 readjson(sdet.testdatasupplier.UseCase2Test)  Time elapsed: 11.266 sec  <<< FAILURE!
 java.lang.NullPointerException
-	at com.proj.listeners.TestListenerImpl.onTestStart(TestListenerImpl.java:32)
+	at com.listeners.TestListenerImpl.onTestStart(TestListenerImpl.java:32)
 	at org.testng.internal.TestListenerHelper.runTestListeners(TestListenerHelper.java:103)
 	at org.testng.internal.TestInvoker.runTestResultListener(TestInvoker.java:219)
 	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:569)
@@ -667,7 +667,7 @@ java.lang.NullPointerException
 
 readjson(sdet.testdatasupplier.UseCase2Test)  Time elapsed: 11.268 sec  <<< FAILURE!
 java.lang.NullPointerException
-	at com.proj.listeners.TestListenerImpl.onTestStart(TestListenerImpl.java:32)
+	at com.listeners.TestListenerImpl.onTestStart(TestListenerImpl.java:32)
 	at org.testng.internal.TestListenerHelper.runTestListeners(TestListenerHelper.java:103)
 	at org.testng.internal.TestInvoker.runTestResultListener(TestInvoker.java:219)
 	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:569)
@@ -706,7 +706,7 @@ java.lang.NullPointerException
 
 testDemo(sdet.testdatasupplier.UseCase3Test)  Time elapsed: 11.519 sec  <<< FAILURE!
 java.lang.NullPointerException
-	at com.proj.listeners.TestListenerImpl.onTestStart(TestListenerImpl.java:32)
+	at com.listeners.TestListenerImpl.onTestStart(TestListenerImpl.java:32)
 	at org.testng.internal.TestListenerHelper.runTestListeners(TestListenerHelper.java:103)
 	at org.testng.internal.TestInvoker.runTestResultListener(TestInvoker.java:219)
 	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:569)
@@ -745,7 +745,7 @@ java.lang.NullPointerException
 
 testDemo(sdet.testdatasupplier.UseCase3Test)  Time elapsed: 11.522 sec  <<< FAILURE!
 java.lang.NullPointerException
-	at com.proj.listeners.TestListenerImpl.onTestStart(TestListenerImpl.java:32)
+	at com.listeners.TestListenerImpl.onTestStart(TestListenerImpl.java:32)
 	at org.testng.internal.TestListenerHelper.runTestListeners(TestListenerHelper.java:103)
 	at org.testng.internal.TestInvoker.runTestResultListener(TestInvoker.java:219)
 	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:569)
@@ -784,7 +784,7 @@ java.lang.NullPointerException
 
 testDemo(sdet.testdatasupplier.UseCase3Test)  Time elapsed: 11.523 sec  <<< FAILURE!
 java.lang.NullPointerException
-	at com.proj.listeners.TestListenerImpl.onTestStart(TestListenerImpl.java:32)
+	at com.listeners.TestListenerImpl.onTestStart(TestListenerImpl.java:32)
 	at org.testng.internal.TestListenerHelper.runTestListeners(TestListenerHelper.java:103)
 	at org.testng.internal.TestInvoker.runTestResultListener(TestInvoker.java:219)
 	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:569)
@@ -823,7 +823,7 @@ java.lang.NullPointerException
 
 testDemo1(sdet.testdatasupplier.UseCase3Test)  Time elapsed: 11.56 sec  <<< FAILURE!
 java.lang.NullPointerException
-	at com.proj.listeners.TestListenerImpl.onTestStart(TestListenerImpl.java:32)
+	at com.listeners.TestListenerImpl.onTestStart(TestListenerImpl.java:32)
 	at org.testng.internal.TestListenerHelper.runTestListeners(TestListenerHelper.java:103)
 	at org.testng.internal.TestInvoker.runTestResultListener(TestInvoker.java:219)
 	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:569)
@@ -862,7 +862,7 @@ java.lang.NullPointerException
 
 testDemo1(sdet.testdatasupplier.UseCase3Test)  Time elapsed: 11.561 sec  <<< FAILURE!
 java.lang.NullPointerException
-	at com.proj.listeners.TestListenerImpl.onTestStart(TestListenerImpl.java:32)
+	at com.listeners.TestListenerImpl.onTestStart(TestListenerImpl.java:32)
 	at org.testng.internal.TestListenerHelper.runTestListeners(TestListenerHelper.java:103)
 	at org.testng.internal.TestInvoker.runTestResultListener(TestInvoker.java:219)
 	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:569)
@@ -901,7 +901,7 @@ java.lang.NullPointerException
 
 testDemo1(sdet.testdatasupplier.UseCase3Test)  Time elapsed: 11.563 sec  <<< FAILURE!
 java.lang.NullPointerException
-	at com.proj.listeners.TestListenerImpl.onTestStart(TestListenerImpl.java:32)
+	at com.listeners.TestListenerImpl.onTestStart(TestListenerImpl.java:32)
 	at org.testng.internal.TestListenerHelper.runTestListeners(TestListenerHelper.java:103)
 	at org.testng.internal.TestInvoker.runTestResultListener(TestInvoker.java:219)
 	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:569)
@@ -940,7 +940,7 @@ java.lang.NullPointerException
 
 testLinks(javaPrectice.TestAssignment)  Time elapsed: 11.711 sec  <<< FAILURE!
 java.lang.NullPointerException
-	at com.proj.listeners.TestListenerImpl.onTestStart(TestListenerImpl.java:32)
+	at com.listeners.TestListenerImpl.onTestStart(TestListenerImpl.java:32)
 	at org.testng.internal.TestListenerHelper.runTestListeners(TestListenerHelper.java:103)
 	at org.testng.internal.TestInvoker.runTestResultListener(TestInvoker.java:219)
 	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:569)
@@ -979,7 +979,7 @@ java.lang.NullPointerException
 
 testLinks1(javaPrectice.TestAssignment)  Time elapsed: 11.711 sec  <<< FAILURE!
 java.lang.NullPointerException
-	at com.proj.listeners.TestListenerImpl.onTestStart(TestListenerImpl.java:32)
+	at com.listeners.TestListenerImpl.onTestStart(TestListenerImpl.java:32)
 	at org.testng.internal.TestListenerHelper.runTestListeners(TestListenerHelper.java:103)
 	at org.testng.internal.TestInvoker.runTestResultListener(TestInvoker.java:219)
 	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:569)
@@ -1040,7 +1040,7 @@ Session ID: 96fb57a4-838f-4c11-a46c-238179f4dd37
 
 customdateformate(com.projtest.mobile.demotest.DateTest)  Time elapsed: 0.343 sec  <<< FAILURE!
 java.lang.NullPointerException
-	at com.proj.listeners.TestListenerImpl.onTestStart(TestListenerImpl.java:32)
+	at com.listeners.TestListenerImpl.onTestStart(TestListenerImpl.java:32)
 	at org.testng.internal.TestListenerHelper.runTestListeners(TestListenerHelper.java:103)
 	at org.testng.internal.TestInvoker.runTestResultListener(TestInvoker.java:219)
 	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:569)
@@ -1079,7 +1079,7 @@ java.lang.NullPointerException
 
 run(com.projtest.mobile.demotest.DateTest)  Time elapsed: 0.343 sec  <<< FAILURE!
 java.lang.NullPointerException
-	at com.proj.listeners.TestListenerImpl.onTestStart(TestListenerImpl.java:32)
+	at com.listeners.TestListenerImpl.onTestStart(TestListenerImpl.java:32)
 	at org.testng.internal.TestListenerHelper.runTestListeners(TestListenerHelper.java:103)
 	at org.testng.internal.TestInvoker.runTestResultListener(TestInvoker.java:219)
 	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:569)
@@ -1118,7 +1118,7 @@ java.lang.NullPointerException
 
 sample(com.projtest.mobile.demotest.DateTest)  Time elapsed: 0.344 sec  <<< FAILURE!
 java.lang.NullPointerException
-	at com.proj.listeners.TestListenerImpl.onTestStart(TestListenerImpl.java:32)
+	at com.listeners.TestListenerImpl.onTestStart(TestListenerImpl.java:32)
 	at org.testng.internal.TestListenerHelper.runTestListeners(TestListenerHelper.java:103)
 	at org.testng.internal.TestInvoker.runTestResultListener(TestInvoker.java:219)
 	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:569)
@@ -1157,7 +1157,7 @@ java.lang.NullPointerException
 
 splitdate(com.projtest.mobile.demotest.DateTest)  Time elapsed: 0.345 sec  <<< FAILURE!
 java.lang.NullPointerException
-	at com.proj.listeners.TestListenerImpl.onTestStart(TestListenerImpl.java:32)
+	at com.listeners.TestListenerImpl.onTestStart(TestListenerImpl.java:32)
 	at org.testng.internal.TestListenerHelper.runTestListeners(TestListenerHelper.java:103)
 	at org.testng.internal.TestInvoker.runTestResultListener(TestInvoker.java:219)
 	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:569)
@@ -1196,7 +1196,7 @@ java.lang.NullPointerException
 
 test(com.projtest.mobile.demotest.SampleTest)  Time elapsed: 22.184 sec  <<< FAILURE!
 java.lang.NullPointerException
-	at com.proj.listeners.TestListenerImpl.onTestStart(TestListenerImpl.java:32)
+	at com.listeners.TestListenerImpl.onTestStart(TestListenerImpl.java:32)
 	at org.testng.internal.TestListenerHelper.runTestListeners(TestListenerHelper.java:103)
 	at org.testng.internal.TestInvoker.runTestResultListener(TestInvoker.java:219)
 	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:569)
@@ -1331,7 +1331,7 @@ java.net.URISyntaxException: Illegal character in path at index 30: https://pets
 	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:203)
 	at io.restassured.internal.RequestSpecificationImpl.get(RequestSpecificationImpl.groovy:173)
 	at io.restassured.internal.RequestSpecificationImpl.get(RequestSpecificationImpl.groovy)
-	at com.proj.api.GetUsers.getUser(GetUsers.java:17)
+	at com.api.GetUsers.getUser(GetUsers.java:17)
 	at com.projtest.api.GetUsersTest.getUserByPageNumber(GetUsersTest.java:14)
 
 createNewUser(com.projtest.api.Post_or_CreateNewUserTest)  Time elapsed: 0.293 sec  <<< FAILURE!
@@ -1426,7 +1426,7 @@ java.net.URISyntaxException: Illegal character in path at index 30: https://pets
 
 uploadPetImage(com.projtest.api.practice.fileUpload.FileUploadTest)  Time elapsed: 0.298 sec  <<< FAILURE!
 java.lang.NullPointerException
-	at com.proj.listeners.TestListenerImpl.onTestStart(TestListenerImpl.java:32)
+	at com.listeners.TestListenerImpl.onTestStart(TestListenerImpl.java:32)
 	at org.testng.internal.TestListenerHelper.runTestListeners(TestListenerHelper.java:103)
 	at org.testng.internal.TestInvoker.runTestResultListener(TestInvoker.java:219)
 	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:569)
@@ -1465,7 +1465,7 @@ java.lang.NullPointerException
 
 validatePojoToJson(com.projtest.api.practice.fileUpload.FileUploadTest)  Time elapsed: 0.3 sec  <<< FAILURE!
 java.lang.NullPointerException
-	at com.proj.listeners.TestListenerImpl.onTestStart(TestListenerImpl.java:32)
+	at com.listeners.TestListenerImpl.onTestStart(TestListenerImpl.java:32)
 	at org.testng.internal.TestListenerHelper.runTestListeners(TestListenerHelper.java:103)
 	at org.testng.internal.TestInvoker.runTestResultListener(TestInvoker.java:219)
 	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:569)
@@ -1504,7 +1504,7 @@ java.lang.NullPointerException
 
 dpTest(com.projtest.api.practice.dataProvidertest.DataProviderTest)  Time elapsed: 0.307 sec  <<< FAILURE!
 java.lang.NullPointerException
-	at com.proj.listeners.TestListenerImpl.onTestStart(TestListenerImpl.java:32)
+	at com.listeners.TestListenerImpl.onTestStart(TestListenerImpl.java:32)
 	at org.testng.internal.TestListenerHelper.runTestListeners(TestListenerHelper.java:103)
 	at org.testng.internal.TestInvoker.runTestResultListener(TestInvoker.java:219)
 	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:569)
@@ -1543,7 +1543,7 @@ java.lang.NullPointerException
 
 dpTest(com.projtest.api.practice.dataProvidertest.DataProviderTest)  Time elapsed: 0.309 sec  <<< FAILURE!
 java.lang.NullPointerException
-	at com.proj.listeners.TestListenerImpl.onTestStart(TestListenerImpl.java:32)
+	at com.listeners.TestListenerImpl.onTestStart(TestListenerImpl.java:32)
 	at org.testng.internal.TestListenerHelper.runTestListeners(TestListenerHelper.java:103)
 	at org.testng.internal.TestInvoker.runTestResultListener(TestInvoker.java:219)
 	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:569)
@@ -1582,7 +1582,7 @@ java.lang.NullPointerException
 
 dpTest(com.projtest.api.practice.dataProvidertest.DataProviderTest)  Time elapsed: 0.31 sec  <<< FAILURE!
 java.lang.NullPointerException
-	at com.proj.listeners.TestListenerImpl.onTestStart(TestListenerImpl.java:32)
+	at com.listeners.TestListenerImpl.onTestStart(TestListenerImpl.java:32)
 	at org.testng.internal.TestListenerHelper.runTestListeners(TestListenerHelper.java:103)
 	at org.testng.internal.TestInvoker.runTestResultListener(TestInvoker.java:219)
 	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:569)
@@ -1621,7 +1621,7 @@ java.lang.NullPointerException
 
 testDemo(com.projtest.api.practice.dataProvidertest.DataProviderTest)  Time elapsed: 0.316 sec  <<< FAILURE!
 java.lang.NullPointerException
-	at com.proj.listeners.TestListenerImpl.onTestStart(TestListenerImpl.java:32)
+	at com.listeners.TestListenerImpl.onTestStart(TestListenerImpl.java:32)
 	at org.testng.internal.TestListenerHelper.runTestListeners(TestListenerHelper.java:103)
 	at org.testng.internal.TestInvoker.runTestResultListener(TestInvoker.java:219)
 	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:569)
@@ -1660,7 +1660,7 @@ java.lang.NullPointerException
 
 testDemo(com.projtest.api.practice.dataProvidertest.DataProviderTest)  Time elapsed: 0.319 sec  <<< FAILURE!
 java.lang.NullPointerException
-	at com.proj.listeners.TestListenerImpl.onTestStart(TestListenerImpl.java:32)
+	at com.listeners.TestListenerImpl.onTestStart(TestListenerImpl.java:32)
 	at org.testng.internal.TestListenerHelper.runTestListeners(TestListenerHelper.java:103)
 	at org.testng.internal.TestInvoker.runTestResultListener(TestInvoker.java:219)
 	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:569)
@@ -1699,7 +1699,7 @@ java.lang.NullPointerException
 
 testDemo(com.projtest.api.practice.dataProvidertest.DataProviderTest)  Time elapsed: 0.32 sec  <<< FAILURE!
 java.lang.NullPointerException
-	at com.proj.listeners.TestListenerImpl.onTestStart(TestListenerImpl.java:32)
+	at com.listeners.TestListenerImpl.onTestStart(TestListenerImpl.java:32)
 	at org.testng.internal.TestListenerHelper.runTestListeners(TestListenerHelper.java:103)
 	at org.testng.internal.TestInvoker.runTestResultListener(TestInvoker.java:219)
 	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:569)
@@ -1738,7 +1738,7 @@ java.lang.NullPointerException
 
 builderPattern(com.projtest.api.practice.samplepetstore.BuilderDesignPatternTest)  Time elapsed: 0.322 sec  <<< FAILURE!
 java.lang.NullPointerException
-	at com.proj.listeners.TestListenerImpl.onTestStart(TestListenerImpl.java:32)
+	at com.listeners.TestListenerImpl.onTestStart(TestListenerImpl.java:32)
 	at org.testng.internal.TestListenerHelper.runTestListeners(TestListenerHelper.java:103)
 	at org.testng.internal.TestInvoker.runTestResultListener(TestInvoker.java:219)
 	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:569)
@@ -1777,7 +1777,7 @@ java.lang.NullPointerException
 
 builderPattern1(com.projtest.api.practice.samplepetstore.BuilderDesignPatternTest)  Time elapsed: 0.324 sec  <<< FAILURE!
 java.lang.NullPointerException
-	at com.proj.listeners.TestListenerImpl.onTestStart(TestListenerImpl.java:32)
+	at com.listeners.TestListenerImpl.onTestStart(TestListenerImpl.java:32)
 	at org.testng.internal.TestListenerHelper.runTestListeners(TestListenerHelper.java:103)
 	at org.testng.internal.TestInvoker.runTestResultListener(TestInvoker.java:219)
 	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:569)
@@ -1816,7 +1816,7 @@ java.lang.NullPointerException
 
 builderPattern11(com.projtest.api.practice.samplepetstore.BuilderDesignPatternTest)  Time elapsed: 0.325 sec  <<< FAILURE!
 java.lang.NullPointerException
-	at com.proj.listeners.TestListenerImpl.onTestStart(TestListenerImpl.java:32)
+	at com.listeners.TestListenerImpl.onTestStart(TestListenerImpl.java:32)
 	at org.testng.internal.TestListenerHelper.runTestListeners(TestListenerHelper.java:103)
 	at org.testng.internal.TestInvoker.runTestResultListener(TestInvoker.java:219)
 	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:569)
@@ -1867,7 +1867,7 @@ java.nio.file.NoSuchFileException: ./src/test/resources/requestjsonfiles/postreq
 
 serialization(com.projtest.api.practice.pojolibtest.serialization.PojoMultipleArrayObjectTest)  Time elapsed: 0.004 sec  <<< FAILURE!
 java.lang.NullPointerException
-	at com.proj.listeners.TestListenerImpl.onTestStart(TestListenerImpl.java:32)
+	at com.listeners.TestListenerImpl.onTestStart(TestListenerImpl.java:32)
 	at org.testng.internal.TestListenerHelper.runTestListeners(TestListenerHelper.java:103)
 	at org.testng.internal.TestInvoker.runTestResultListener(TestInvoker.java:219)
 	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:569)
@@ -1906,7 +1906,7 @@ java.lang.NullPointerException
 
 serialization(com.projtest.api.practice.pojolibtest.serialization.PojoArrayObjectTest)  Time elapsed: 0.005 sec  <<< FAILURE!
 java.lang.NullPointerException
-	at com.proj.listeners.TestListenerImpl.onTestStart(TestListenerImpl.java:32)
+	at com.listeners.TestListenerImpl.onTestStart(TestListenerImpl.java:32)
 	at org.testng.internal.TestListenerHelper.runTestListeners(TestListenerHelper.java:103)
 	at org.testng.internal.TestInvoker.runTestResultListener(TestInvoker.java:219)
 	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:569)
@@ -1945,7 +1945,7 @@ java.lang.NullPointerException
 
 serialization(com.projtest.api.practice.pojolibtest.serialization.PojoLibTest)  Time elapsed: 0.007 sec  <<< FAILURE!
 java.lang.NullPointerException
-	at com.proj.listeners.TestListenerImpl.onTestStart(TestListenerImpl.java:32)
+	at com.listeners.TestListenerImpl.onTestStart(TestListenerImpl.java:32)
 	at org.testng.internal.TestListenerHelper.runTestListeners(TestListenerHelper.java:103)
 	at org.testng.internal.TestInvoker.runTestResultListener(TestInvoker.java:219)
 	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:569)

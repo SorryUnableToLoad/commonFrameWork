@@ -3,7 +3,7 @@
 <testsuite hostname="Surajkumars-MacBook-Pro.local" failures="0" tests="1" name="com.projtest.api.practice.pojolibtest.serialization.PojoLibTest" time="0.000" errors="1" timestamp="2022-12-25T14:13:48 IST" skipped="0">
   <testcase classname="com.projtest.api.practice.pojolibtest.serialization.PojoLibTest" name="serialization" time="0.000">
     <error type="java.lang.NullPointerException">
-      <![CDATA[java.lang.NullPointerException
+        <![CDATA[java.lang.NullPointerException
 at com.proj.listeners.TestListenerImpl.onTestStart(TestListenerImpl.java:32)
 at org.testng.internal.TestListenerHelper.runTestListeners(TestListenerHelper.java:103)
 at org.testng.internal.TestInvoker.runTestResultListener(TestInvoker.java:219)

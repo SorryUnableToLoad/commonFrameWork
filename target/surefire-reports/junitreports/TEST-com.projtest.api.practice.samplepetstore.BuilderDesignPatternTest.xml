@@ -3,7 +3,7 @@
 <testsuite hostname="Surajkumars-MacBook-Pro.local" failures="0" tests="3" name="com.projtest.api.practice.samplepetstore.BuilderDesignPatternTest" time="0.001" errors="3" timestamp="2022-12-25T14:13:48 IST" skipped="0">
   <testcase classname="com.projtest.api.practice.samplepetstore.BuilderDesignPatternTest" name="builderPattern" time="0.001">
     <error type="java.lang.NullPointerException">
-      <![CDATA[java.lang.NullPointerException
+        <![CDATA[java.lang.NullPointerException
 at com.proj.listeners.TestListenerImpl.onTestStart(TestListenerImpl.java:32)
 at org.testng.internal.TestListenerHelper.runTestListeners(TestListenerHelper.java:103)
 at org.testng.internal.TestInvoker.runTestResultListener(TestInvoker.java:219)
@@ -46,7 +46,7 @@ at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:75)
   <system-out/>
   <testcase classname="com.projtest.api.practice.samplepetstore.BuilderDesignPatternTest" name="builderPattern11" time="0.000">
     <error type="java.lang.NullPointerException">
-      <![CDATA[java.lang.NullPointerException
+        <![CDATA[java.lang.NullPointerException
 at com.proj.listeners.TestListenerImpl.onTestStart(TestListenerImpl.java:32)
 at org.testng.internal.TestListenerHelper.runTestListeners(TestListenerHelper.java:103)
 at org.testng.internal.TestInvoker.runTestResultListener(TestInvoker.java:219)
@@ -89,7 +89,7 @@ at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:75)
   <system-out/>
   <testcase classname="com.projtest.api.practice.samplepetstore.BuilderDesignPatternTest" name="builderPattern1" time="0.000">
     <error type="java.lang.NullPointerException">
-      <![CDATA[java.lang.NullPointerException
+        <![CDATA[java.lang.NullPointerException
 at com.proj.listeners.TestListenerImpl.onTestStart(TestListenerImpl.java:32)
 at org.testng.internal.TestListenerHelper.runTestListeners(TestListenerHelper.java:103)
 at org.testng.internal.TestInvoker.runTestResultListener(TestInvoker.java:219)

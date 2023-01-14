@@ -1,7 +1,5 @@
 package com.proj.config;
 
-import com.proj.config.converters.*;
-import com.proj.config.enums.*;
 import org.aeonbits.owner.Config;
 
 import java.net.URL;
