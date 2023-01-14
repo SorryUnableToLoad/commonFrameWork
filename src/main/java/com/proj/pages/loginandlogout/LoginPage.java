@@ -1,14 +1,13 @@
 package com.proj.pages.loginandlogout;
 
 import com.proj.driver.DriverManager;
+import com.proj.utils.ActionHelper;
 import io.appium.java_client.AppiumDriver;
 import io.appium.java_client.MobileElement;
 import io.appium.java_client.pagefactory.AndroidFindBy;
 import io.appium.java_client.pagefactory.AppiumFieldDecorator;
 import org.openqa.selenium.support.PageFactory;
 import org.testng.Assert;
-
-import static com.proj.utils.ActionHelper.*;
 
 public class LoginPage {
     AppiumDriver driver;
@@ -40,15 +39,15 @@ public class LoginPage {
      * @param mobileNumber
      */
     public void loginToApplication(String mobileNumber) {
-        String login = getAttribute(LoginPage, "content-desc");
+        String login = ActionHelper.getAttribute(LoginPage, "content-desc");
         Assert.assertEquals(login, "Login/Signup");
-        String enter_your_mobile_number = getAttribute(enterMobileNumberText, "content-desc");
+        String enter_your_mobile_number = ActionHelper.getAttribute(enterMobileNumberText, "content-desc");
         Assert.assertEquals(enter_your_mobile_number, "Please enter your mobile number");
         System.out.println(enter_your_mobile_number);
-        clickOnElement(mobileNumberInputBox);
-        waitAndSendKeys(mobileNumberInputBox, mobileNumber);
-        waitForPresenceOfElement(otpPage);
-        String otppage = getAttribute(otpPage, "content-desc");
+        ActionHelper.clickOnElement(mobileNumberInputBox);
+        ActionHelper.waitAndSendKeys(mobileNumberInputBox, mobileNumber);
+        //ActionHelper.waitForPresenceOfElement(otpPage);
+        String otppage = ActionHelper.getAttribute(otpPage, "content-desc");
         Assert.assertEquals(otppage, "Enter OTP");
         //clickOnElement(otpAllowButton);
     }

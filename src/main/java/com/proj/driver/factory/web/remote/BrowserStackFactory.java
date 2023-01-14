@@ -1,7 +1,7 @@
 package com.proj.driver.factory.web.remote;
 
-import com.proj.config.enums.WebBrowserType;
 import com.proj.driver.manager.web.remote.browserstack.BrowserStackChromeManager;
+import com.proj.config.enums.WebBrowserType;
 import com.proj.driver.manager.web.remote.browserstack.BrowserStackFirefoxManager;
 import org.openqa.selenium.WebDriver;
 

@@ -1,9 +1,9 @@
 package com.proj.listeners;
 
 import com.aventstack.extentreports.Status;
-import com.proj.annotations.FrameworkAnnotations;
 import com.proj.listeners.extentreport.ExtentManager;
 import com.proj.listeners.extentreport.ExtentReport;
+import com.proj.annotations.FrameworkAnnotations;
 import org.testng.ITestContext;
 import org.testng.ITestListener;
 import org.testng.ITestResult;

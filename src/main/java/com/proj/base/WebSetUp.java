@@ -1,5 +1,6 @@
 package com.proj.base;
 
+import com.proj.config.factory.FrameworkConfigFactory;
 import com.proj.driver.Driver;
 import com.proj.driver.DriverManager;
 import org.slf4j.Logger;
@@ -9,8 +10,6 @@ import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 
 import java.util.concurrent.TimeUnit;
-
-import static com.proj.config.factory.FrameworkConfigFactory.getConfig;
 
 /**
  * This class contains basic configuration methods to execute every TestScripts
@@ -26,7 +25,7 @@ public class WebSetUp {
     @BeforeClass
     public void setUp() {
         Driver.initDriverForWeb();
-        DriverManager.getDriver().manage().timeouts().implicitlyWait(getConfig().waitTime(), TimeUnit.SECONDS);
+        DriverManager.getDriver().manage().timeouts().implicitlyWait(FrameworkConfigFactory.getConfig().waitTime(), TimeUnit.SECONDS);
         Reporter.log("========== Successfully Initiated for Web Test ==========", true);
         logger.info("========== Successfully Initiated for Web Test ==========");
     }

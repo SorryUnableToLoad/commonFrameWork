@@ -1,8 +1,9 @@
 package com.proj.base;
 
+import com.proj.config.factory.FrameworkConfigFactory;
 import com.proj.driver.Driver;
-import com.proj.driver.DriverManager;
 import com.proj.pages.initializepages.InitializePages;
+import com.proj.driver.DriverManager;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.testng.Reporter;
@@ -12,8 +13,6 @@ import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeSuite;
 
 import java.util.concurrent.TimeUnit;
-
-import static com.proj.config.factory.FrameworkConfigFactory.getConfig;
 
 /**
  * This class contains basic configuration methods to execute every TestScripts
@@ -30,7 +29,7 @@ public class MobileSetUp {
     @BeforeSuite
     public void setUp() {
         Driver.initDriverForMobile();
-        DriverManager.getDriver().manage().timeouts().implicitlyWait(getConfig().waitTime(), TimeUnit.SECONDS);
+        DriverManager.getDriver().manage().timeouts().implicitlyWait(FrameworkConfigFactory.getConfig().waitTime(), TimeUnit.SECONDS);
         Reporter.log("========== Successfully Initiated for Mobile Test ==========", true);
         logger.info("========== Successfully Initiated for Mobile Test ==========");
     }

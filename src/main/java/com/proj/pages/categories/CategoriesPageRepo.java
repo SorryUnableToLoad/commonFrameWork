@@ -1,6 +1,7 @@
 package com.proj.pages.categories;
 
 import com.proj.driver.DriverManager;
+import com.proj.utils.ActionHelper;
 import io.appium.java_client.AppiumDriver;
 import io.appium.java_client.MobileElement;
 import io.appium.java_client.pagefactory.AndroidFindBy;
@@ -57,10 +58,10 @@ public class CategoriesPageRepo {
     }
 
     public void add_items_to_cart() {
-        clickOnElement(categories_button);
-        clickOnElement(fish_category);
-        clickOnElement(selectproduct("Aar (Bengali)"));
-        clickOnElement(add_sku(1));
-        clickOnElement(cross_button);
+        ActionHelper.clickOnElement(categories_button);
+        ActionHelper.clickOnElement(fish_category);
+        ActionHelper.clickOnElement(selectproduct("Aar (Bengali)"));
+        ActionHelper.clickOnElement(add_sku(1));
+        ActionHelper.clickOnElement(cross_button);
     }
 }

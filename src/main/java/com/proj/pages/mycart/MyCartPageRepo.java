@@ -1,6 +1,7 @@
 package com.proj.pages.mycart;
 
 import com.proj.driver.DriverManager;
+import com.proj.utils.ActionHelper;
 import io.appium.java_client.AppiumDriver;
 import io.appium.java_client.MobileElement;
 import io.appium.java_client.pagefactory.AndroidFindBy;
@@ -41,33 +42,33 @@ public class MyCartPageRepo {
     }
 
     public void createNewOrder() {
-        clickOnElement(my_cart_button);
-        clickOnElement(place_order_button);
-        String sussesPage = getAttribute(order_placed_successfully_page);
+        ActionHelper.clickOnElement(my_cart_button);
+        ActionHelper.clickOnElement(place_order_button);
+        String sussesPage = ActionHelper.getAttribute(order_placed_successfully_page);
         System.out.println(sussesPage);
         Assert.assertEquals(sussesPage, "Order placed successfully");
-        clickOnElement(home_button);
+        ActionHelper.clickOnElement(home_button);
     }
 
     public void addToExistingOrder() {
-        clickOnElement(my_cart_button);
-        clickOnElement(add_to_existing_order_button);
-        String sussesPage = getAttribute(order_placed_successfully_page);
+        ActionHelper.clickOnElement(my_cart_button);
+        ActionHelper.clickOnElement(add_to_existing_order_button);
+        String sussesPage = ActionHelper.getAttribute(order_placed_successfully_page);
         System.out.println(sussesPage);
         Assert.assertEquals(sussesPage, "Order placed successfully");
-        clickOnElement(home_button);
+        ActionHelper.clickOnElement(home_button);
     }
 
     public void modifyOrder() {
-        clickOnElement(modify_order_button);
-        clickOnElement(modify_order_button);
-        String popup = getAttribute(modify_order_popup);
+        ActionHelper.clickOnElement(modify_order_button);
+        ActionHelper.clickOnElement(modify_order_button);
+        String popup = ActionHelper.getAttribute(modify_order_popup);
         System.out.println(popup);
         Assert.assertEquals(popup, "Are you sure you want to modify the order?");
-        clickOnElement(modify_button);
-        String sussesPage = getAttribute(order_placed_successfully_page);
+        ActionHelper.clickOnElement(modify_button);
+        String sussesPage = ActionHelper.getAttribute(order_placed_successfully_page);
         System.out.println(sussesPage);
         Assert.assertEquals(sussesPage, "Order placed successfully");
-        clickOnElement(home_button);
+        ActionHelper.clickOnElement(home_button);
     }
 }

@@ -1,5 +1,6 @@
 package com.proj.base;
 
+import com.proj.listeners.TestListenerImpl;
 import com.proj.utils.apiutils.DatabaseUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -12,7 +13,7 @@ import org.testng.annotations.Listeners;
  *
  * @author surajkumarnaganuri
  */
-@Listeners(com.proj.listeners.TestListenerImpl.class)
+@Listeners(TestListenerImpl.class)
 public class APISetUp {
     public static final Logger logger = LoggerFactory.getLogger(APISetUp.class);
 

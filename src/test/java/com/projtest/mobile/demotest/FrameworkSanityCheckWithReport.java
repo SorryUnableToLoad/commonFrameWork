@@ -1,13 +1,14 @@
 package com.projtest.mobile.demotest;
 
 import com.proj.annotations.FrameworkAnnotations;
+import com.proj.listeners.TestListenerImpl;
 import com.proj.base.MobileSetUp;
 import org.testng.SkipException;
 import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 import org.testng.asserts.SoftAssert;
 
-@Listeners(com.proj.listeners.TestListenerImpl.class)
+@Listeners(TestListenerImpl.class)
 public class FrameworkSanityCheckWithReport extends MobileSetUp {
     @Test
     @FrameworkAnnotations(author = "Suraj")

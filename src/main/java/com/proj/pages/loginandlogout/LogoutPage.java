@@ -1,9 +1,8 @@
 package com.proj.pages.loginandlogout;
 
+import com.proj.utils.ActionHelper;
 import org.openqa.selenium.By;
 import org.testng.Assert;
-
-import static com.proj.utils.ActionHelper.*;
 
 public class LogoutPage {
 
@@ -20,11 +19,11 @@ public class LogoutPage {
      * This method is used to log out to the application
      */
     public void logoutToApplication() {
-        clickOnElement(account_page_button);
-        performScrollBottomToTop();
-        scrollToSpecificElementAndClick(logout_option);
-        String logOutPopUp = getAttribute(logout_popup);
+        ActionHelper.clickOnElement(account_page_button);
+        ActionHelper.performScrollBottomToTop();
+        ActionHelper.scrollToSpecificElementAndClick(logout_option);
+        String logOutPopUp = ActionHelper.getAttribute(logout_popup);
         Assert.assertEquals(logOutPopUp, "Are you sure you want to logout?");
-        clickOnElement(logout_button);
+        ActionHelper.clickOnElement(logout_button);
     }
 }

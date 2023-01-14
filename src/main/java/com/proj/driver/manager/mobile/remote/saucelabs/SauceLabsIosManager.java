@@ -1,9 +1,8 @@
 package com.proj.driver.manager.mobile.remote.saucelabs;
 
+import com.proj.config.factory.FrameworkConfigFactory;
 import io.appium.java_client.AppiumDriver;
 import org.openqa.selenium.remote.DesiredCapabilities;
-
-import static com.proj.config.factory.FrameworkConfigFactory.getConfig;
 
 public final class SauceLabsIosManager {
 
@@ -19,10 +18,10 @@ public final class SauceLabsIosManager {
         capabilities.setCapability("appium:orientation", "portrait");
         capabilities.setCapability("appium:app", "storage:filename=<file-name>");
         DesiredCapabilities sauceOptions = new DesiredCapabilities();
-        sauceOptions.setCapability("username", getConfig().saucelabsusername());
-        sauceOptions.setCapability("accessKey", getConfig().key());
+        sauceOptions.setCapability("username", FrameworkConfigFactory.getConfig().saucelabsusername());
+        sauceOptions.setCapability("accessKey", FrameworkConfigFactory.getConfig().key());
         capabilities.setCapability("sauce:options", sauceOptions);
-        return new AppiumDriver(getConfig()
+        return new AppiumDriver(FrameworkConfigFactory.getConfig()
                 .saucelabsurl(), capabilities);
     }
 }

@@ -1,8 +1,7 @@
 package com.proj.pages.home;
 
+import com.proj.utils.ActionHelper;
 import org.openqa.selenium.By;
-
-import static com.proj.utils.ActionHelper.*;
 
 public class SelectStore {
     private static final By change_store = By.xpath("//android.view.View[@content-desc='Hello!']/following-sibling::android.view.View[1]");
@@ -18,22 +17,22 @@ public class SelectStore {
         store = null;
         switch (store) {
             case "App_Test_Customer_3":
-                clickOnElement(change_store);
-                scrollToSpecificElementAndClick(APP_TEST_CUSTOMER_3);
+                ActionHelper.clickOnElement(change_store);
+                ActionHelper.scrollToSpecificElementAndClick(APP_TEST_CUSTOMER_3);
                 break;
             case "App_Test_Customer_4":
-                clickOnElement(change_store);
-                scrollToSpecificElementAndClick(APP_TEST_CUSTOMER_4);
+                ActionHelper.clickOnElement(change_store);
+                ActionHelper.scrollToSpecificElementAndClick(APP_TEST_CUSTOMER_4);
                 break;
             default:
-                clickOnElement(change_store);
-                scrollToSpecificElementAndClick(test_customer_1);
+                ActionHelper.clickOnElement(change_store);
+                ActionHelper.scrollToSpecificElementAndClick(test_customer_1);
         }
     }
 
     public void changeStore() {
-        clickOnElement(change_store);
-        performScrollBottomToTop();
-        scrollToSpecificElementAndClick(test_customer_1);
+        ActionHelper.clickOnElement(change_store);
+        ActionHelper.performScrollBottomToTop();
+        ActionHelper.scrollToSpecificElementAndClick(test_customer_1);
     }
 }

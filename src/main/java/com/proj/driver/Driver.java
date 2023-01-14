@@ -1,13 +1,12 @@
 package com.proj.driver;
 
+import com.proj.config.factory.FrameworkConfigFactory;
 import com.proj.driver.entity.MobileDriverData;
 import com.proj.driver.entity.WebDriverData;
 import com.proj.driver.factory.DriverFactory;
 import org.openqa.selenium.WebDriver;
 
 import java.util.Objects;
-
-import static com.proj.config.factory.FrameworkConfigFactory.getConfig;
 
 /**
  * This class is created for initialize the webDriver and quit the driver.
@@ -25,10 +24,10 @@ public final class Driver {
      */
     public static void initDriverForWeb() {
         if (Objects.isNull(DriverManager.getDriver())) {
-            WebDriverData driverData = new WebDriverData(getConfig().webBrowser(),
-                    getConfig().webCloudMode());
+            WebDriverData driverData = new WebDriverData(FrameworkConfigFactory.getConfig().webBrowser(),
+                    FrameworkConfigFactory.getConfig().webCloudMode());
             WebDriver driver = DriverFactory
-                    .getDriverForWeb(getConfig().webRunMode())
+                    .getDriverForWeb(FrameworkConfigFactory.getConfig().webRunMode())
                     .getDriver(driverData);
             DriverManager.getInstance().setDriver(driver);
             loadURL();
@@ -41,7 +40,7 @@ public final class Driver {
      */
     public static void loadURL() {
         DriverManager.getDriver().manage().window().maximize();
-        DriverManager.getDriver().get(getConfig().webUrl());
+        DriverManager.getDriver().get(FrameworkConfigFactory.getConfig().webUrl());
         // DriverManager.getDriver().get("https://www.amazon.in/");
     }
 
@@ -54,10 +53,10 @@ public final class Driver {
      */
     public static void initDriverForMobile() {
         //MobileDriverData driverData = new MobileDriverData(MobilePlatformType.ANDROID, getConfig().mobileCloudMode());
-        MobileDriverData driverData = new MobileDriverData(getConfig().mobileOs()
-                , getConfig().mobileCloudMode());
+        MobileDriverData driverData = new MobileDriverData(FrameworkConfigFactory.getConfig().mobileOs()
+                , FrameworkConfigFactory.getConfig().mobileCloudMode());
         WebDriver driver = DriverFactory
-                .getDriverForMobile(getConfig().mobileRunMode())
+                .getDriverForMobile(FrameworkConfigFactory.getConfig().mobileRunMode())
                 .getDriver(driverData);
         DriverManager.getInstance().setDriver(driver);
     }

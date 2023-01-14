@@ -50,6 +50,17 @@ public class ActionHelper extends MobileSetUp {
 
     }
     //+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++//
+    /*protected void sendKeys(MobileElement element,String value) {
+        explicitlyWait(element);
+        LogStatus.pass("Screenshot below", TestUtils.pullScreenshotPath());
+        element.sendKeys(value);
+        LogStatus.pass(value + " is entered in to the "+ element);
+    }protected void click(MobileElement element) {
+        explicitlyWait(element);
+        LogStatus.pass("Screenshot below", TestUtils.pullScreenshotPath());
+        element.click();
+        LogStatus.pass("Clicking is successfull on "+ element);
+    }*/
 
     /**
      * This method is used to wait and click on the element
@@ -220,7 +231,7 @@ public class ActionHelper extends MobileSetUp {
      *
      * @param mobileElement
      */
-    public static void waitForPresenceOfElement(MobileElement mobileElement) {
+    private static void waitForPresenceOfElement(MobileElement mobileElement) {
         WebDriverWait wait = new WebDriverWait(DriverManager.getDriver(), getConfig().waitTime());
         wait.until(ExpectedConditions.visibilityOf(mobileElement));
     }
@@ -230,7 +241,7 @@ public class ActionHelper extends MobileSetUp {
      *
      * @param by
      */
-    public static void waitForPresenceOfElement(By by) {
+    private static void waitForPresenceOfElement(By by) {
         WebDriverWait wait = new WebDriverWait(DriverManager.getDriver(), getConfig().waitTime());
         wait.until(ExpectedConditions.presenceOfElementLocated(by));
     }

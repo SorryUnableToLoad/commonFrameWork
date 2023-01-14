@@ -1,12 +1,13 @@
 package com.projtest.web;
 
 import com.proj.annotations.FrameworkAnnotations;
+import com.proj.listeners.TestListenerImpl;
 import com.proj.base.WebSetUp;
 import com.proj.driver.DriverManager;
 import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 
-@Listeners(com.proj.listeners.TestListenerImpl.class)
+@Listeners(TestListenerImpl.class)
 public class SampleTest extends WebSetUp {
     @Test
     @FrameworkAnnotations(author = "Suraj")
