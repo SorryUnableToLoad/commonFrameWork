@@ -11,19 +11,18 @@ import io.restassured.http.Header;
 import io.restassured.specification.QueryableRequestSpecification;
 import io.restassured.specification.RequestSpecification;
 import io.restassured.specification.SpecificationQuerier;
-import org.testng.ITestResult;
 
 import java.io.File;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
 public class ExtentReport {
-    private ExtentReport() {
-    }
-
+    public static String timeStamp = new SimpleDateFormat(("ddMMMyyyy hh:mm:ss")).format(new Date());
     private static ExtentReports report;
     private static ExtentTest test;
-    public static String timeStamp = new SimpleDateFormat(("ddMMMyyyy hh:mm:ss")).format(new Date());
+
+    private ExtentReport() {
+    }
 
     public static void initReport() {
         File file = new File("./extentreports/HTML" + " " + timeStamp);

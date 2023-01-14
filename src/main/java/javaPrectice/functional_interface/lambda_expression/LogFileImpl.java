@@ -1,6 +1,6 @@
 package javaPrectice.functional_interface.lambda_expression;
 
-public class LogFileImpl implements IPrintable{
+public class LogFileImpl implements IPrintable {
 
     @Override
     public void print() {

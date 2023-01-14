@@ -1,7 +1,6 @@
 package sdet.externalfilereading.propertyfile;
 
 import org.aeonbits.owner.ConfigFactory;
-import sdet.externalfilereading.propertyfile.OwnerConfig;
 
 public class OwnerConfigRunner {
     public static void main(String[] args) {

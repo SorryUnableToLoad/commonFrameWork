@@ -10,9 +10,6 @@ import java.util.Map;
 import java.util.function.Supplier;
 
 public final class SeleniumGridFactory {
-    private SeleniumGridFactory() {
-    }
-
     /*public static WebDriver getDriver(WebBrowserType browserType) {
         return browserType == WebBrowserType.CHROME
                 ? SeleniumGridChromeManager.getDriver()
@@ -26,7 +23,10 @@ public final class SeleniumGridFactory {
         MAP.put(WebBrowserType.FIREFOX, SeleniumGridFirefoxManager::getDriver);
     }
 
-    public static WebDriver getDriver(WebBrowserType browserType){
+    private SeleniumGridFactory() {
+    }
+
+    public static WebDriver getDriver(WebBrowserType browserType) {
         return MAP.get(browserType).get();
     }
 }

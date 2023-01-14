@@ -13,14 +13,14 @@ public interface IPrintable {
     public abstract void scanner();*/
     //----------------------------------------------------------------------------------------//
 
-    //we can have default method and static method as well
-    default void scan() {
-        System.out.println("scanning");
-    }
-
     static void printToConsole() {
         System.out.println("printing on console");
 
+    }
+
+    //we can have default method and static method as well
+    default void scan() {
+        System.out.println("scanning");
     }
 
     default void scanAsPdf() {

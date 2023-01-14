@@ -6,7 +6,7 @@ public class StudentBuilder {
     private String lastname;
     private String email;
 
-    public static StudentBuilder builder(){
+    public static StudentBuilder builder() {
         return new StudentBuilder();
     }
 
@@ -30,7 +30,7 @@ public class StudentBuilder {
         return this;
     }
 
-    public Student build(){
-        return new Student (this.id,this.firstname,this.lastname,this.email);
+    public Student build() {
+        return new Student(this.id, this.firstname, this.lastname, this.email);
     }
 }

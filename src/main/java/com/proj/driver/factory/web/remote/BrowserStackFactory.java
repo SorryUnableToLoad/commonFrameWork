@@ -10,9 +10,6 @@ import java.util.Map;
 import java.util.function.Supplier;
 
 public final class BrowserStackFactory {
-    private BrowserStackFactory() {
-    }
-
     /*public static WebDriver getDriver(WebBrowserType webBrowserType) {
         return webBrowserType == WebBrowserType.CHROME
                 ? BrowserStackChromeManager.getDriver()
@@ -24,6 +21,9 @@ public final class BrowserStackFactory {
     static {
         MAP.put(WebBrowserType.CHROME, BrowserStackChromeManager::getDriver);
         MAP.put(WebBrowserType.FIREFOX, BrowserStackFirefoxManager::getDriver);
+    }
+
+    private BrowserStackFactory() {
     }
 
     public static WebDriver getDriver(WebBrowserType webBrowserType) {

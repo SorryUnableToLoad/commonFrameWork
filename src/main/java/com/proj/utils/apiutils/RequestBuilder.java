@@ -7,7 +7,9 @@ import io.restassured.specification.RequestSpecification;
 import static io.restassured.RestAssured.given;
 
 public class RequestBuilder {
-    private RequestBuilder(){}
+    private RequestBuilder() {
+    }
+
     public static RequestSpecification requestForGetCall() {
         return given()
                 .baseUri(ApiConfigFactory.getConfig().apibaseurl())

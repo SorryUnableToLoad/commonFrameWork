@@ -50,8 +50,8 @@ public class UseCase1Test {
     }
 
     @Test(dataProvider = "getData3")
-    public void testDemo3(char a,char b,char c) {
-        System.out.println(a+" "+b+" "+c);
+    public void testDemo3(char a, char b, char c) {
+        System.out.println(a + " " + b + " " + c);
     }
 
 }

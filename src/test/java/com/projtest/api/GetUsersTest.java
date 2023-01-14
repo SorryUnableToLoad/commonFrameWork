@@ -39,9 +39,9 @@ public class GetUsersTest {
         ResponseAssert.asserThat(response)
                 .statusCodeIs(201)
                 .responseTimeIsLessThan(1800l)
-                .hasHeaderKeyAndValue("Content-Type","application/json")
+                .hasHeaderKeyAndValue("Content-Type", "application/json")
                 .hasContentType("application/json")
-                .hasKeyWithValue("page","3")
+                .hasKeyWithValue("page", "3")
                 .assertAll();
 
     }

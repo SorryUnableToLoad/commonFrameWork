@@ -2,45 +2,51 @@ package sdet.fixtures;
 
 import br.com.six2six.fixturefactory.Fixture;
 import br.com.six2six.fixturefactory.loader.FixtureFactoryLoader;
-import sdet.fixtures.pojo.Address;
-import sdet.fixtures.pojo.Employee;
-import io.restassured.http.ContentType;
-import io.restassured.response.Response;
-import org.testng.annotations.BeforeSuite;
-import org.testng.annotations.DataProvider;
+import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
+import sdet.fixtures.pojo.Employee;
 
-import static io.restassured.RestAssured.*;
+import java.util.List;
 
 public class PostEmployeeTest {
 
-    @BeforeSuite
-    public void setUp(){
-        FixtureFactoryLoader.loadTemplates("sdet.fixtures.templates");
+    @BeforeClass
+    public void setUp() {
+        FixtureFactoryLoader.loadTemplates("sdet.fixtures");
     }
-    @DataProvider(parallel = true)
+
+    @Test
+    public void test() {
+        List<Employee> valid = Fixture.from(Employee.class).gimme(10, "valid");
+        valid.forEach(System.out::println);
+    }
+
+
+
+   /* @DataProvider(parallel = true)
     public static Object[][] getData() {
         Employee valid = Fixture.from(Employee.class).gimme("valid");
-        Employee invalidid = Fixture.from(Employee.class).gimme("invalidid");
-        Employee invalidfname=Fixture.from(Employee.class).gimme("invalidfname");
+        Employee invalidId = Fixture.from(Employee.class).gimme("invalidId");
+        Employee invalidName = Fixture.from(Employee.class).gimme("invalidName");
         return new Object[][]{
                 {valid},
-                {invalidid},
-                {invalidfname}
+                {invalidId},
+                {invalidName}
         };
 
     }
 
     @Test(dataProvider = "getData")
-    public void postEmployeeTest(Employee employee){
+    public void postEmployeeTest(Employee employee) {
         Response response = given().contentType(ContentType.JSON)
                 .baseUri("")
                 .log()
                 .all()
                 .body(employee)
                 .post("");
-        
+
         response.then().assertThat().statusCode(201);
         System.out.println(employee);
-    }
+    }*/
+
 }

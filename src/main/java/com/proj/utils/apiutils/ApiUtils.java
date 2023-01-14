@@ -8,15 +8,16 @@ import java.nio.file.Paths;
 
 public final class ApiUtils {
 
-    private ApiUtils(){}
+    private ApiUtils() {
+    }
 
     @SneakyThrows
-    public static String readJsonAndGetAsString(String filepath){
+    public static String readJsonAndGetAsString(String filepath) {
         return new String(Files.readAllBytes(Paths.get(filepath)));
     }
 
     @SneakyThrows
-    public static void storeStringAsJsonFile(String filepath, Response response){
-        Files.write(Paths.get(filepath),response.asByteArray());
+    public static void storeStringAsJsonFile(String filepath, Response response) {
+        Files.write(Paths.get(filepath), response.asByteArray());
     }
 }

@@ -16,6 +16,6 @@ public class TestData {
     private String lname;
     @Column(name = "mobileno", index = 2)
     private long mobileno;
-    @Column(name = "isboolean", index = 3,converterClass = BooleanConverter.class)
+    @Column(name = "isboolean", index = 3, converterClass = BooleanConverter.class)
     private boolean isboolean;
 }

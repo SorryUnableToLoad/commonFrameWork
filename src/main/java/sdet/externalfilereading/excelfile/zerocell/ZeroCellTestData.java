@@ -2,8 +2,6 @@ package sdet.externalfilereading.excelfile.zerocell;
 
 import com.creditdatamw.zerocell.annotation.Column;
 import com.creditdatamw.zerocell.converter.BooleanConverter;
-import com.creditdatamw.zerocell.converter.Converter;
-import com.creditdatamw.zerocell.converter.IntegerConverter;
 import io.github.sskorol.data.Sheet;
 
 @Sheet(name = "Sheet1")

@@ -13,7 +13,7 @@ public class PojoArrayObjectTest {
     public void serialization() throws IOException {
 
         long[] contactNumbers = {1234567890l, 9987654321l, 6789054321l};
-        PojoArrayObjectLib pobj = new PojoArrayObjectLib("Suraj","E123","abc@gmail.com",contactNumbers);
+        PojoArrayObjectLib pobj = new PojoArrayObjectLib("Suraj", "E123", "abc@gmail.com", contactNumbers);
 
         ObjectMapper mapper = new ObjectMapper();
         String creat = mapper.writeValueAsString(pobj);

@@ -13,13 +13,6 @@ import static com.proj.utils.ActionHelper.clickOnElement;
 import static com.proj.utils.ActionHelper.getAttribute;
 
 public class MyCartPageRepo {
-    AppiumDriver driver;
-
-    public MyCartPageRepo() {
-        driver = (AppiumDriver) DriverManager.getDriver();
-        PageFactory.initElements(new AppiumFieldDecorator(driver), this);
-    }
-
     public static final By my_cart_button = By.xpath("//android.view.View[@content-desc='My cart']");
     public static final By place_order_button = By.xpath("//android.widget.Button[@content-desc='PLACE ORDER']");
     /*@AndroidFindBy(accessibility = "PLACE ORDER")
@@ -34,13 +27,18 @@ public class MyCartPageRepo {
     public static final By modify_button = By.xpath("//android.widget.Button[@content-desc='MODIFY']");
     public static final By cancel_button = By.xpath("//android.widget.Button[@content-desc='CANCEL']");
     public static final By order_placed_successfully_page = By.xpath("//android.view.View[@content-desc='Order placed successfully']");
-    /*@AndroidFindBy(xpath = "//android.view.View[@content-desc='Order placed successfully']")
-    public static MobileElement Order_placed_successfully;*/
-
     @AndroidFindBy(accessibility = "HOME")
     public static MobileElement home_button;
     @AndroidFindBy(accessibility = "VIEW ORDERS")
     public static MobileElement view_orders_button;
+    /*@AndroidFindBy(xpath = "//android.view.View[@content-desc='Order placed successfully']")
+    public static MobileElement Order_placed_successfully;*/
+    AppiumDriver driver;
+
+    public MyCartPageRepo() {
+        driver = (AppiumDriver) DriverManager.getDriver();
+        PageFactory.initElements(new AppiumFieldDecorator(driver), this);
+    }
 
     public void createNewOrder() {
         clickOnElement(my_cart_button);

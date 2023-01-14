@@ -6,7 +6,6 @@ import org.codehaus.jackson.map.JsonMappingException;
 import org.codehaus.jackson.map.ObjectMapper;
 import org.testng.annotations.Test;
 
-
 import java.io.File;
 import java.io.IOException;
 
@@ -15,7 +14,7 @@ public class PojoLibTest {
     public void serialization() throws JsonGenerationException, JsonMappingException, IOException {
 
         //we are creating an object into library
-        PojoLib pobj=new PojoLib("Suraj", "E987", "sjn6724@gmail.com", 7019020148l);
+        PojoLib pobj = new PojoLib("Suraj", "E987", "sjn6724@gmail.com", 7019020148l);
 
 
         //converting java object into json

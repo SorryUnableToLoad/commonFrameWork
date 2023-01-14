@@ -11,11 +11,11 @@ import lombok.Setter;
 @Setter
 @AllArgsConstructor
 @JsonInclude(value = JsonInclude.Include.NON_NULL)
-@JsonPropertyOrder(value = {"String","Integer"})
+@JsonPropertyOrder(value = {"String", "Integer"})
 public class Tags {
     private Integer id;
     private String name;
 
-    public Tags(){
+    public Tags() {
     }
 }

@@ -12,19 +12,12 @@ import org.openqa.selenium.support.PageFactory;
 import static com.proj.utils.ActionHelper.clickOnElement;
 
 public class CategoriesPageRepo {
-    AppiumDriver driver;
-
-    public CategoriesPageRepo() {
-        driver = (AppiumDriver) DriverManager.getDriver();
-        PageFactory.initElements(new AppiumFieldDecorator(driver), this);
-    }
-
     public static final By categories_button = By.xpath("//android.view.View[@content-desc='Categories']");
     public static final By all_categories_page = By.xpath("//android.view.View[@content-desc='All Categories']");
     public static final By back_arrow_button = By.xpath("//android.view.View[@content-desc='All Categories']/android.widget.Button");
     public static final By search_icon = By.xpath("//android.view.View[@content-desc='All Categories']/android.view.View");
     public static final By categories_list = By.xpath("//android.view.View[@content-desc='All Categories']/following-sibling::android.view.View/android.view.View/android.widget.ImageView");
-
+    public static final By cross_button = By.xpath("//android.view.View[@content-desc='Select item(s) to order']/following-sibling::android.view.View");
     @AndroidFindBy(accessibility = "Fish\n" +
             "Bengali, Freshwater, Seawater, Prawns, Crabs, Squids")
     public static MobileElement fish_category;
@@ -39,6 +32,12 @@ public class CategoriesPageRepo {
     public static MobileElement eggs_category;
     @AndroidFindBy(accessibility = "Back Button")
     public static MobileElement backButton;
+    AppiumDriver driver;
+
+    public CategoriesPageRepo() {
+        driver = (AppiumDriver) DriverManager.getDriver();
+        PageFactory.initElements(new AppiumFieldDecorator(driver), this);
+    }
 
     public static WebElement select_level_1_Catgory(String level_1_category) {
         return DriverManager.getDriver().findElement(By.xpath("//android.widget.ImageView[@content-desc='" + level_1_category + "']"));
@@ -47,8 +46,6 @@ public class CategoriesPageRepo {
     public static MobileElement selectproduct(String product_name) {
         return (MobileElement) DriverManager.getDriver().findElement(By.xpath("//android.widget.ImageView[@content-desc='" + product_name + "']"));
     }
-
-    public static final By cross_button = By.xpath("//android.view.View[@content-desc='Select item(s) to order']/following-sibling::android.view.View");
 
     public static MobileElement select_sku(int index) {
         return (MobileElement) DriverManager.getDriver().findElement(By.xpath("//android.view.View[@content-desc='Select item(s) to order']/parent::android.view.View/android.widget.ScrollView/android.view.View[2]/android.view.View/android.view.View['" + index + "']"));
@@ -59,7 +56,7 @@ public class CategoriesPageRepo {
         return (MobileElement) DriverManager.getDriver().findElement(By.xpath("(//android.view.View[@content-desc='Select item(s) to order']/parent::android.view.View/android.widget.ScrollView/android.view.View[2]/android.view.View/android.view.View/android.view.View)['" + index + "']"));
     }
 
-    public void add_items_to_cart(){
+    public void add_items_to_cart() {
         clickOnElement(categories_button);
         clickOnElement(fish_category);
         clickOnElement(selectproduct("Aar (Bengali)"));

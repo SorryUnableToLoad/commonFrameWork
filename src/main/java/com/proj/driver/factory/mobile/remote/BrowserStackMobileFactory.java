@@ -10,9 +10,6 @@ import java.util.Map;
 import java.util.function.Supplier;
 
 public final class BrowserStackMobileFactory {
-    private BrowserStackMobileFactory() {
-    }
-
     /*public static WebDriver getDriver(MobilePlatformType mobilePlatformType) {
         return mobilePlatformType == MobilePlatformType.ANDROID
                 ? BrowserStackAndroidManager.getDriver()
@@ -24,6 +21,9 @@ public final class BrowserStackMobileFactory {
     static {
         MAP.put(MobilePlatformType.ANDROID, BrowserStackAndroidManager::getDriver);
         MAP.put(MobilePlatformType.IOS, BrowserStackIosManager::getDriver);
+    }
+
+    private BrowserStackMobileFactory() {
     }
 
     public static AppiumDriver getDriver(MobilePlatformType mobilePlatformType) {

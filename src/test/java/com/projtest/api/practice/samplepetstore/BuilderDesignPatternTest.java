@@ -25,8 +25,9 @@ public class BuilderDesignPatternTest {
 
 
     }
+
     @Test
-    public void builderPattern1(){
+    public void builderPattern1() {
         Student student = Student
                 .builder1()
                 .setEmail("awerfgt")

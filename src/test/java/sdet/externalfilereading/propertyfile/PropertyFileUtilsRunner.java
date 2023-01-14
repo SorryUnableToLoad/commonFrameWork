@@ -1,7 +1,5 @@
 package sdet.externalfilereading.propertyfile;
 
-import sdet.externalfilereading.propertyfile.PropertyFileUtils;
-
 public class PropertyFileUtilsRunner {
     public static void main(String[] args) {
         String browser = PropertyFileUtils.readDataFromPropertyFile("browser");

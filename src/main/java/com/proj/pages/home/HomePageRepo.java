@@ -10,13 +10,6 @@ import org.openqa.selenium.support.PageFactory;
 import java.util.List;
 
 public class HomePageRepo {
-    AppiumDriver driver;
-
-    public HomePageRepo() {
-        driver = (AppiumDriver) DriverManager.getDriver();
-        PageFactory.initElements(new AppiumFieldDecorator(driver), this);
-    }
-
     //bottom navigate bar elements
     //-----------------------------------------------------------//
     @AndroidFindBy(accessibility = "Home")
@@ -27,27 +20,23 @@ public class HomePageRepo {
     public MobileElement myCartPageButtton;
     @AndroidFindBy(accessibility = "Account")
     public MobileElement accountPageButtton;
+    @AndroidFindBy(accessibility = "Popular Products ")
+    public MobileElement popularProductList;
+    //Outstanding section
+    //-----------------------------------------------------------//
+    @AndroidFindBy(accessibility = "ACCOUNT STATEMENT")
+    public MobileElement accountStateementButton;
 
 
     //-----------------------------------------------------------//
 
     //Popular Products section
     //-----------------------------------------------------------//
-
-    @AndroidFindBy(accessibility = "Popular Products ")
-    public MobileElement popularProductList;
-
-
-    //-----------------------------------------------------------//
-
-    //Outstanding section
-    //-----------------------------------------------------------//
-    @AndroidFindBy(accessibility = "ACCOUNT STATEMENT")
-    public MobileElement accountStateementButton;
     @AndroidFindBy(accessibility = "PAY")
     public MobileElement payButton;
-    //-----------------------------------------------------------//
 
+
+    //-----------------------------------------------------------//
     //recent Orders section
     //-----------------------------------------------------------//
     @AndroidFindBy(className = "android.view.View")
@@ -55,10 +44,15 @@ public class HomePageRepo {
     @AndroidFindBy(xpath = "(//android.view.View[@content-desc=\"View All \"])[2]")
     public MobileElement viewAllButtonOfRecentOrders;
     //-----------------------------------------------------------//
-
     @AndroidFindBy(className = "android.view.View")
     public List<MobileElement> l1category;
+    AppiumDriver driver;
+    //-----------------------------------------------------------//
 
+    public HomePageRepo() {
+        driver = (AppiumDriver) DriverManager.getDriver();
+        PageFactory.initElements(new AppiumFieldDecorator(driver), this);
+    }
 
 
 }

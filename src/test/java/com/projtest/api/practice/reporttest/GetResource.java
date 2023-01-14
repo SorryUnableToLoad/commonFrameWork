@@ -1,10 +1,8 @@
 package com.projtest.api.practice.reporttest;
 
 import com.proj.annotations.FrameworkAnnotations;
-import com.proj.listeners.extentreport.ExtentReport;
 import io.restassured.http.ContentType;
 import io.restassured.response.Response;
-import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 
 import static io.restassured.RestAssured.given;
@@ -34,8 +32,6 @@ public class GetResource {
                 .contentType(ContentType.JSON)
                 .log().all();
         //ExtentReport.logResponse(responce.asPrettyString());
-
-
 
 
     }

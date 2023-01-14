@@ -13,7 +13,7 @@ public class PojoMultipleArrayObjectTest {
     @Test
     public void serialization() throws IOException {
         long[] contactnumber1 = {1234567890l, 2345678901l};
-        long[] contactnumber2 = {2345679876l,9876543456709l};
+        long[] contactnumber2 = {2345679876l, 9876543456709l};
 
         PojoArrayObjectLib pao1 = new PojoArrayObjectLib("Suraj", "E345", "acded@gmail.com", contactnumber1);
         PojoArrayObjectLib pao2 = new PojoArrayObjectLib("Varun", "E346", "acded@gmail.com", contactnumber2);

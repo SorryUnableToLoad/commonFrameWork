@@ -12,8 +12,6 @@ import java.util.function.Supplier;
 
 public final class SauceLabsMobileFactory {
 
-    private SauceLabsMobileFactory(){}
-
     private static final Map<MobilePlatformType, Supplier<AppiumDriver>> MAP =
             new EnumMap<>(MobilePlatformType.class);
 
@@ -22,7 +20,10 @@ public final class SauceLabsMobileFactory {
         MAP.put(MobilePlatformType.IOS, SauceLabsIosManager::getDriver);
     }
 
-    public static AppiumDriver getDriver(MobilePlatformType mobilePlatformType){
+    private SauceLabsMobileFactory() {
+    }
+
+    public static AppiumDriver getDriver(MobilePlatformType mobilePlatformType) {
         return MAP.get(mobilePlatformType).get();
     }
 }

@@ -7,9 +7,10 @@ import static com.proj.config.factory.FrameworkConfigFactory.getConfig;
 
 public final class SauceLabsIosManager {
 
-    private SauceLabsIosManager(){}
+    private SauceLabsIosManager() {
+    }
 
-    public static AppiumDriver getDriver(){
+    public static AppiumDriver getDriver() {
         //dummy code and not tested
         DesiredCapabilities capabilities = new DesiredCapabilities();
         capabilities.setCapability("platformName", "iOS");

@@ -1,6 +1,5 @@
 package com.proj.listeners;
 
-import com.aventstack.extentreports.MediaEntityBuilder;
 import com.aventstack.extentreports.Status;
 import com.proj.annotations.FrameworkAnnotations;
 import com.proj.listeners.extentreport.ExtentManager;
@@ -8,10 +7,6 @@ import com.proj.listeners.extentreport.ExtentReport;
 import org.testng.ITestContext;
 import org.testng.ITestListener;
 import org.testng.ITestResult;
-
-import java.io.IOException;
-
-import static com.proj.utils.ScreenshotUtils.takeScreenShot;
 
 public class TestListenerImpl implements ITestListener {
     @Override

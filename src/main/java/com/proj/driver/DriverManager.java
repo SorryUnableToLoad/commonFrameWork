@@ -8,7 +8,7 @@ import org.openqa.selenium.WebDriver;
 import java.util.EnumMap;
 import java.util.Map;
 
-import static java.lang.ThreadLocal.*;
+import static java.lang.ThreadLocal.withInitial;
 
 
 public class DriverManager {
@@ -33,12 +33,6 @@ public class DriverManager {
         return getInstance().getdriver();
     }
 
-    private WebDriver getdriver() {
-        return CONTEXT.get() == PlatFormType.WEB
-                ? WEB_DRIVER_THREAD_LOCAL.get()
-                : MOBILE_DRIVER_THREAD_LOCAL.get();
-    }
-
     public void setDriver(WebDriver driver) {
         if (isMobileDriver(driver)) {
             MOBILE_DRIVER_THREAD_LOCAL.set(driver);
@@ -59,5 +53,11 @@ public class DriverManager {
         WEB_DRIVER_THREAD_LOCAL.remove();
         MOBILE_DRIVER_THREAD_LOCAL.remove();
         CONTEXT.remove();
+    }
+
+    private WebDriver getdriver() {
+        return CONTEXT.get() == PlatFormType.WEB
+                ? WEB_DRIVER_THREAD_LOCAL.get()
+                : MOBILE_DRIVER_THREAD_LOCAL.get();
     }
 }

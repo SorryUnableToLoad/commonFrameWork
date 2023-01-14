@@ -13,6 +13,24 @@ import java.util.concurrent.TimeUnit;
 import java.util.function.Consumer;
 
 public class Use_Case_Test_2 {
+    private static void selectValueFromDropDown(WebElement element, String textorvalueorindex, String strategy) {
+        Select select = new Select(element);
+        if (strategy.equalsIgnoreCase("text")) {
+            select.selectByVisibleText(textorvalueorindex);
+        } else if (strategy.equalsIgnoreCase("value")) {
+            select.selectByValue(textorvalueorindex);
+        } else if (strategy.equalsIgnoreCase("index")) {
+            select.selectByIndex(Integer.parseInt(textorvalueorindex));
+        } else {
+            System.out.println("Invalid strategy");
+        }
+    }
+
+    private static void selectFromDropDown(Consumer<Select> consumer, WebElement element) {
+        Select select = new Select(element);
+        consumer.accept(select);
+    }
+
     @Test
     void testRunner() {
         WebDriverManager.chromedriver().setup();
@@ -34,19 +52,6 @@ public class Use_Case_Test_2 {
 
     }
 
-    private static void selectValueFromDropDown(WebElement element, String textorvalueorindex, String strategy) {
-        Select select = new Select(element);
-        if (strategy.equalsIgnoreCase("text")) {
-            select.selectByVisibleText(textorvalueorindex);
-        } else if (strategy.equalsIgnoreCase("value")) {
-            select.selectByValue(textorvalueorindex);
-        } else if (strategy.equalsIgnoreCase("index")) {
-            select.selectByIndex(Integer.parseInt(textorvalueorindex));
-        } else {
-            System.out.println("Invalid strategy");
-        }
-    }
-
     @Test
     void testRunner1() {
         WebDriverManager.chromedriver().setup();
@@ -66,18 +71,13 @@ public class Use_Case_Test_2 {
 
         List<WebElement> multiOptionsDropDown = new Select(driver.findElement(By.id("cars"))).getOptions();
 
-        multiOptionsDropDown.forEach(e->e.click());
+        multiOptionsDropDown.forEach(e -> e.click());
         Uninterruptibles.sleepUninterruptibly(5, TimeUnit.SECONDS);
 
-        multiOptionsDropDown.stream().skip(2).forEach(e->e.click());
+        multiOptionsDropDown.stream().skip(2).forEach(e -> e.click());
         Uninterruptibles.sleepUninterruptibly(3, TimeUnit.SECONDS);
 
 
         driver.quit();
-    }
-
-    private static void selectFromDropDown(Consumer<Select> consumer, WebElement element) {
-        Select select = new Select(element);
-        consumer.accept(select);
     }
 }

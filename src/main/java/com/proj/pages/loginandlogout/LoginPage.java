@@ -12,16 +12,6 @@ import static com.proj.utils.ActionHelper.*;
 
 public class LoginPage {
     AppiumDriver driver;
-
-    /**
-     * This constructor is used to initialize elements using pageFactory
-     *
-     */
-    public LoginPage() {
-        driver = (AppiumDriver) DriverManager.getDriver();
-        PageFactory.initElements(new AppiumFieldDecorator(driver), this);
-    }
-
     /**
      * Identifing the mobile elements by using annotations
      */
@@ -29,16 +19,20 @@ public class LoginPage {
     private MobileElement LoginPage;
     @AndroidFindBy(xpath = "//android.view.View[@content-desc='Please enter your mobile number']")
     private MobileElement enterMobileNumberText;
-
     @AndroidFindBy(xpath = "//android.widget.EditText[@class='android.widget.EditText']")
     private MobileElement mobileNumberInputBox;
-
     @AndroidFindBy(xpath = "//android.view.View[@content-desc='Enter OTP']")
     private MobileElement otpPage;
-
     @AndroidFindBy(id = "com.google.android.gms:id/positive_button")
     private MobileElement otpAllowButton;
 
+    /**
+     * This constructor is used to initialize elements using pageFactory
+     */
+    public LoginPage() {
+        driver = (AppiumDriver) DriverManager.getDriver();
+        PageFactory.initElements(new AppiumFieldDecorator(driver), this);
+    }
 
     /**
      * This method is used to login to the application

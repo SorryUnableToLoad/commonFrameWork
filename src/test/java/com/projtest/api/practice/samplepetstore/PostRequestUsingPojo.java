@@ -52,6 +52,6 @@ public class PostRequestUsingPojo {
         System.out.println(photourls);
         System.out.println("**************************************");
 
-      response.then().body(JsonSchemaValidator.matchesJsonSchema(new File("./src/test/resources/api-resources/schemaJsonfiles/schema.json")));
+        response.then().body(JsonSchemaValidator.matchesJsonSchema(new File("./src/test/resources/api-resources/schemaJsonfiles/schema.json")));
     }
 }

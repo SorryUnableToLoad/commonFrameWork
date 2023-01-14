@@ -14,6 +14,7 @@ public class PojoLib {
     private String emailId;
     private long contactNumber;
 
-    public PojoLib(){}
+    public PojoLib() {
+    }
 
 }

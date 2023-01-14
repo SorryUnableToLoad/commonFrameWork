@@ -150,7 +150,7 @@ public class DIffWayToPostARequest {
     }
 
     @Test
-    public void bodyAsJSONObject(){
+    public void bodyAsJSONObject() {
         // to overcome above approach problems
         // having some collection that can solve the problems we had while using/creating map and list
         // using external json/json-simple library
@@ -163,7 +163,7 @@ public class DIffWayToPostARequest {
         JSONObject categoryObject = new JSONObject();
         categoryObject.put("id", 11);
         categoryObject.put("name", "animal");
-        obj.put("category",categoryObject);
+        obj.put("category", categoryObject);
 
         obj.put("name", "animalname");
 

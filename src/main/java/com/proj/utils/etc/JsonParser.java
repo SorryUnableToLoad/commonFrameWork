@@ -9,23 +9,23 @@ import java.io.IOException;
 
 
 public class JsonParser {
-	private static File jsonFile;
+    private static File jsonFile;
 
-	public static String getValue(String path) throws IOException   {
-		String temp = "";
-		try {
-			jsonFile=new File(IConstants.JSONPATH);
-			temp=JsonPath.read(jsonFile,"$."+path);
-		}
-		catch(Exception e) {
+    public static String getValue(String path) throws IOException {
+        String temp = "";
+        try {
+            jsonFile = new File(IConstants.JSONPATH);
+            temp = JsonPath.read(jsonFile, "$." + path);
+        } catch (Exception e) {
 
-		}
-		return temp;
+        }
+        return temp;
 
-	}
-	@Test
-	void test() throws IOException {
-		String value = JsonParser.getValue("config.global.appiumurl");
-		System.out.println(value);
-	}
+    }
+
+    @Test
+    void test() throws IOException {
+        String value = JsonParser.getValue("config.global.appiumurl");
+        System.out.println(value);
+    }
 }

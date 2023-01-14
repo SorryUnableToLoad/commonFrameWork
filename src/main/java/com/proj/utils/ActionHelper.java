@@ -46,12 +46,6 @@ public class ActionHelper extends MobileSetUp {
     static int startY = size.getHeight() * 60 / 100;
     static int endY = size.getHeight() * 10 / 100;
 
-
-   /* static int center = size.getHeight() / 2;
-    static int endY = (int) (size.getHeight() * 0.20);
-    static int startX = size.getWidth() * 10 / 100;
-    static int endX = size.getWidth() * 90 / 100;*/
-
     private ActionHelper() {
 
     }
@@ -461,16 +455,6 @@ public class ActionHelper extends MobileSetUp {
     }
 
     /**
-     * This method is used for long-press on element
-     *
-     * @param mobileElement
-     * @param milliSeconds
-     */
-    public void longPress(MobileElement mobileElement, int milliSeconds) {
-        new TouchAction((PerformsTouchActions) DriverManager.getDriver()).longPress(LongPressOptions.longPressOptions().withElement(ElementOption.element(mobileElement))).waitAction(WaitOptions.waitOptions(Duration.ofMillis(milliSeconds))).perform();
-    }
-
-    /**
      * This method is used to drag and drop the element
      * by passing the source element and the target element
      *
@@ -480,9 +464,19 @@ public class ActionHelper extends MobileSetUp {
     public static void dragAndDrop(MobileElement sourceElement, MobileElement targetElement) {
         new TouchAction((PerformsTouchActions) DriverManager.getDriver()).tap(TapOptions.tapOptions().withElement(ElementOption.element(sourceElement))).waitAction(WaitOptions.waitOptions(Duration.ofMillis(500))).moveTo(ElementOption.element(targetElement)).release().perform();
     }
-    //=================================================================================================================================================================//
 
     public static WebElement chooseAProduct(String productName) {
         return DriverManager.getDriver().findElement(By.xpath("//android.widget.ImageView[@content-desc='" + productName + "']"));
+    }
+    //=================================================================================================================================================================//
+
+    /**
+     * This method is used for long-press on element
+     *
+     * @param mobileElement
+     * @param milliSeconds
+     */
+    public void longPress(MobileElement mobileElement, int milliSeconds) {
+        new TouchAction((PerformsTouchActions) DriverManager.getDriver()).longPress(LongPressOptions.longPressOptions().withElement(ElementOption.element(mobileElement))).waitAction(WaitOptions.waitOptions(Duration.ofMillis(milliSeconds))).perform();
     }
 }

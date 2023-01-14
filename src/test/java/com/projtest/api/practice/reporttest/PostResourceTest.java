@@ -25,9 +25,9 @@ public class PostResourceTest {
                 .body(resource)
                 .contentType(ContentType.JSON);
 
-       //ExtentReport.logRequest(requestSpecification);
+        //ExtentReport.logRequest(requestSpecification);
 
-        Response response = requestSpecification.post(getConfig().apibaseurl()+getConfig().addNewPetStore());
+        Response response = requestSpecification.post(getConfig().apibaseurl() + getConfig().addNewPetStore());
 
         response.then()
                 .assertThat()
@@ -35,7 +35,7 @@ public class PostResourceTest {
                 .contentType(ContentType.JSON)
                 .time(Matchers.lessThan(400l), TimeUnit.SECONDS)
                 .log().all();
-       //ExtentReport.logResponse(response.asPrettyString());
+        //ExtentReport.logResponse(response.asPrettyString());
 
 
     }

@@ -15,6 +15,7 @@ public interface ApiConfig extends Config {
 
     @Key("responseTime")
     long responseTime();
+
     @Key("api.baseurl")
     String apibaseurl();
 

@@ -54,8 +54,8 @@ public final class Driver {
      */
     public static void initDriverForMobile() {
         //MobileDriverData driverData = new MobileDriverData(MobilePlatformType.ANDROID, getConfig().mobileCloudMode());
-        MobileDriverData driverData=new MobileDriverData(getConfig().mobileOs()
-                ,getConfig().mobileCloudMode());
+        MobileDriverData driverData = new MobileDriverData(getConfig().mobileOs()
+                , getConfig().mobileCloudMode());
         WebDriver driver = DriverFactory
                 .getDriverForMobile(getConfig().mobileRunMode())
                 .getDriver(driverData);

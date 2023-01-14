@@ -7,7 +7,8 @@ import org.openqa.selenium.remote.RemoteWebDriver;
 
 public final class BrowserStackFirefoxManager {
 
-    private BrowserStackFirefoxManager(){}
+    private BrowserStackFirefoxManager() {
+    }
 
     public static WebDriver getDriver() {
         DesiredCapabilities desiredCapabilities = new DesiredCapabilities();

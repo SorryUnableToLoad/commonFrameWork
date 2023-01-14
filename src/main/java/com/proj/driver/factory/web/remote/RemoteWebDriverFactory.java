@@ -9,8 +9,8 @@ import java.util.Map;
 import java.util.function.Function;
 
 public class RemoteWebDriverFactory {
-    private RemoteWebDriverFactory() {
-    }
+    private static final Map<WebCloudType, Function<WebBrowserType, WebDriver>> MAP =
+            new EnumMap<>(WebCloudType.class);
     /*public static WebDriver getDriver(WebCloudType cloudType, BrowserType browserType) {
         if (cloudType == WebCloudType.BROWSERSTACK) {
             return BrowserStackFactory.getDriver(browserType);
@@ -21,9 +21,6 @@ public class RemoteWebDriverFactory {
         }
         return null;
     }*/
-
-    private static final Map<WebCloudType, Function<WebBrowserType, WebDriver>> MAP =
-            new EnumMap<>(WebCloudType.class);
     //private static final Function<BrowserType,WebDriver>SELENIUMGRID=browserType -> SelenoidFactory.getDriver();
     private static final Function<WebBrowserType, WebDriver> SELENIUMGRID = SeleniumGridFactory::getDriver;
     private static final Function<WebBrowserType, WebDriver> SELENOID = SelenoidFactory::getDriver;
@@ -33,6 +30,9 @@ public class RemoteWebDriverFactory {
         MAP.put(WebCloudType.SELENIUMGRID, SELENIUMGRID);
         MAP.put(WebCloudType.SELENOID, SELENOID);
         MAP.put(WebCloudType.BROWSERSTACK, BROWSERSTACK);
+    }
+
+    private RemoteWebDriverFactory() {
     }
 
     public static WebDriver getDriver(WebCloudType cloudType, WebBrowserType webBrowserType) {

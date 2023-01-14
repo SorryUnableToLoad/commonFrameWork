@@ -18,6 +18,7 @@ public class AccountPageRepo {
     public final By reorder_button = By.xpath("//android.widget.Button[@content-desc='REORDER']");
     public final By modify_button = By.xpath("//android.widget.Button[@content-desc='MODIFY']");
     AppiumDriver driver;
+
     public AccountPageRepo() {
         driver = (AppiumDriver) DriverManager.getDriver();
         PageFactory.initElements(new AppiumFieldDecorator(driver), this);

@@ -23,7 +23,7 @@ public class Use_Case_1 {
         }
         System.out.println("++++++++++++++++++++");
         Consumer<String> consumer = (s) -> System.out.println(s);
-        Consumer<String> consumer1= (s) -> System.out.println(s.toUpperCase());
+        Consumer<String> consumer1 = (s) -> System.out.println(s.toUpperCase());
 
         list.forEach(consumer);
         System.out.println("++++++++++++++++++++");

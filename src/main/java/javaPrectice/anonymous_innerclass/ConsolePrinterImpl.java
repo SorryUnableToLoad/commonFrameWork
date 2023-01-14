@@ -1,6 +1,6 @@
 package javaPrectice.anonymous_innerclass;
 
-public class ConsolePrinterImpl implements IPrintable{
+public class ConsolePrinterImpl implements IPrintable {
 
     @Override
     public void print() {

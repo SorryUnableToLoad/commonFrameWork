@@ -10,9 +10,6 @@ import java.util.Map;
 import java.util.function.Supplier;
 
 public final class SelenoidFactory {
-    private SelenoidFactory(){
-
-    }
     /*public static WebDriver getDriver(WebBrowserType webBrowserType){
         return webBrowserType == WebBrowserType.CHROME
                 ? SelenoidChromeManager.getDriver()
@@ -26,7 +23,11 @@ public final class SelenoidFactory {
         MAP.put(WebBrowserType.FIREFOX, SelenoidFirefoxManager::getDriver);
     }
 
-    public static WebDriver getDriver(WebBrowserType browserType){
+    private SelenoidFactory() {
+
+    }
+
+    public static WebDriver getDriver(WebBrowserType browserType) {
         return MAP.get(browserType).get();
     }
 }

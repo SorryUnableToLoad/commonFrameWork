@@ -49,16 +49,16 @@ public class TestRunner {
     }*/
     //----------------------------------------------------------------------------------------//
 
-   /* @Test
-    public void returnString() {
-        IPrintable obj = () -> {
-            return "appium";
-        };
-        System.out.println(obj.print());
+    /* @Test
+     public void returnString() {
+         IPrintable obj = () -> {
+             return "appium";
+         };
+         System.out.println(obj.print());
 
-        IPrintable obj1 = () -> "selenium";
-        System.out.println(obj1.print());
-    }*/
+         IPrintable obj1 = () -> "selenium";
+         System.out.println(obj1.print());
+     }*/
     /*@Test
     public void returnStringWithParam() {
         IPrintable obj = (String a) -> {
@@ -75,14 +75,14 @@ public class TestRunner {
     @Test
     public void returnBoolean() {
         IPrintable obj = (String a) -> {
-            return a.length()>3;
+            return a.length() > 3;
         };
         System.out.println(obj.print("appium"));
 
-        IPrintable obj1 = (String a) -> a.length()>10;
+        IPrintable obj1 = (String a) -> a.length() > 10;
         System.out.println(obj1.print("selenium"));
 
-        IPrintable obj2 = a -> a.length()>5;
+        IPrintable obj2 = a -> a.length() > 5;
         System.out.println(obj2.print("suraj"));
 
     }

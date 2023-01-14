@@ -1,11 +1,9 @@
 package com.projtest.api.practice.pojolibtest.deserialization;
 
 
-
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.proj.practice.pojolib.PojoLib;
 import org.testng.annotations.Test;
-
 
 import java.io.File;
 import java.io.IOException;

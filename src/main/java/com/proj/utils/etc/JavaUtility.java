@@ -8,24 +8,27 @@ import java.util.Random;
 
 /**
  * This class contains generic methods with respect to java
+ *
  * @author surajkumarnaganuri
  */
 public class JavaUtility {
     /**
      * This method will generate random number and return the number to caller
+     *
      * @return
      */
-    public int getRandomNumber(){
-       Random randomNumber = new Random();
+    public int getRandomNumber() {
+        Random randomNumber = new Random();
         int num = randomNumber.nextInt(1000);
         return num;
     }
 
     /**
      * This method is generate current date and return the current-date to caller
+     *
      * @return
      */
-    public String getCurrentDate(){
+    public String getCurrentDate() {
         Date date = new Date();
         String currenrDate = date.toString();
         return currenrDate;
@@ -33,9 +36,10 @@ public class JavaUtility {
 
     /**
      * This method is generate date in customised and return to the caller
+     *
      * @return
      */
-    public String getDate(){
+    public String getDate() {
         Date date = new Date();
         String systemdate = date.toString();
         String[] ds = systemdate.split(" ");
@@ -50,17 +54,19 @@ public class JavaUtility {
         return today;
 
     }
-    public String oderDate(){
+
+    public String oderDate() {
         return new SimpleDateFormat(("dd MMM, yyyy")).format(new Date());
     }
-    public String deliveryDate(){
+
+    public String deliveryDate() {
         String timestamp = new SimpleDateFormat(("MMM, yyyy")).format(new Date());
         return (Integer.parseInt(new SimpleDateFormat(("dd")).format(new Date()).split(" ")[0]) + 1) + " " + timestamp;
     }
 
 
     @Test
-    public void run(){
+    public void run() {
         System.out.println(deliveryDate());
         System.out.println(oderDate());
     }

@@ -25,6 +25,22 @@ import static io.restassured.RestAssured.given;
 
 public class Post_or_CreateNewUserTest {
 
+    public static void logRequest(RequestSpecification requestSpecification) {
+        QueryableRequestSpecification query = SpecificationQuerier.query(requestSpecification);
+
+        ExtentManager.getTest().log(Status.INFO, "Request Body Details");
+
+        ExtentManager.getTest().pass(MarkupHelper.createCodeBlock(query.getBody(), CodeLanguage.JSON));
+        for (Header header : query.getHeaders()) {
+            ExtentManager.getTest().log(Status.INFO, header.getName() + ":" + header.getValue());
+        }
+    }
+
+    public static void logResponse(String response) {
+        ExtentManager.getTest().log(Status.INFO, "Response Body Details");
+        ExtentManager.getTest().pass(MarkupHelper.createCodeBlock(response, CodeLanguage.JSON));
+    }
+
     @Test
     @FrameworkAnnotations(author = "Suraj")
     public void createNewUser() throws IOException {
@@ -58,21 +74,5 @@ public class Post_or_CreateNewUserTest {
                 .time(Matchers.lessThan(getConfig().responseTime()))
                 .contentType(ContentType.JSON);
         ExtentReport.logResponse(response.prettyPrint());*/
-    }
-
-    public static void logRequest(RequestSpecification requestSpecification) {
-        QueryableRequestSpecification query = SpecificationQuerier.query(requestSpecification);
-
-        ExtentManager.getTest().log(Status.INFO, "Request Body Details");
-
-        ExtentManager.getTest().pass(MarkupHelper.createCodeBlock(query.getBody(), CodeLanguage.JSON));
-        for (Header header : query.getHeaders()) {
-            ExtentManager.getTest().log(Status.INFO, header.getName() + ":" + header.getValue());
-        }
-    }
-
-    public static void logResponse(String response) {
-        ExtentManager.getTest().log(Status.INFO, "Response Body Details");
-        ExtentManager.getTest().pass(MarkupHelper.createCodeBlock(response, CodeLanguage.JSON));
     }
 }

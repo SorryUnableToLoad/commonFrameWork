@@ -7,7 +7,10 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.annotations.Test;
 
-import java.util.*;
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.HashSet;
+import java.util.List;
 
 public class TestAssignment {
     //without using java 8
@@ -41,6 +44,7 @@ public class TestAssignment {
         }
         driver.quit();
     }
+
     //with using java 8 concept
     @Test
     public void testLinks1() {

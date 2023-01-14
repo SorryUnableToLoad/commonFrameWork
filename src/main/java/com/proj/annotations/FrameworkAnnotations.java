@@ -9,5 +9,6 @@ import static java.lang.annotation.ElementType.METHOD;
 @Target({METHOD})
 public @interface FrameworkAnnotations {
     String[] author() default "default author";
+
     String[] category() default "default category";
 }

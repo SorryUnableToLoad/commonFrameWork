@@ -6,7 +6,9 @@ import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.remote.RemoteWebDriver;
 
 public final class BrowserStackChromeManager {
-    private BrowserStackChromeManager(){}
+    private BrowserStackChromeManager() {
+    }
+
     public static WebDriver getDriver() {
         DesiredCapabilities desiredCapabilities = new DesiredCapabilities();
         desiredCapabilities.setCapability("browserName", "chrome");

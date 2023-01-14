@@ -12,6 +12,7 @@ public class apptestCases extends MobileSetUp {
         pages.categoriesPageRepo.add_items_to_cart();
         pages.myCartPageRepo.createNewOrder();
     }
+
     @Test(priority = 1)
     public void addToExistingOrder() {
         InitializePages pages = new InitializePages();
@@ -19,6 +20,7 @@ public class apptestCases extends MobileSetUp {
         pages.categoriesPageRepo.add_items_to_cart();
         pages.myCartPageRepo.addToExistingOrder();
     }
+
     @Test(priority = 2)
     public void modifyOrder() {
         InitializePages pages = new InitializePages();

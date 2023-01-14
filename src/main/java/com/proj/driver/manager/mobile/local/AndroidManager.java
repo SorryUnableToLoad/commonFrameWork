@@ -8,11 +8,11 @@ import org.openqa.selenium.remote.DesiredCapabilities;
 import static com.proj.config.factory.FrameworkConfigFactory.getConfig;
 
 public final class AndroidManager {
-    private AndroidManager() {
-    }
-
     private final static String APP_ACTIVITY_NAME = ".MainActivity";
     private final static String APP_PACKAGE_NAME = "in.captainfresh.customer";
+
+    private AndroidManager() {
+    }
 
     public static AppiumDriver getDriver() {
         DesiredCapabilities desiredCapabilities = new DesiredCapabilities();

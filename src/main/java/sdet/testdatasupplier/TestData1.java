@@ -1,7 +1,6 @@
 package sdet.testdatasupplier;
 
 import com.creditdatamw.zerocell.annotation.Column;
-import com.creditdatamw.zerocell.converter.BooleanConverter;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;

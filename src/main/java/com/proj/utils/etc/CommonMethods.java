@@ -11,7 +11,7 @@ import java.util.List;
 import java.util.concurrent.TimeUnit;
 
 public class CommonMethods {
-    AndroidDriver driver= (AndroidDriver) DriverManager.getDriver();
+    AndroidDriver driver = (AndroidDriver) DriverManager.getDriver();
     long timeOutInSeconds = 10;
 
     public boolean isElementExists(List<WebElement> elements) {
@@ -20,8 +20,8 @@ public class CommonMethods {
 
     //This is time efficient, no List is needed for element
     public boolean isElementExistsNew(WebElement element) {
-       // driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(timeOutInSeconds));
-        driver.manage().timeouts().implicitlyWait(60,TimeUnit.SECONDS);
+        // driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(timeOutInSeconds));
+        driver.manage().timeouts().implicitlyWait(60, TimeUnit.SECONDS);
 
         try {
             //new WebDriverWait(driver, Duration.ofSeconds(timeOutInSeconds)).until(ExpectedConditions.visibilityOf(element));
@@ -31,8 +31,8 @@ public class CommonMethods {
         } catch (org.openqa.selenium.TimeoutException e) {
             return false;
         } finally {
-           // driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(getConfig().waitTime()));
-            driver.manage().timeouts().implicitlyWait(60,TimeUnit.SECONDS);
+            // driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(getConfig().waitTime()));
+            driver.manage().timeouts().implicitlyWait(60, TimeUnit.SECONDS);
 
         }
     }
@@ -40,7 +40,8 @@ public class CommonMethods {
     public void clickBackButton() {
         driver.navigate().back();
     }
-    public void scrollByUiAutomator(String textContains, String part_text){
+
+    public void scrollByUiAutomator(String textContains, String part_text) {
         //driver.findElementByAndroidUIAutomator("new UiSelector(new UiSelector().scrollIntoView(AN(\"AV\"))");
         //driver.findElementByAndroidUIAutomator("new UiScrollable(new UiSelector().scrollable(true)).scrollIntoView(new UiSelector().textContains(\"part_text\"))");
 
@@ -57,6 +58,6 @@ public class CommonMethods {
 
 
     public void findElementByUiAutomatorAndCLick(String text) {
-        ((AndroidDriver) driver).findElementByAndroidUIAutomator("new UiScrollable(new UiSelector()).scrollIntoView(text(\""+text+"\"))").click();
+        ((AndroidDriver) driver).findElementByAndroidUIAutomator("new UiScrollable(new UiSelector()).scrollIntoView(text(\"" + text + "\"))").click();
     }
 }

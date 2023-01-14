@@ -8,8 +8,8 @@ import java.util.concurrent.TimeUnit;
 
 
 public class ResponseAssert {
-    private SoftAssert softAssert;
     static Response response;
+    private SoftAssert softAssert;
 
     private ResponseAssert() {
         softAssert = new SoftAssert();

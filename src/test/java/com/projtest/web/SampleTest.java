@@ -1,8 +1,8 @@
 package com.projtest.web;
 
 import com.proj.annotations.FrameworkAnnotations;
-import com.proj.driver.DriverManager;
 import com.proj.base.WebSetUp;
+import com.proj.driver.DriverManager;
 import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 
@@ -10,7 +10,7 @@ import org.testng.annotations.Test;
 public class SampleTest extends WebSetUp {
     @Test
     @FrameworkAnnotations(author = "Suraj")
-    public void test(){
+    public void test() {
         System.out.println("WEB LOCAL");
         String title = DriverManager.getDriver().getTitle();
         System.out.println(title);

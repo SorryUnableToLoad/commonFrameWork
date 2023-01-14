@@ -1,7 +1,7 @@
 package com.projtest.mobile.demotest;
 
-import com.proj.driver.DriverManager;
 import com.proj.base.MobileSetUp;
+import com.proj.driver.DriverManager;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.testng.annotations.Test;
@@ -19,12 +19,12 @@ public class ListOfStore extends MobileSetUp {
         int count = listOfStore.size();
         System.out.println(count);
         Thread.sleep(3000);
-        for (int i=0;i<count;i++){
+        for (int i = 0; i < count; i++) {
             String an = listOfStore.get(i).getTagName();
-            String av= listOfStore.get(i).getAttribute("content-desc");
+            String av = listOfStore.get(i).getAttribute("content-desc");
             System.out.println(an);
             System.out.println("----------------------------------------");
-            System.out.println("store name "+i+" -> "+av);
+            System.out.println("store name " + i + " -> " + av);
             System.out.println("****************************************");
 
         }

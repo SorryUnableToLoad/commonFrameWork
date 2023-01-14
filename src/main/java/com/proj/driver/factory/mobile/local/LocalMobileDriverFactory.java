@@ -10,15 +10,15 @@ import java.util.Map;
 import java.util.function.Supplier;
 
 public class LocalMobileDriverFactory {
-    private LocalMobileDriverFactory() {
-    }
-
     private static final Map<MobilePlatformType, Supplier<AppiumDriver>> MAP
             = new EnumMap<>(MobilePlatformType.class);
 
     static {
         MAP.put(MobilePlatformType.ANDROID, AndroidManager::getDriver);
         MAP.put(MobilePlatformType.IOS, IosManager::getDriver);
+    }
+
+    private LocalMobileDriverFactory() {
     }
 
     public static AppiumDriver getDriver(MobilePlatformType mobilePlatformType) {
