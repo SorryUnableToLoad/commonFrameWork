@@ -35,13 +35,10 @@ javaPrectice/consumer_interface/Use_Case_Test_1.class
 com/proj/driver/factory/mobile/remote/BrowserStackMobileFactory.class
 com/proj/driver/factory/web/remote/BrowserStackFactory.class
 com/proj/config/converters/StringToWebCloudTypeConverter.class
-sdet/fixtures/templates/EmployeeTemplate$4.class
 com/proj/driver/impl/web/LocalWebDriverImpl.class
 com/proj/driver/manager/mobile/remote/browserstack/BrowserStackIosManager.class
 sdet/fixtures/templates/EmployeeTemplate.class
 com/proj/driver/DriverManager.class
-sdet/fixtures/templates/AddressTemplate$1.class
-sdet/fixtures/templates/EmployeeTemplate$3.class
 javaPrectice/consumer_interface/Use_Case_Test_2.class
 com/proj/driver/factory/DriverFactory.class
 com/proj/pages/loginandlogout/LogoutPage.class
