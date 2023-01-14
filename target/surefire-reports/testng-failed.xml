@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [Command line suite]" verbose="0">
+  <test thread-count="5" name="Command line test(failed)" verbose="0">
+    <classes>
+      <class name="com.projtest.api.practice.fileUpload.FileUploadTest">
+        <methods>
+          <include name="uploadPetImage"/>
+          <include name="validatePojoToJson"/>
+        </methods>
+      </class> <!-- com.projtest.api.practice.fileUpload.FileUploadTest -->
+      <class name="com.projtest.api.practice.dataProvidertest.DataProviderTest">
+        <methods>
+          <include name="testDemo"/>
+          <include name="dpTest"/>
+        </methods>
+      </class> <!-- com.projtest.api.practice.dataProvidertest.DataProviderTest -->
+      <class name="com.projtest.mobile.demotest.SampleTest">
+        <methods>
+          <include name="scrollTest"/>
+          <include name="tearDown"/>
+          <include name="setUp"/>
+          <include name="test"/>
+        </methods>
+      </class> <!-- com.projtest.mobile.demotest.SampleTest -->
+      <class name="com.projtest.api.practice.samplepetstore.BuilderDesignPatternTest">
+        <methods>
+          <include name="builderPattern11"/>
+          <include name="builderPattern"/>
+          <include name="builderPattern1"/>
+        </methods>
+      </class> <!-- com.projtest.api.practice.samplepetstore.BuilderDesignPatternTest -->
+      <class name="com.projtest.api.practice.pojolibtest.serialization.PojoMultipleArrayObjectTest">
+        <methods>
+          <include name="serialization"/>
+        </methods>
+      </class> <!-- com.projtest.api.practice.pojolibtest.serialization.PojoMultipleArrayObjectTest -->
+      <class name="com.projtest.mobile.demotest.DateTest">
+        <methods>
+          <include name="run"/>
+          <include name="sample"/>
+          <include name="splitdate"/>
+          <include name="customdateformate"/>
+        </methods>
+      </class> <!-- com.projtest.mobile.demotest.DateTest -->
+      <class name="com.projtest.web.SampleWebTest">
+        <methods>
+          <include name="tearDown"/>
+          <include name="sampleWebTest"/>
+          <include name="setUp"/>
+        </methods>
+      </class> <!-- com.projtest.web.SampleWebTest -->
+      <class name="com.projtest.api.practice.pojolibtest.serialization.PojoArrayObjectTest">
+        <methods>
+          <include name="serialization"/>
+        </methods>
+      </class> <!-- com.projtest.api.practice.pojolibtest.serialization.PojoArrayObjectTest -->
+      <class name="com.projtest.api.practice.reporttest.PostResourceTest">
+        <methods>
+          <include name="postResource"/>
+        </methods>
+      </class> <!-- com.projtest.api.practice.reporttest.PostResourceTest -->
+      <class name="com.projtest.mobile.demotest.LoginPageTest">
+        <methods>
+          <include name="tearDown"/>
+          <include name="loginToApplication"/>
+          <include name="logoutToApplication"/>
+          <include name="setUp"/>
+          <include name="homePageValidation"/>
+        </methods>
+      </class> <!-- com.projtest.mobile.demotest.LoginPageTest -->
+      <class name="com.projtest.api.Post_or_CreateNewUserTest">
+        <methods>
+          <include name="createNewUser"/>
+        </methods>
+      </class> <!-- com.projtest.api.Post_or_CreateNewUserTest -->
+      <class name="com.projtest.api.practice.pojolibtest.serialization.PojoLibTest">
+        <methods>
+          <include name="serialization"/>
+        </methods>
+      </class> <!-- com.projtest.api.practice.pojolibtest.serialization.PojoLibTest -->
+      <class name="com.projtest.api.GetUsersTest">
+        <methods>
+          <include name="getUserByPageNumber"/>
+        </methods>
+      </class> <!-- com.projtest.api.GetUsersTest -->
+    </classes>
+  </test> <!-- Command line test(failed) -->
+</suite> <!-- Failed suite [Command line suite] -->
