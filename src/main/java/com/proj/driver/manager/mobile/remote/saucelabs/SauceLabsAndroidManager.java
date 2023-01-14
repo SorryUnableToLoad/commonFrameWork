@@ -20,10 +20,10 @@ public final class SauceLabsAndroidManager {
         capabilities.setCapability("appium:orientation", "portrait");
         capabilities.setCapability("appium:app", "storage:filename=<file-name>");
         DesiredCapabilities sauceOptions = new DesiredCapabilities();
-        sauceOptions.setCapability("username", getConfig().saucelabsurl());
+        sauceOptions.setCapability("username", getConfig().sauceLabsUrl());
         sauceOptions.setCapability("accessKey", getConfig().key());
         capabilities.setCapability("sauce:options", sauceOptions);
         return new AppiumDriver(getConfig()
-                .saucelabsurl(), capabilities);
+                .sauceLabsUrl(), capabilities);
     }
 }

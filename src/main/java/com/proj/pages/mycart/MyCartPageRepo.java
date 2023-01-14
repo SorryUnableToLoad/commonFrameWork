@@ -10,9 +10,6 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.support.PageFactory;
 import org.testng.Assert;
 
-import static com.proj.utils.ActionHelper.clickOnElement;
-import static com.proj.utils.ActionHelper.getAttribute;
-
 public class MyCartPageRepo {
     public static final By my_cart_button = By.xpath("//android.view.View[@content-desc='My cart']");
     public static final By place_order_button = By.xpath("//android.widget.Button[@content-desc='PLACE ORDER']");

@@ -1,9 +1,9 @@
 package com.proj.driver.factory;
 
+import com.proj.config.enums.RunModeType;
 import com.proj.driver.IMobileDriver;
 import com.proj.driver.IWebDriver;
 import com.proj.driver.impl.mobile.LocalMobileDriverImpl;
-import com.proj.config.enums.RunModeType;
 import com.proj.driver.impl.mobile.RemoteMobileDriverImpl;
 import com.proj.driver.impl.web.LocalWebDriverImpl;
 import com.proj.driver.impl.web.RemoteWebDriverImpl;

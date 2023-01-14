@@ -1,8 +1,8 @@
 package com.projtest.web;
 
 import com.proj.annotations.FrameworkAnnotations;
-import com.proj.listeners.TestListenerImpl;
 import com.proj.base.WebSetUp;
+import com.proj.listeners.TestListenerImpl;
 import org.testng.SkipException;
 import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
@@ -16,21 +16,21 @@ public class FrameworkSanityCheckWithReport extends WebSetUp {
 
     @Test
     @FrameworkAnnotations(author = "Suraj")
-    public void test() throws InterruptedException {
+    public void demoWebTest() throws InterruptedException {
         System.out.println("test started");
     }
 
 
     @Test
     @FrameworkAnnotations(author = "Suraj")
-    public void test1() {
+    public void demoWebPassTest() {
         System.out.println("test1 passed");
     }
 
 
     @Test
     @FrameworkAnnotations(author = "Suraj")
-    public void test2() throws InterruptedException {
+    public void demoWebFailTest() throws InterruptedException {
         System.out.println("test 2nd executed but failed");
         SoftAssert sa = new SoftAssert();
         sa.fail("fail");
@@ -39,7 +39,7 @@ public class FrameworkSanityCheckWithReport extends WebSetUp {
 
     @Test
     @FrameworkAnnotations(author = "Suraj")
-    public void test3() {
+    public void demoWebSkipTest() {
         throw new SkipException("test3 skipped");
     }
 }

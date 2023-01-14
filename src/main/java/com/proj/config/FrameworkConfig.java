@@ -1,5 +1,7 @@
 package com.proj.config;
 
+import com.proj.config.converters.*;
+import com.proj.config.enums.*;
 import org.aeonbits.owner.Config;
 
 import java.net.URL;
@@ -38,11 +40,11 @@ public interface FrameworkConfig extends Config {
     WebCloudType webCloudMode();
 
     @ConverterClass(StringToURLConverter.class)
-    @Key("seleniumgridurl")
+    @Key("seleniumGridUrl")
     URL seleniumGridUrl();
 
     @ConverterClass(StringToURLConverter.class)
-    @Key("selenoidurl")
+    @Key("selenoidUrl")
     URL selenoidUrl();
 
 //---------------------------------------------------------------------//
@@ -65,26 +67,26 @@ public interface FrameworkConfig extends Config {
     URL localAppiumServerURL();
 
 
-    @Key("browserstackusername")
+    @Key("browserStackUserName")
     String browserStackUserName();
 
-    @Key("browserstackautomatekey")
-    String browserstackautomatekey();
+    @Key("browserStackAutomateKey")
+    String browserStackAutomateKey();
 
-    @DefaultValue("https://${browserstackusername}:${browserstackautomatekey}@hub-cloud.browserstack.com/wd/hub")
+    @DefaultValue("https://${browserStackUserName}:${browserStackAutomateKey}@hub-cloud.browserstack.com/wd/hub")
     @ConverterClass(StringToURLConverter.class)
     URL browserStackURL();
 
 
-    @Key("saucelabskey")
+    @Key("sauceLabsUsername")
+    String sauceLabsUsername();
+
+    @Key("sauceLabsKey")
     String key();
 
-    @Key("saucelabsusername")
-    String saucelabsusername();
-
     @ConverterClass(StringToURLConverter.class)
-    @Key("saucelabsurl")
-    URL saucelabsurl();
+    @Key("sauceLabsUrl")
+    URL sauceLabsUrl();
 
     //---------------------------------------------------------------------//
 

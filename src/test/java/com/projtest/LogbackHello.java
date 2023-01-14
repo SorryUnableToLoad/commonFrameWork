@@ -5,11 +5,6 @@ import org.slf4j.LoggerFactory;
 
 public class LogbackHello {
     private static final Logger logger = LoggerFactory.getLogger(LogbackHello.class);
-
-
-    /**
-     * @param args
-     */
     public static void main(String[] args) {
         logger.trace("Hello World!");
 

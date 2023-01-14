@@ -18,10 +18,10 @@ public final class SauceLabsIosManager {
         capabilities.setCapability("appium:orientation", "portrait");
         capabilities.setCapability("appium:app", "storage:filename=<file-name>");
         DesiredCapabilities sauceOptions = new DesiredCapabilities();
-        sauceOptions.setCapability("username", FrameworkConfigFactory.getConfig().saucelabsusername());
+        sauceOptions.setCapability("username", FrameworkConfigFactory.getConfig().sauceLabsUsername());
         sauceOptions.setCapability("accessKey", FrameworkConfigFactory.getConfig().key());
         capabilities.setCapability("sauce:options", sauceOptions);
         return new AppiumDriver(FrameworkConfigFactory.getConfig()
-                .saucelabsurl(), capabilities);
+                .sauceLabsUrl(), capabilities);
     }
 }

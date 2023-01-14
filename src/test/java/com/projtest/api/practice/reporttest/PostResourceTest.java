@@ -19,7 +19,7 @@ public class PostResourceTest {
     @FrameworkAnnotations(author = "Suraj")
     @Test
     public void postResource() {
-        String resource = ApiUtils.readJsonAndGetAsString("./src/test/resources/requestjsonfiles/postrequestfile.json");
+        String resource = ApiUtils.readJsonAndGetAsString("./src/test/resources/requestJsonFiles/postRequestFile.json");
 
         RequestSpecification requestSpecification = given()
                 .body(resource)
@@ -33,7 +33,7 @@ public class PostResourceTest {
                 .assertThat()
                 .statusCode(200)
                 .contentType(ContentType.JSON)
-                .time(Matchers.lessThan(400l), TimeUnit.SECONDS)
+                .time(Matchers.lessThan(400L), TimeUnit.SECONDS)
                 .log().all();
         //ExtentReport.logResponse(response.asPrettyString());
 

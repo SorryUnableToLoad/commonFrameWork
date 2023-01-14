@@ -10,8 +10,6 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.PageFactory;
 
-import static com.proj.utils.ActionHelper.clickOnElement;
-
 public class CategoriesPageRepo {
     public static final By categories_button = By.xpath("//android.view.View[@content-desc='Categories']");
     public static final By all_categories_page = By.xpath("//android.view.View[@content-desc='All Categories']");

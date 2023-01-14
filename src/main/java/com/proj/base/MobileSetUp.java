@@ -2,8 +2,8 @@ package com.proj.base;
 
 import com.proj.config.factory.FrameworkConfigFactory;
 import com.proj.driver.Driver;
-import com.proj.pages.initializepages.InitializePages;
 import com.proj.driver.DriverManager;
+import com.proj.pages.initializepages.InitializePages;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.testng.Reporter;
@@ -21,7 +21,6 @@ import java.util.concurrent.TimeUnit;
  */
 public class MobileSetUp {
     public static final Logger logger = LoggerFactory.getLogger(MobileSetUp.class);
-
 
     /**
      * This method consist of before suite configuration functionalities

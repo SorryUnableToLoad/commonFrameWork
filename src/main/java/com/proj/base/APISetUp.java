@@ -16,7 +16,6 @@ import org.testng.annotations.Listeners;
 @Listeners(TestListenerImpl.class)
 public class APISetUp {
     public static final Logger logger = LoggerFactory.getLogger(APISetUp.class);
-
     /**
      * This method consist of before test method configuration functionalities
      */
@@ -25,7 +24,6 @@ public class APISetUp {
         DatabaseUtils.connectToDB();
         logger.info("Successfully Connected to DB");
     }
-
     /**
      * This method consist of after test method configuration functionalities
      */

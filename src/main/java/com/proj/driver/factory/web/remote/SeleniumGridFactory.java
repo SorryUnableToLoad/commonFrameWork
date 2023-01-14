@@ -1,8 +1,8 @@
 package com.proj.driver.factory.web.remote;
 
-import com.proj.driver.manager.web.remote.seleniumgrid.SeleniumGridFirefoxManager;
 import com.proj.config.enums.WebBrowserType;
 import com.proj.driver.manager.web.remote.seleniumgrid.SeleniumGridChromeManager;
+import com.proj.driver.manager.web.remote.seleniumgrid.SeleniumGridFirefoxManager;
 import org.openqa.selenium.WebDriver;
 
 import java.util.EnumMap;
