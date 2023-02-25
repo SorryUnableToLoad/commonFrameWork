@@ -456,3 +456,82 @@
 2023-02-25 22:22:20,128 [main] DEBUG org.apache.http.wire -  << "[\r][\n]"
 2023-02-25 22:22:20,129 [main] DEBUG o.a.h.i.c.BasicClientConnectionManager - Releasing connection org.apache.http.impl.conn.ManagedClientConnectionImpl@6acffb2d
 2023-02-25 22:22:20,129 [main] DEBUG o.a.h.i.c.BasicClientConnectionManager - Connection can be kept alive indefinitely
+2023-02-25 22:50:28,689 [main] INFO  org.reflections.Reflections - Reflections took 87 ms to scan 1 urls, producing 2 keys and 3 values
+2023-02-25 22:50:29,603 [main] DEBUG i.g.b.wdm.cache.ResolutionCache - Removing resolution chrome=110 from cache (expired on Sat Feb 25 16:05:55 IST 2023)
+2023-02-25 22:50:29,635 [main] TRACE i.g.b.wdm.versions.VersionDetector - Reading online commands.properties to find out driver version
+2023-02-25 22:50:29,646 [main] DEBUG o.a.h.c.h.i.c.InternalHttpClient - ex-00000001: preparing request execution
+2023-02-25 22:50:29,649 [main] DEBUG o.a.h.c.h.p.RequestAddCookies - Cookie spec selected: strict
+2023-02-25 22:50:29,651 [main] DEBUG o.a.h.c.h.protocol.RequestAuthCache - Auth cache not set in the context
+2023-02-25 22:50:29,651 [main] DEBUG o.a.h.c.h.impl.classic.ProtocolExec - ex-00000001: target auth state: UNCHALLENGED
+2023-02-25 22:50:29,651 [main] DEBUG o.a.h.c.h.impl.classic.ProtocolExec - ex-00000001: proxy auth state: UNCHALLENGED
+2023-02-25 22:50:29,651 [main] DEBUG o.a.h.c.h.impl.classic.ConnectExec - ex-00000001: acquiring connection with route {s}->https://raw.githubusercontent.com:443
+2023-02-25 22:50:29,652 [main] DEBUG o.a.h.c.h.i.c.InternalHttpClient - ex-00000001: acquiring endpoint (3 MINUTES)
+2023-02-25 22:50:29,656 [main] DEBUG o.a.h.c.h.i.i.PoolingHttpClientConnectionManager - ex-00000001: endpoint lease request (3 MINUTES) [route: {s}->https://raw.githubusercontent.com:443][total available: 0; route allocated: 0 of 5; total allocated: 0 of 25]
+2023-02-25 22:50:29,663 [main] DEBUG o.a.h.c.h.i.i.PoolingHttpClientConnectionManager - ex-00000001: endpoint leased [route: {s}->https://raw.githubusercontent.com:443][total available: 0; route allocated: 1 of 5; total allocated: 1 of 25]
+2023-02-25 22:50:29,669 [main] DEBUG o.a.h.c.h.i.i.PoolingHttpClientConnectionManager - ex-00000001: acquired ep-00000000
+2023-02-25 22:50:29,669 [main] DEBUG o.a.h.c.h.i.c.InternalHttpClient - ex-00000001: acquired endpoint ep-00000000
+2023-02-25 22:50:29,669 [main] DEBUG o.a.h.c.h.impl.classic.ConnectExec - ex-00000001: opening connection {s}->https://raw.githubusercontent.com:443
+2023-02-25 22:50:29,670 [main] DEBUG o.a.h.c.h.i.c.InternalHttpClient - ep-00000000: connecting endpoint (30 SECONDS)
+2023-02-25 22:50:29,670 [main] DEBUG o.a.h.c.h.i.i.PoolingHttpClientConnectionManager - ep-00000000: connecting endpoint to https://raw.githubusercontent.com:443 (30 SECONDS)
+2023-02-25 22:50:29,698 [main] DEBUG o.a.h.c.h.i.i.DefaultHttpClientConnectionOperator - http-outgoing-0: connecting to raw.githubusercontent.com/49.44.79.236:443
+2023-02-25 22:50:29,698 [main] DEBUG o.a.h.c.h.s.SSLConnectionSocketFactory - Connecting socket to raw.githubusercontent.com/49.44.79.236:443 with timeout 30 SECONDS
+2023-02-25 22:50:59,705 [main] DEBUG o.a.h.c.h.i.i.DefaultHttpClientConnectionOperator - http-outgoing-0: connect to raw.githubusercontent.com/49.44.79.236:443 timed out. Connection will be retried using another IP address
+2023-02-25 22:50:59,706 [main] DEBUG o.a.h.c.h.i.i.DefaultHttpClientConnectionOperator - http-outgoing-0: connecting to raw.githubusercontent.com/2405:200:1607:2820:41:0:0:36:443
+2023-02-25 22:50:59,706 [main] DEBUG o.a.h.c.h.s.SSLConnectionSocketFactory - Connecting socket to raw.githubusercontent.com/2405:200:1607:2820:41:0:0:36:443 with timeout 30 SECONDS
+2023-02-25 22:50:59,712 [main] DEBUG o.a.h.c.h.i.i.DefaultManagedHttpClientConnection - http-outgoing-0: close connection IMMEDIATE
+2023-02-25 22:50:59,713 [main] DEBUG o.a.h.c.h.i.c.InternalHttpClient - ep-00000000: endpoint closed
+2023-02-25 22:50:59,713 [main] DEBUG o.a.h.c.h.i.c.InternalHttpClient - ep-00000000: discarding endpoint
+2023-02-25 22:50:59,713 [main] DEBUG o.a.h.c.h.i.i.PoolingHttpClientConnectionManager - ep-00000000: releasing endpoint
+2023-02-25 22:50:59,713 [main] DEBUG o.a.h.c.h.i.i.PoolingHttpClientConnectionManager - ep-00000000: connection is not kept alive
+2023-02-25 22:50:59,713 [main] DEBUG o.a.h.c.h.i.i.PoolingHttpClientConnectionManager - ep-00000000: connection released [route: {s}->https://raw.githubusercontent.com:443][total available: 0; route allocated: 0 of 5; total allocated: 0 of 25]
+2023-02-25 22:50:59,714 [main] WARN  i.g.b.wdm.versions.VersionDetector - Error reading commands.properties, using local instead
+2023-02-25 22:50:59,729 [main] DEBUG i.g.b.wdm.versions.VersionDetector - Detecting chrome version using online commands.properties
+2023-02-25 22:50:59,736 [main] DEBUG i.g.bonigarcia.wdm.versions.Shell - Running command on the shell: [/Applications/Google Chrome.app/Contents/MacOS/Google Chrome, --version]
+2023-02-25 22:50:59,811 [main] DEBUG i.g.bonigarcia.wdm.versions.Shell - Result: Google Chrome 110.0.5481.100
+2023-02-25 22:50:59,814 [main] TRACE i.g.b.wdm.versions.VersionDetector - Detected browser version is 110.0.5481.100
+2023-02-25 22:50:59,816 [main] DEBUG i.g.b.wdm.cache.ResolutionCache - Resolution chrome110=110.0.5481.77 in cache (valid until 15:05:55 26/02/2023 IST)
+2023-02-25 22:50:59,816 [main] INFO  i.g.bonigarcia.wdm.WebDriverManager - Using chromedriver 110.0.5481.77 (resolved driver for Chrome 110)
+2023-02-25 22:50:59,817 [main] DEBUG i.g.b.wdm.cache.ResolutionCache - Storing resolution chrome=110 in cache (valid until 23:50:59 25/02/2023 IST)
+2023-02-25 22:50:59,819 [main] TRACE i.g.b.wdm.cache.CacheHandler - Checking if chromedriver exists in cache
+2023-02-25 22:50:59,833 [main] TRACE i.g.b.wdm.cache.CacheHandler - Filter cache by chromedriver -- input list [/Users/surajkumarnaganuri/.cache/selenium/chromedriver/mac64/104.0.5112.79/chromedriver, /Users/surajkumarnaganuri/.cache/selenium/chromedriver/mac64/105.0.5195.52/chromedriver, /Users/surajkumarnaganuri/.cache/selenium/chromedriver/mac64/106.0.5249.61/chromedriver, /Users/surajkumarnaganuri/.cache/selenium/chromedriver/mac64/107.0.5304.62/chromedriver, /Users/surajkumarnaganuri/.cache/selenium/chromedriver/mac64/108.0.5359.71/chromedriver, /Users/surajkumarnaganuri/.cache/selenium/chromedriver/mac64/109.0.5414.74/chromedriver, /Users/surajkumarnaganuri/.cache/selenium/chromedriver/mac64/110.0.5481.77/chromedriver, /Users/surajkumarnaganuri/.cache/selenium/resolution.properties] -- output list [/Users/surajkumarnaganuri/.cache/selenium/chromedriver/mac64/104.0.5112.79/chromedriver, /Users/surajkumarnaganuri/.cache/selenium/chromedriver/mac64/105.0.5195.52/chromedriver, /Users/surajkumarnaganuri/.cache/selenium/chromedriver/mac64/106.0.5249.61/chromedriver, /Users/surajkumarnaganuri/.cache/selenium/chromedriver/mac64/107.0.5304.62/chromedriver, /Users/surajkumarnaganuri/.cache/selenium/chromedriver/mac64/108.0.5359.71/chromedriver, /Users/surajkumarnaganuri/.cache/selenium/chromedriver/mac64/109.0.5414.74/chromedriver, /Users/surajkumarnaganuri/.cache/selenium/chromedriver/mac64/110.0.5481.77/chromedriver] 
+2023-02-25 22:50:59,834 [main] TRACE i.g.b.wdm.cache.CacheHandler - Filter cache by 110.0.5481.77 -- input list [/Users/surajkumarnaganuri/.cache/selenium/chromedriver/mac64/104.0.5112.79/chromedriver, /Users/surajkumarnaganuri/.cache/selenium/chromedriver/mac64/105.0.5195.52/chromedriver, /Users/surajkumarnaganuri/.cache/selenium/chromedriver/mac64/106.0.5249.61/chromedriver, /Users/surajkumarnaganuri/.cache/selenium/chromedriver/mac64/107.0.5304.62/chromedriver, /Users/surajkumarnaganuri/.cache/selenium/chromedriver/mac64/108.0.5359.71/chromedriver, /Users/surajkumarnaganuri/.cache/selenium/chromedriver/mac64/109.0.5414.74/chromedriver, /Users/surajkumarnaganuri/.cache/selenium/chromedriver/mac64/110.0.5481.77/chromedriver] -- output list [/Users/surajkumarnaganuri/.cache/selenium/chromedriver/mac64/110.0.5481.77/chromedriver] 
+2023-02-25 22:50:59,834 [main] TRACE i.g.b.wdm.cache.CacheHandler - Filter cache by MAC -- input list [/Users/surajkumarnaganuri/.cache/selenium/chromedriver/mac64/110.0.5481.77/chromedriver] -- output list [/Users/surajkumarnaganuri/.cache/selenium/chromedriver/mac64/110.0.5481.77/chromedriver] 
+2023-02-25 22:50:59,835 [main] DEBUG i.g.bonigarcia.wdm.WebDriverManager - Driver chromedriver 110.0.5481.77 found in cache
+2023-02-25 22:50:59,836 [main] INFO  i.g.bonigarcia.wdm.WebDriverManager - Exporting webdriver.chrome.driver as /Users/surajkumarnaganuri/.cache/selenium/chromedriver/mac64/110.0.5481.77/chromedriver
+2023-02-25 22:51:22,092 [main] INFO  com.proj.common.base.WebSetUp - ========== Successfully Initiated for Web Test ==========
+2023-02-25 22:51:22,596 [main] INFO  com.proj.common.base.WebSetUp - Test completed
+2023-02-25 22:51:22,596 [main] DEBUG com.proj.common.base.WebSetUp - Test completed
+2023-02-25 22:51:22,597 [main] TRACE com.proj.common.base.WebSetUp - Test completed
+2023-02-25 22:51:22,597 [main] WARN  com.proj.common.base.WebSetUp - Test completed
+2023-02-25 22:51:22,597 [main] ERROR com.proj.common.base.WebSetUp - Test completed
+2023-02-25 22:51:22,797 [main] INFO  com.proj.common.base.WebSetUp - ========== Successfully Terminated The Instance of Running Test Script ==========
+2023-02-25 22:51:36,654 [main] INFO  org.reflections.Reflections - Reflections took 81 ms to scan 1 urls, producing 2 keys and 3 values
+2023-02-25 22:51:36,744 [main] INFO  org.reflections.Reflections - Reflections took 42 ms to scan 1 urls, producing 2 keys and 3 values
+2023-02-25 22:51:36,764 [main] INFO  org.reflections.Reflections - Reflections took 12 ms to scan 1 urls, producing 2 keys and 3 values
+2023-02-25 22:51:36,780 [main] INFO  org.reflections.Reflections - Reflections took 15 ms to scan 1 urls, producing 2 keys and 3 values
+2023-02-25 22:51:37,818 [main] DEBUG i.g.b.wdm.cache.ResolutionCache - Resolution chrome=110 in cache (valid until 23:50:59 25/02/2023 IST)
+2023-02-25 22:51:37,828 [main] DEBUG i.g.b.wdm.cache.ResolutionCache - Resolution chrome110=110.0.5481.77 in cache (valid until 15:05:55 26/02/2023 IST)
+2023-02-25 22:51:37,828 [main] INFO  i.g.bonigarcia.wdm.WebDriverManager - Using chromedriver 110.0.5481.77 (resolved driver for Chrome 110)
+2023-02-25 22:51:37,831 [main] TRACE i.g.b.wdm.cache.CacheHandler - Checking if chromedriver exists in cache
+2023-02-25 22:51:37,849 [main] TRACE i.g.b.wdm.cache.CacheHandler - Filter cache by chromedriver -- input list [/Users/surajkumarnaganuri/.cache/selenium/chromedriver/mac64/104.0.5112.79/chromedriver, /Users/surajkumarnaganuri/.cache/selenium/chromedriver/mac64/105.0.5195.52/chromedriver, /Users/surajkumarnaganuri/.cache/selenium/chromedriver/mac64/106.0.5249.61/chromedriver, /Users/surajkumarnaganuri/.cache/selenium/chromedriver/mac64/107.0.5304.62/chromedriver, /Users/surajkumarnaganuri/.cache/selenium/chromedriver/mac64/108.0.5359.71/chromedriver, /Users/surajkumarnaganuri/.cache/selenium/chromedriver/mac64/109.0.5414.74/chromedriver, /Users/surajkumarnaganuri/.cache/selenium/chromedriver/mac64/110.0.5481.77/chromedriver, /Users/surajkumarnaganuri/.cache/selenium/resolution.properties] -- output list [/Users/surajkumarnaganuri/.cache/selenium/chromedriver/mac64/104.0.5112.79/chromedriver, /Users/surajkumarnaganuri/.cache/selenium/chromedriver/mac64/105.0.5195.52/chromedriver, /Users/surajkumarnaganuri/.cache/selenium/chromedriver/mac64/106.0.5249.61/chromedriver, /Users/surajkumarnaganuri/.cache/selenium/chromedriver/mac64/107.0.5304.62/chromedriver, /Users/surajkumarnaganuri/.cache/selenium/chromedriver/mac64/108.0.5359.71/chromedriver, /Users/surajkumarnaganuri/.cache/selenium/chromedriver/mac64/109.0.5414.74/chromedriver, /Users/surajkumarnaganuri/.cache/selenium/chromedriver/mac64/110.0.5481.77/chromedriver] 
+2023-02-25 22:51:37,850 [main] TRACE i.g.b.wdm.cache.CacheHandler - Filter cache by 110.0.5481.77 -- input list [/Users/surajkumarnaganuri/.cache/selenium/chromedriver/mac64/104.0.5112.79/chromedriver, /Users/surajkumarnaganuri/.cache/selenium/chromedriver/mac64/105.0.5195.52/chromedriver, /Users/surajkumarnaganuri/.cache/selenium/chromedriver/mac64/106.0.5249.61/chromedriver, /Users/surajkumarnaganuri/.cache/selenium/chromedriver/mac64/107.0.5304.62/chromedriver, /Users/surajkumarnaganuri/.cache/selenium/chromedriver/mac64/108.0.5359.71/chromedriver, /Users/surajkumarnaganuri/.cache/selenium/chromedriver/mac64/109.0.5414.74/chromedriver, /Users/surajkumarnaganuri/.cache/selenium/chromedriver/mac64/110.0.5481.77/chromedriver] -- output list [/Users/surajkumarnaganuri/.cache/selenium/chromedriver/mac64/110.0.5481.77/chromedriver] 
+2023-02-25 22:51:37,850 [main] TRACE i.g.b.wdm.cache.CacheHandler - Filter cache by MAC -- input list [/Users/surajkumarnaganuri/.cache/selenium/chromedriver/mac64/110.0.5481.77/chromedriver] -- output list [/Users/surajkumarnaganuri/.cache/selenium/chromedriver/mac64/110.0.5481.77/chromedriver] 
+2023-02-25 22:51:37,852 [main] DEBUG i.g.bonigarcia.wdm.WebDriverManager - Driver chromedriver 110.0.5481.77 found in cache
+2023-02-25 22:51:37,854 [main] INFO  i.g.bonigarcia.wdm.WebDriverManager - Exporting webdriver.chrome.driver as /Users/surajkumarnaganuri/.cache/selenium/chromedriver/mac64/110.0.5481.77/chromedriver
+2023-02-25 22:51:59,614 [main] INFO  com.proj.common.base.WebSetUp - ========== Successfully Initiated for Web Test ==========
+2023-02-25 22:51:59,771 [main] INFO  com.proj.common.base.WebSetUp - ========== Successfully Terminated The Instance of Running Test Script ==========
+2023-02-25 22:54:00,398 [main] INFO  org.reflections.Reflections - Reflections took 95 ms to scan 1 urls, producing 2 keys and 4 values
+2023-02-25 22:54:00,501 [main] INFO  org.reflections.Reflections - Reflections took 10 ms to scan 1 urls, producing 2 keys and 4 values
+2023-02-25 22:56:44,088 [main] INFO  org.reflections.Reflections - Reflections took 143 ms to scan 1 urls, producing 2 keys and 4 values
+2023-02-25 22:56:44,154 [main] INFO  org.reflections.Reflections - Reflections took 16 ms to scan 1 urls, producing 2 keys and 4 values
+2023-02-25 22:56:52,509 [main] INFO  com.proj.common.base.MobileSetUp - ========== Successfully Initiated for Mobile Test ==========
+2023-02-25 22:56:52,687 [main] INFO  com.proj.common.base.MobileSetUp - ========== Successfully Terminated The Instance of Running Test Script ==========
+2023-02-25 22:57:07,505 [main] INFO  org.reflections.Reflections - Reflections took 139 ms to scan 1 urls, producing 2 keys and 4 values
+2023-02-25 22:57:07,580 [main] INFO  org.reflections.Reflections - Reflections took 15 ms to scan 1 urls, producing 2 keys and 4 values
+2023-02-25 22:57:12,362 [main] INFO  com.proj.common.base.MobileSetUp - ========== Successfully Initiated for Mobile Test ==========
+2023-02-25 22:57:35,191 [main] INFO  com.proj.common.base.MobileSetUp - ========== Successfully Terminated The Instance of Running Test Script ==========
+2023-02-25 22:57:54,735 [main] INFO  org.reflections.Reflections - Reflections took 84 ms to scan 1 urls, producing 2 keys and 4 values
+2023-02-25 22:57:54,853 [main] INFO  org.reflections.Reflections - Reflections took 10 ms to scan 1 urls, producing 2 keys and 4 values
+2023-02-25 22:57:54,871 [main] INFO  org.reflections.Reflections - Reflections took 15 ms to scan 1 urls, producing 2 keys and 4 values
+2023-02-25 22:57:59,353 [main] INFO  com.proj.common.base.MobileSetUp - ========== Successfully Initiated for Mobile Test ==========
+2023-02-25 22:58:22,862 [main] INFO  com.proj.common.base.MobileSetUp - ========== Successfully Terminated The Instance of Running Test Script ==========

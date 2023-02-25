@@ -5,17 +5,12 @@ import com.proj.utils.LoggerUtils;
 import java.sql.*;
 import java.util.HashMap;
 
-
-/**
- * @author nishanth.t
- */
 public class PostgresDBUtils {
 
     public static Connection con = null;
     public static String combinedURL;
 
     /**
-     * @author Raghavendra YT
      * @param host Host for the database
      * @param port port number
      * @param uname DB username
@@ -39,7 +34,6 @@ public class PostgresDBUtils {
     }
 
     /**
-     * @author Raghavendra YT
      * @param completeUrl Provide complete postgres url with db name
      * @param uname DB username
      * @param pass DB password
@@ -80,7 +74,6 @@ public class PostgresDBUtils {
     }
 
     /**
-     * @author Raghavendra YT
      * @param tableName Database table name
      * @param columnNames list of column names {id, name, etc..} OR {""} to display all columns
      * @param whereConditions list of conditions like {"columnName < 10", "columnName like 'xyz%'", "columnName in (10, 11)"} OR {""} for without conditions
@@ -110,7 +103,6 @@ public class PostgresDBUtils {
     }
 
     /**
-     * @author Raghavendra YT
      * @param tableName Database table name
      * @param columnValues list of all column values {id, name, etc..}
      */
@@ -130,7 +122,6 @@ public class PostgresDBUtils {
     }
 
     /**
-     * @author Raghavendra YT
      * @param tableName Database table name
      * @param updateValueConditions single or list of update conditions like {"columnName = 'xyz'", "id = 1"}
      * @param whereConditions list of conditions like {"columnName < 10", "columnName like 'xyz%'", "columnName in (10, 11)"}
@@ -159,7 +150,6 @@ public class PostgresDBUtils {
     /**
      * Displays all row data, but returns only last row as HashMap
      *
-     * @author Raghavendra YT
      * @param completeUrl Provide complete postgres url with db name
      * @param uname DB username
      * @param pass DB password
@@ -194,7 +184,6 @@ public class PostgresDBUtils {
     }
 
     /**
-     * @author Raghavendra YT
      * @param completeUrl Provide complete postgres url with db name
      * @param uname DB username
      * @param pass DB password
@@ -216,7 +205,6 @@ public class PostgresDBUtils {
 
 
     /**
-     * @author Raghavendra YT
      * @param completeUrl Provide complete postgres url with db name
      * @param uname DB username
      * @param pass DB password

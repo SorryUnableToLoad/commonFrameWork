@@ -14,9 +14,6 @@ import org.slf4j.LoggerFactory;
 import java.util.ArrayList;
 import java.util.List;
 
-/**
- * @author nishanth.t
- */
 public class MongoDBUtils {
 
     public static MongoClient mongoClient;
@@ -24,7 +21,6 @@ public class MongoDBUtils {
     public MongoCollection<Document> collection;
 
     /**
-     * @author Raghavendra YT
      * @param mongoPrefix Prefix
      * @param userName DB username
      * @param password DB password
@@ -47,7 +43,6 @@ public class MongoDBUtils {
     }
 
     /**
-     * @author Raghavendra YT
      * Use this method to close the connection to mongoDB
      */
     public void mongodbCloseConnection() {
@@ -62,7 +57,6 @@ public class MongoDBUtils {
     }
 
     /**
-     * @author Raghavendra YT
      * @param collectionName Any collection name in specific database
      * This method changes the collection to provided value
      */
@@ -76,7 +70,6 @@ public class MongoDBUtils {
     }
 
     /**
-     * @author Raghavendra YT
      * This method will turn off the unnecessary logging messages from mongoDB
      */
     public void turnOffMongodbLogger(){
@@ -86,7 +79,6 @@ public class MongoDBUtils {
     }
 
     /**
-     * @author Raghavendra YT
      * @param operation provide values like eq, ne, gt, gte, lt, lte, regex.
      * @param fieldName field name in the mongo object
      * @param value value of the field name
@@ -132,7 +124,6 @@ public class MongoDBUtils {
     }
 
     /**
-     * @author Raghavendra YT
      * @param jsonStringFilter Provide input string in json format, for ex: "{\"abc.xyz\":{$lt:10}}", "{\"name\":\"Raghav\"}"
      * @return returns Bson filter
      */
@@ -141,7 +132,6 @@ public class MongoDBUtils {
     }
 
     /**
-     * @author Raghavendra YT
      * @param filter1 Provide Bson filter as input value 1
      * @param filter2 Provide Bson filter as input value 2
      * @return returns Bson filter
@@ -152,7 +142,6 @@ public class MongoDBUtils {
     }
 
     /**
-     * @author Raghavendra YT
      * @param filter1 Provide Bson filter as input value 1
      * @param filter2 Provide Bson filter as input value 2
      * @return returns Bson filter
@@ -163,7 +152,6 @@ public class MongoDBUtils {
     }
 
     /**
-     * @author Raghavendra YT
      * @param fieldName field name in the mongo object
      * @param values list of values for particular field
      * @return returns Bson filter
@@ -174,7 +162,6 @@ public class MongoDBUtils {
     }
 
     /**
-     * @author Raghavendra YT
      * @param filter input bson filter
      * @return returns list of Documents filtered through bson filter
      */
@@ -195,7 +182,6 @@ public class MongoDBUtils {
     }
 
     /**
-     * @author Raghavendra YT
      * @param doc Single mongoDB document
      * @param fieldName any key from the provided document in "SingleStrin" or "str1.str2" format
      * @return returns the filtered value as a String
