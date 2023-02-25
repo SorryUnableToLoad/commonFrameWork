@@ -7,7 +7,6 @@ import java.sql.DriverManager;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 
-
 public class DatabaseUtils {
     public static Connection connect;
 
@@ -43,8 +42,8 @@ public class DatabaseUtils {
     }
 
     /**
-     * This methods returns all the data from database
-     *
+     * This methods will return the data from database
+     * and query string given by user input
      * @param query
      * @return
      */
@@ -71,7 +70,7 @@ public class DatabaseUtils {
         ResultSet result = connect.createStatement().executeQuery(query);
         String actualData = null;
         while (result.next()) {
-            //System.out.println(result.getString(columnindex));
+            //System.out.println(result.getString(columnIndex));
             if (result.getString(columnIndex).equals(expectedData)) {
                 actualData = result.getString(columnIndex);
             } else {
@@ -86,21 +85,55 @@ public class DatabaseUtils {
      * This method will validate the data and return the data
      *
      * @param query
-     * @param columnindex
+     * @param columnIndex
      * @param expectedData
      * @return
      * @throws SQLException
      */
-    public static String getTheDataFromDatabaseAndVerify(String query, String expectedData, int columnindex) throws SQLException {
+    public static String getTheDataFromDatabaseAndVerify(String query, String expectedData, int columnIndex) throws SQLException {
         ResultSet result = connect.createStatement().executeQuery(query);
         boolean flag = false;
         String actualData = null;
         while (result.next()) {
             try {
-                if (result.getString(columnindex).equals(expectedData)) {
-                    //System.out.println(result.getString(columnindex));
+                if (result.getString(columnIndex).equals(expectedData)) {
+                    //System.out.println(result.getString(columnIndex));
                     flag = true;
-                    actualData = result.getString(columnindex);
+                    actualData = result.getString(columnIndex);
+                    break;
+                } else {
+                    actualData = "Data Is Not Present";
+                }
+            } catch (SQLException e) {
+                e.printStackTrace();
+            }
+        }
+        if (flag) {
+            System.out.println("Data is verified and present");
+        } else {
+            System.out.println("Data is not present");
+        }
+        return actualData;
+    }
+    /**
+     * This method will validate the data and return the data
+     *
+     * @param query
+     * @param columnLabel
+     * @param expectedData¯
+     * @return
+     * @throws SQLException
+     */
+    public static String getTheDataFromDatabaseAndVerify(String query, String expectedData, String columnLabel) throws SQLException {
+        ResultSet result = connect.createStatement().executeQuery(query);
+        boolean flag = false;
+        String actualData = null;
+        while (result.next()) {
+            try {
+                if (result.getString(columnLabel).equals(expectedData)) {
+                    //System.out.println(result.getString(columnLabel));
+                    flag = true;
+                    actualData = result.getString(columnLabel);
                     break;
                 } else {
                     actualData = "Data Is Not Present";

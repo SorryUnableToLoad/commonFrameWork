@@ -1,16 +1,12 @@
 package com.proj.api.pojos;
 
-import lombok.AllArgsConstructor;
-import lombok.Builder;
 import lombok.Data;
-import lombok.NoArgsConstructor;
+import lombok.experimental.Accessors;
 
+@Accessors(chain = true)
 @Data
-@Builder
-@NoArgsConstructor
-@AllArgsConstructor
 public class UserDetails {
-    private String name;
-    private String job;
 
+  private String name;
+  private String job;
 }

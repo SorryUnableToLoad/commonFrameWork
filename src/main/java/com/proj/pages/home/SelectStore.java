@@ -1,6 +1,6 @@
 package com.proj.pages.home;
 
-import com.proj.utils.ActionHelper;
+import com.proj.utils.UI_Utils.ActionHelper;
 import org.openqa.selenium.By;
 
 public class SelectStore {

@@ -1,7 +1,7 @@
 package com.proj.pages.categories;
 
-import com.proj.driver.DriverManager;
-import com.proj.utils.ActionHelper;
+import com.proj.common.driver.DriverManager;
+import com.proj.utils.UI_Utils.ActionHelper;
 import io.appium.java_client.AppiumDriver;
 import io.appium.java_client.MobileElement;
 import io.appium.java_client.pagefactory.AndroidFindBy;

@@ -2,16 +2,22 @@
   "id": 122,
   "category": {
     "id": 11,
-    "name": "animal"
+    "name": "category name"
   },
-  "name": "animalName",
+  "name": "petName",
   "photoUrls": [
-    "string"
+    "url1",
+    "url2",
+    "url3"
   ],
   "tags": [
     {
       "id": 22,
-      "name": "string"
+      "name": "tag name22"
+    },
+    {
+      "id": 33,
+      "name": "tag name33"
     }
   ],
   "status": "available"

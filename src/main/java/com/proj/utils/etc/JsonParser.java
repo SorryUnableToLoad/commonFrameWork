@@ -1,7 +1,7 @@
 package com.proj.utils.etc;
 
 import com.jayway.jsonpath.JsonPath;
-import constants.IConstants;
+import com.proj.common.pathconstants.IConstants;
 import org.testng.annotations.Test;
 
 import java.io.File;

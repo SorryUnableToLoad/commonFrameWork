@@ -1,8 +1,8 @@
 package com.projtest.web;
 
-import com.proj.annotations.FrameworkAnnotations;
-import com.proj.base.WebSetUp;
-import com.proj.listeners.TestListenerImpl;
+import com.proj.common.annotations.FrameworkAnnotations;
+import com.proj.common.base.WebSetUp;
+import com.proj.common.listeners.TestListenerImpl;
 import org.testng.SkipException;
 import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
@@ -11,7 +11,6 @@ import org.testng.asserts.SoftAssert;
 //integrating with extent report
 
 @Listeners(TestListenerImpl.class)
-
 public class FrameworkSanityCheckWithReport extends WebSetUp {
 
     @Test

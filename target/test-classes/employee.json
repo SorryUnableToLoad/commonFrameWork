@@ -1,10 +1,10 @@
 {
   "id": 1,
-  "fname": "suraj",
+  "fName": "suraj",
   "isFTE": true,
   "address": {
     "street": "first street",
-    "city": "belagavi"
+    "city": "Belagavi"
   },
   "roles": [
     "manager",

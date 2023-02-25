@@ -1,6 +1,6 @@
 package com.proj.pages.account;
 
-import com.proj.driver.DriverManager;
+import com.proj.common.driver.DriverManager;
 import io.appium.java_client.AppiumDriver;
 import io.appium.java_client.MobileElement;
 import io.appium.java_client.pagefactory.AppiumFieldDecorator;

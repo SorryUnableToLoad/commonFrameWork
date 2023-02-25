@@ -1,6 +1,6 @@
 package com.proj.pages.loginandlogout;
 
-import com.proj.utils.ActionHelper;
+import com.proj.utils.UI_Utils.ActionHelper;
 import org.openqa.selenium.By;
 import org.testng.Assert;
 
