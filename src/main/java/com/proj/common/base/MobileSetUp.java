@@ -3,7 +3,7 @@ package com.proj.common.base;
 import com.proj.common.config.factory.FrameworkConfigFactory;
 import com.proj.common.driver.Driver;
 import com.proj.common.driver.DriverManager;
-import com.proj.pages.initializepages.InitializePages;
+import com.proj.pages.mobile.b2b.initializepages.InitializePages;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.testng.Reporter;

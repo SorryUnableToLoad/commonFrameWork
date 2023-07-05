@@ -1,7 +1,5 @@
 package com.proj.utils.apiutils;
 
-import com.proj.utils.LoggerUtils;
-
 import java.sql.*;
 import java.util.HashMap;
 

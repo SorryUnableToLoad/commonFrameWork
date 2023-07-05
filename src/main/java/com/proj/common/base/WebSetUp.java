@@ -34,7 +34,8 @@ public class WebSetUp {
      * This method consist of after testScript execution configuration functionalities
      */
     @AfterClass
-    public void tearDown() {
+    public void tearDown() throws InterruptedException {
+        Thread.sleep(15000);
         Driver.quitDriver();
         Reporter.log("========== Successfully Terminated The Instance of Running Test Script ==========", true);
         logger.info("========== Successfully Terminated The Instance of Running Test Script ==========");
