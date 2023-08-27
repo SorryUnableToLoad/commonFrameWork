@@ -140,7 +140,6 @@ public class JsonUtils {
         return null;
 
     }
-
     public static String extractValueFromJson(String jsonData, String rootNodeKey, String subRootNodeKey, String nodeKey) {
         JsonNode jsonNode = parse(jsonData);
         JsonNode rootNode = jsonNode.get(rootNodeKey);
@@ -155,7 +154,6 @@ public class JsonUtils {
         }
         return null;
     }
-
     public static String extractValueFromJson(String jsonData, int index, String rootNodeKey, String subRootNodeKey, String nodeKey) {
         JsonNode jsonNode = parse(jsonData);
         JsonNode rootNode = jsonNode.get(rootNodeKey);
@@ -170,7 +168,6 @@ public class JsonUtils {
         }
         return null;
     }
-
     public static String[] extractValuesFromJsonArray(String jsonData, String arrayKey) {
         ObjectMapper objectMapper = new ObjectMapper();
         try {
@@ -192,7 +189,6 @@ public class JsonUtils {
         }
         return new String[0];
     }
-
     public static String[] extractValuesFromJsonArray(String jsonData, String arrayKey, String valueKey) {
         ObjectMapper objectMapper = new ObjectMapper();
         try {
@@ -284,8 +280,6 @@ public class JsonUtils {
         }
     }*/
 
-
-
    /* public static List<Object> extractValuesFromJson(String jsonData, String key) {
         ObjectMapper objectMapper = new ObjectMapper();
         try {
@@ -317,7 +311,6 @@ public class JsonUtils {
         }
         return values;
     }*/
-
 
     //++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++//
 
@@ -351,7 +344,7 @@ public class JsonUtils {
     }*/
 
     //++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++//
-    public static void extractValueFromJson(String jsonData, String... keys) {
+   /* public static void extractValueFromJson(String jsonData, String... keys) {
         ObjectMapper objectMapper = new ObjectMapper();
         try {
             JsonNode jsonNode = objectMapper.readTree(jsonData);
@@ -394,6 +387,6 @@ public class JsonUtils {
                 extractValue(fieldNode, path + fieldName + ".");
             }
         }
-    }
+    }*/
 
 }
