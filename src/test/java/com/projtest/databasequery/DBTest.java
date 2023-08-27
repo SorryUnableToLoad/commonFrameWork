@@ -32,6 +32,7 @@ public class DBTest {
         ResultSet result = pdb.buildQuery("select id,name from media where name='promobanner.png'");
 
 
+
         while (result.next()) {
             System.out.println(result.getString("id")+"\t"+result.getString("name"));
         }

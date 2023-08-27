@@ -1,0 +1,13 @@
+{
+  "id": 1,
+  "fName": "suraj",
+  "isFTE": true,
+  "address": {
+    "street": "first street",
+    "city": "Belagavi"
+  },
+  "roles": [
+    "manager",
+    "Assistant director"
+  ]
+}

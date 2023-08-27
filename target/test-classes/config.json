@@ -1,0 +1,12 @@
+{
+  "config": {
+    "global": {
+      "username": "asakthiv",
+      "password": "1234",
+      "bundleId": "",
+      "appPackage": "com.dhl.fsi.android.dev",
+      "appActivity": "com.dhl.fsi.android.activity.login.LoginActivity",
+      "appiumUrl": "http://127.0.0.1:4723/wd/hub"
+    }
+  }
+}

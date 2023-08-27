@@ -1,0 +1,19 @@
+{
+  "pojoArrayObject" : [ {
+    "name" : "Suraj",
+    "empId" : "E345",
+    "emailId" : "acded@gmail.com",
+    "contactNumber" : [ 1234567890, 2345678901 ]
+  }, {
+    "name" : "Varun",
+    "empId" : "E346",
+    "emailId" : "acded@gmail.com",
+    "contactNumber" : [ 2345679876, 9876543456709 ]
+  } ],
+  "buildingNo" : 456,
+  "addressLine_1" : "line23",
+  "city" : "bangalore",
+  "state" : "karnataka",
+  "country" : "india",
+  "pinCode" : 567432
+}

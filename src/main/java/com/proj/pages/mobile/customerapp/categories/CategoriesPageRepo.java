@@ -41,7 +41,7 @@ public class CategoriesPageRepo {
     @AndroidFindBy(accessibility = "Back Button")
     public static MobileElement backButton;
 
-    public static WebElement select_level_1_Catgory(String level_1_category) {
+    public static WebElement select_level_1_Category(String level_1_category) {
         return DriverManager.getDriver().findElement(By.xpath("//android.widget.ImageView[@content-desc='" + level_1_category + "']"));
     }
 
