@@ -3,6 +3,8 @@ package com.proj.utils;
 import com.fasterxml.jackson.core.JsonParseException;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.*;
+import com.fasterxml.jackson.databind.node.JsonNodeFactory;
+import com.proj.utils.apiutils.LoggerUtils;
 
 import java.io.IOException;
 import java.util.HashMap;
@@ -11,7 +13,7 @@ import java.util.Map;
 
 public class JsonUtils {
 
-    private static ObjectMapper objectMapper = getDefaultObjectMapper();
+    private static final ObjectMapper objectMapper = getDefaultObjectMapper();
 
     private static ObjectMapper getDefaultObjectMapper() {
         ObjectMapper defaultObjectMapper = new ObjectMapper();
@@ -21,21 +23,19 @@ public class JsonUtils {
     }
 
     public static JsonNode parse(String src) {
-        JsonNode jsonNode = null;
         try {
-            jsonNode = objectMapper.readTree(src);
-            // Do something with the jsonNode object
+            return objectMapper.readTree(src); // Return the non-null jsonNode
         } catch (JsonParseException e) {
-            System.err.println("Error: Invalid JSON string");
+            LoggerUtils.error("Error: Invalid JSON string");
             e.printStackTrace();
         } catch (IOException e) {
-            System.err.println("Error: Failed to parse JSON string");
+            LoggerUtils.error("Error: Failed to parse JSON string");
             e.printStackTrace();
         }
-        return jsonNode;
-
+        // If an exception was caught, return a default or empty JsonNode
+        return JsonNodeFactory.instance.nullNode();
     }
-
+    
     public static JsonNode parse(String src, String path) {
         JsonNode rootNode = null;
         try {
@@ -128,6 +128,7 @@ public class JsonUtils {
         }
         return null;
     }
+
     public static Object extractValueFromJson(String jsonData, String rootNodeKey, String nodeKey) {
         JsonNode jsonNode = parse(jsonData);
         JsonNode rootNode = jsonNode.get(rootNodeKey);
@@ -140,10 +141,11 @@ public class JsonUtils {
         return null;
 
     }
+
     public static String extractValueFromJson(String jsonData, String rootNodeKey, String subRootNodeKey, String nodeKey) {
         JsonNode jsonNode = parse(jsonData);
         JsonNode rootNode = jsonNode.get(rootNodeKey);
-        if (rootNode.isArray() && rootNode.size() > 0) {
+        if (rootNode.isArray() && !rootNode.isEmpty()) {
             JsonNode subRootNode = rootNode.get(0).get(subRootNodeKey);
             if (subRootNode != null) {
                 return subRootNode.get(nodeKey).asText();
@@ -154,10 +156,11 @@ public class JsonUtils {
         }
         return null;
     }
+
     public static String extractValueFromJson(String jsonData, int index, String rootNodeKey, String subRootNodeKey, String nodeKey) {
         JsonNode jsonNode = parse(jsonData);
         JsonNode rootNode = jsonNode.get(rootNodeKey);
-        if (rootNode.isArray() && rootNode.size() > 0) {
+        if (rootNode.isArray() && !rootNode.isEmpty()) {
             JsonNode subRootNode = rootNode.get(index).get(subRootNodeKey);
             if (subRootNode != null) {
                 return subRootNode.get(nodeKey).asText();
@@ -168,52 +171,69 @@ public class JsonUtils {
         }
         return null;
     }
+
     public static String[] extractValuesFromJsonArray(String jsonData, String arrayKey) {
-        ObjectMapper objectMapper = new ObjectMapper();
-        try {
-            JsonNode jsonNode = objectMapper.readTree(jsonData);
-            JsonNode arrayNode = jsonNode.get(arrayKey);
-            if (arrayNode != null && arrayNode.isArray()) {
-                int size = arrayNode.size();
-                String[] values = new String[size];
-                for (int i = 0; i < size; i++) {
-                    JsonNode valueNode = arrayNode.get(i);
-                    if (valueNode != null) {
-                        values[i] = valueNode.asText();
-                    }
+        JsonNode jsonNode = parse(jsonData);
+        JsonNode arrayNode = jsonNode.get(arrayKey);
+        if (arrayNode != null && arrayNode.isArray()) {
+            int size = arrayNode.size();
+            String[] values = new String[size];
+            for (int i = 0; i < size; i++) {
+                JsonNode valueNode = arrayNode.get(i);
+                if (valueNode != null) {
+                    values[i] = valueNode.asText();
                 }
-                return values;
             }
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-        return new String[0];
-    }
-    public static String[] extractValuesFromJsonArray(String jsonData, String arrayKey, String valueKey) {
-        ObjectMapper objectMapper = new ObjectMapper();
-        try {
-            JsonNode jsonNode = objectMapper.readTree(jsonData);
-            JsonNode arrayNode = jsonNode.get(arrayKey);
-            if (arrayNode != null && arrayNode.isArray()) {
-                int size = arrayNode.size();
-                String[] values = new String[size];
-                for (int i = 0; i < size; i++) {
-                    JsonNode objectNode = arrayNode.get(i);
-                    if (objectNode != null) {
-                        JsonNode valueNode = objectNode.get(valueKey);
-                        if (valueNode != null) {
-                            values[i] = valueNode.asText();
-                        }
-                    }
-                }
-                return values;
-            }
-        } catch (Exception e) {
-            e.printStackTrace();
+            return values;
         }
         return new String[0];
     }
 
+    public static String[] extractValuesFromJsonArray(String jsonData, String arrayKey, String valueKey) {
+        JsonNode jsonNode = parse(jsonData);
+        JsonNode arrayNode = jsonNode.get(arrayKey);
+        if (arrayNode != null && arrayNode.isArray()) {
+            int size = arrayNode.size();
+            String[] values = new String[size];
+            for (int i = 0; i < size; i++) {
+                JsonNode objectNode = arrayNode.get(i);
+                if (objectNode != null) {
+                    JsonNode valueNode = objectNode.get(valueKey);
+                    if (valueNode != null) {
+                        values[i] = valueNode.asText();
+                    }
+                }
+            }
+            return values;
+        }
+        return new String[0];
+    }
+
+    public static String[] extractValuesFromNestedJsonArray(String jsonData, String[] keys, String valueKey) {
+        JsonNode jsonNode = parse(jsonData);
+        for (String key : keys) {
+            jsonNode = jsonNode.get(key);
+            if (jsonNode == null) {
+                return new String[0]; // Key not found, return an empty array
+            }
+        }
+
+        if (jsonNode.isArray()) {
+            int size = jsonNode.size();
+            String[] values = new String[size];
+            for (int i = 0; i < size; i++) {
+                JsonNode objectNode = jsonNode.get(i);
+                if (objectNode != null) {
+                    JsonNode valueNode = objectNode.get(valueKey);
+                    if (valueNode != null) {
+                        values[i] = valueNode.asText();
+                    }
+                }
+            }
+            return values;
+        }
+        return new String[0];
+    }
 
     //++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++//
     public static Map<String, String> extractValuesFromJson(String jsonData, String... keys) {
@@ -248,6 +268,10 @@ public class JsonUtils {
             }
         }
     }
+
+    private JsonUtils() {
+    }
+
 
     /*public static Map<String, String> extractValuesFromJson(String jsonData, String key) {
         ObjectMapper objectMapper = new ObjectMapper();
@@ -313,7 +337,6 @@ public class JsonUtils {
     }*/
 
     //++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++//
-
    /* public static void extractValueFromJson(String jsonData, String key) {
         ObjectMapper objectMapper = new ObjectMapper();
         try {

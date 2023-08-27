@@ -1,13 +1,10 @@
 package com.projtest.sampletest;
 
-import com.fasterxml.jackson.databind.JsonNode;
-import com.fasterxml.jackson.databind.ObjectMapper;
 import com.proj.utils.JsonUtils;
 
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Paths;
-import java.util.HashMap;
 import java.util.Map;
 
 import static com.proj.utils.JsonUtils.*;
@@ -33,7 +30,7 @@ public class Mains {
         System.out.println("d -> : " + d);
         System.out.println("--------------------------------");
 
-        String d1 = extractValueFromJson(jsonData,1, "data", "items", "id");
+        String d1 = extractValueFromJson(jsonData, 1, "data", "items", "id");
         System.out.println("d1 -> : " + d1);
         System.out.println("--------------------------------");
 
@@ -80,10 +77,18 @@ public class Mains {
         }
         System.out.println("--------------------------------");
 
-        String[] itemsId = JsonUtils.extractValuesFromJsonArray(extractValueFromJson(jsonData, "data"), "items","id");
+        String[] itemsId = JsonUtils.extractValuesFromJsonArray(extractValueFromJson(jsonData, "data"), "items", "id");
         for (String value : itemsId) {
             System.out.println("5.Extracted value: " + value);
         }
+
+        String[] keys = {"data", "items"};
+        String valueKey = "id";
+        String[] value = extractValuesFromNestedJsonArray(jsonData, keys, valueKey);
+        for (String values : value) {
+            System.out.println("6.Extracted value: " + values);
+        }
+
     }
 
     /*public static Map<String, String> extractValuesFromJson(String jsonData, String... keys) {
