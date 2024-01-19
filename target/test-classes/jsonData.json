@@ -1,0 +1,47 @@
+{
+  "name": "John Doe",
+  "age": 30,
+  "email": "johndoe@example.com",
+  "address": {
+    "street": "123 Main Street",
+    "city": "Anytown",
+    "state": "Anystate",
+    "country": "USA"
+  },
+  "data": {
+    "id": "186",
+    "items": [
+      {
+        "id": 275,
+        "isAvailableForSale": true
+      },
+      {
+        "id": 276,
+        "isAvailableForSale": false
+      }
+    ],
+    "message": "Total cart value has exceeded Outstanding credit limit 18900",
+    "canPlaceOrder": false,
+    "orderId": "123456",
+    "orderCode": "ORDER123"
+  },
+  "phoneNumbers": [
+    {
+      "id":1,
+      "type": "home",
+      "number": "555-1234"
+    },
+    {
+      "id":2,
+      "type": "work",
+      "number": "555-5678"
+    }
+  ],
+  "isEmployed": true,
+  "skills": [
+    345,
+    "programming",
+    "data analysis",
+    "problem-solving"
+  ]
+}
